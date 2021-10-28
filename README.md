@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# @kubgus on GitHub!
 
-You can use the [editor on GitHub](https://github.com/kubgus/kubgus.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Hey, my name is Kubo and I'm a web developer.
+I work with HTML, CSS and Javascript with various APIs.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## My current work:
+### Remify:
+- Remify is a learning app supposed to make studying easier
+- It works by making everything into cards that can be pinned, marked and shared
+- Users can create learning groups where they can share homework and other tasks with each other
+- It's a webapp made with HTML, CSS, Javascript and Firebase API connected to a Firestore Database to handle all the data
 
-### Markdown
+Remify is currently work-in-progress so it's not availible just yet.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## My previous work:
+- [Speed Read](https://github.com/kubgus/Speed-Read) - This project was inspired by a YouTube video that showcased how fast a person can read without having to move their eyes.
+- [Simple Planet Generator](https://github.com/kubgus/Planet-Generator) - I created this project when I wanted to try something new. It could be done better but it was mainly for the sake of fun so I don't care 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kubgus/kubgus.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Other projects:
+- Monez - Monez is an unreleased Discord economy bot that I made with the Discord.js API. I'm hope to be able to return to this project sometime in the future.
