@@ -93,3 +93,22 @@ section.grid > div > div > div {
 section.grid > div > div > div > h4 {
     margin-bottom: 0.8rem;
 }
+
+/* MEDIA QUERIES (help) */
+@media (max-width: 1000px) {
+    section.grid > div.grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    section.grid > div.grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    section.grid > div.grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
