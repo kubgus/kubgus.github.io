@@ -88,12 +88,12 @@ addGridSection("My smaller projects:", [
     createGridCard("https://github.com/kubgus/kubgus.github.io", "kubgus.github.io", "This is where you are right now."),
 ]);
 addGridSection("Things I can do:", [
-    createGridCard("https://www.javascript.com/", "Javascript", "I tried this language after learning Python and I fell in love with it.", "media/thumbnails/javascript.jpg"),
+    createGridCard("https://www.javascript.com/", "Javascript", "I tried this language after learning Python and I fell in love with it. It is what I currently use.", "media/thumbnails/javascript.jpg"),
+    createGridCard("https://www.unrealengine.com/", "Unreal Engine", "I am currently trying to learn visual scripting in UE and make a game.", "media/thumbnails/unreal.jpg"),
     createGridCard("empty.html", "HTML & CSS", "I learned them from a book. Now look at me!", "media/thumbnails/html.jpg"),
     createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I can remember making a game and a Discord bot.", "media/thumbnails/python.jpg"),
     createGridCard("https://github.com/SkriptLang", "Skript", "I coded several Minecraft plugins in Skript, adding both content and commands.", "media/thumbnails/skript.jpg"),
     createGridCard("https://unity.com/", "Unity", "I made some games in Unity when I was younger.", "media/thumbnails/unity.jpg"),
-    createGridCard("https://www.unrealengine.com/", "Unreal Engine", "I am currently trying to learn visual scripting in UE and make a game.", "media/thumbnails/unreal.jpg"),
 ]);
 addGridSection("Other weird places you can find me:", [
     createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg")
