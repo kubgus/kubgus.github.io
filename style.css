@@ -1,0 +1,95 @@
+:root {
+    --page-background: rgb(41, 33, 42);
+    --card-background: rgb(131, 40, 134);
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--page-background);
+    color: rgb(244, 244, 244);
+    font-family: Rubik;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 7px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--page-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+
+}
+
+/* SELECTION */
+::selection {
+    background: var(--card-background);
+}
+
+::-moz-selection {
+    background: var(--card-background);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5rem 0 2rem 2rem;
+}
+
+header img {
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+/* ARTICLE */
+article {
+    padding: 2rem;
+    line-height: 1.75rem;
+}
+
+/* GRID SECTION */
+section.grid {
+    padding: 1.8rem;
+    padding-top: 1.2rem;
+}
+
+section.grid > div.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+
+section.grid > div > div {
+    background-color: var(--card-background);
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+section.grid > div > div:hover {
+    transform: scale(1.1);
+}
+
+section.grid > div > div > img {
+    width: 100%;
+}
+
+section.grid > div > div > div {
+    padding: 1.5rem;
+}
+
+section.grid > div > div > div > h4 {
+    margin-bottom: 0.8rem;
+}
