@@ -1,4 +1,14 @@
 // Content functions
+function addTitle(content) {
+    const template = document.getElementById("title-template");
+    const copy = template.content.cloneNode(true);
+
+    if (content)
+        copy.children[0].innerText = content;
+
+    document.body.appendChild(copy);
+}
+
 function addArticle(content) {
     const template = document.getElementById("article-template");
     const copy = template.content.cloneNode(true);
@@ -55,19 +65,14 @@ function createGridCard(url, title, description, image, alt) {
 }
 
 // Add content to website
-addArticle(`I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing videogames, and not much else. I want to get a coding job one day. I also have some strong opinions and weak relationships. I'm doing fine...`);
+addArticle(`I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing videogames, and sometimes other things. I want to get a coding job one day. I want to use this website to show off my work, get across some of my opinions, and to have something to show for myself.`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
     createGridCard("https://www.reddit.com/user/LennyMemes_1", "Reddit", "LennyMemes_1", "media/thumbnails/reddit.jpg"),
     createGridCard("https://steamcommunity.com/id/laiq79/", "Steam", "LaIQ79", "media/thumbnails/steam.jpg"),
 ]);
-addArticle(
-    `I hope the first paragraph didn't sound too depressing. Most of it was jokes about how programmers are these lonely fat neckbeards that see 3 minutes of sunlight a day. I actually like to spend time with people. I have a decent amount of friends.
-
-It's actually quite fun to write this. You don't usually write this amount of text in any profile description or generally anywhere. After finally finishing the bare minimum for this website to work, it's really relaxing.
-
-Now, I want to show off some of my projects. Most of the "bigger" projects are unfinished or I have stopped working on them. It's just really hard when you have a really big thing to manage.`);
+addArticle(`Now, I want to show off some of my projects. Most of the "bigger" projects are unfinished or I have stopped working on them. It's just really hard when you have a really big thing to manage.`);
 addGridSection("My bigger projects:", [
     createGridCard("empty.html", "KillbY", "An online shooter game where you can build your guns. This is more of a concept than a project, but it is being worked on."),
     createGridCard("empty.html", "Remify", "An online to-do app that improves learning and doing homework with your classmates."),
