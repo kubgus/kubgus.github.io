@@ -90,6 +90,7 @@ addGridSection("My smaller projects:", [
 addGridSection("Things I can do:", [
     createGridCard("https://www.javascript.com/", "Javascript", "I tried this language after learning Python and I fell in love with it. It is what I currently use.", "media/thumbnails/javascript.jpg"),
     createGridCard("https://www.unrealengine.com/", "Unreal Engine", "I am currently trying to learn visual scripting in UE and make a game.", "media/thumbnails/unreal.jpg"),
+    createGridCard("https://flutter.dev/", "Flutter", "I picked up Flutter recently to reach more devices and try something new. I am learning.", "media/thumbnails/flutter.jpg"),
     createGridCard("empty.html", "HTML & CSS", "I learned them from a book. Now look at me!", "media/thumbnails/html.jpg"),
     createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I can remember making a game and a Discord bot.", "media/thumbnails/python.jpg"),
     createGridCard("https://github.com/SkriptLang", "Skript", "I coded several Minecraft plugins in Skript, adding both content and commands.", "media/thumbnails/skript.jpg"),
