@@ -72,6 +72,9 @@ addGridSection("Links:", [
     createGridCard("https://www.reddit.com/user/LennyMemes_1", "Reddit", "LennyMemes_1", "media/thumbnails/reddit.jpg"),
     createGridCard("https://steamcommunity.com/id/laiq79/", "Steam", "LaIQ79", "media/thumbnails/steam.jpg"),
 ]);
+addTitle("A piece of my mind:");
+addArticle(`I really wanted to write some of my opinions on this website. For example, my hatred towards social media. I just don't like how they spy on us and also change our perception of reality a lot. They can silence the ones they don't want to talk and embrace the ones that say what they want. I would also like to point out how short-form content reduces the average attention span by a lot. It's not healthy for the brain, and it's not healthy for society either. I just don't see why we still use them.`);
+addArticle(`But don't mind my opinions too much. Do and think what makes you happy. Just think about it.`);
 addArticle(`Now, I want to show off some of my projects. Most of the "bigger" projects are unfinished, or I have stopped working on them. It's just really hard when you have a huge thing to manage.`);
 addGridSection("My bigger projects:", [
     createGridCard("empty.html", "KillbY", "An online shooter game where you can build your guns. This is more of a concept than a project, but it is being worked on."),
