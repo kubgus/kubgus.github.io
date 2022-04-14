@@ -1,8 +1,13 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+/* VARIABLES */
 :root {
   --page-background: rgb(37, 32, 42);
   --card-background: rgb(98, 40, 134);
 }
 
+/* DEFAULT STYLE */
 html * {
   margin: 0;
   padding: 0;
