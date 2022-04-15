@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
     <!-- JAVASCRIPT -->
-    <script src="/js/main.js" defer></script>
+    <!-- <script src="/js/main.js" defer></script> -->
 
     <!-- FAVICON -->
     <link rel="icon" href="/media/favicon.png">
@@ -81,6 +81,12 @@
         <h1>Jakub Gustafik</h1>
 
     </header>
+
+    <%- include("partials/article",
+        {text: "I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to get a coding job one day. I want to use this website to show off my work, get across some of my opinions, and to have something to show for myself."
+        }) %>
+
+        <%- include("partials/grid", {title: "Links:" }) %>
 
 </body>
 
