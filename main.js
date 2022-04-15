@@ -82,9 +82,9 @@ addArticle(`I really wanted to write some of my opinions on this website. For ex
 addArticle(`But don't mind my opinions too much. Do and think what makes you happy. Just think about it.`);
 addArticle(`Now, I want to show off some of my projects. Most of the "bigger" projects are unfinished, or I have stopped working on them. It's just really hard when you have a huge thing to manage.`);
 addGridSection("My bigger projects:", [
-    createGridCard("empty.html", "KillbY", "An online shooter game where you can build your guns. This is more of a concept than a project, but it is being worked on.", "", "", "sports_esports"),
-    createGridCard("empty.html", "Remify", "An online to-do app that improves learning and doing homework with your classmates.", "", "", "checklist"),
-    createGridCard("empty.html", "Monez", "An innovative Discord economy bot. Discontinued because of a new Discord.js version.", "", "", "chat_bubble"),
+    createGridCard("empty", "KillbY", "An online shooter game where you can build your guns. This is more of a concept than a project, but it is being worked on.", "", "", "sports_esports"),
+    createGridCard("empty", "Remify", "An online to-do app that improves learning and doing homework with your classmates.", "", "", "checklist"),
+    createGridCard("empty", "Monez", "An innovative Discord economy bot. Discontinued because of a new Discord.js version.", "", "", "chat_bubble"),
 ]);
 addArticle("Since I don't publish source code for the big projects, here are some smaller things to try out!");
 addGridSection("My smaller projects:", [
@@ -99,7 +99,7 @@ addGridSection("Things I can do:", [
     createGridCard("https://www.javascript.com/", "Javascript", "I tried this language after learning Python and I fell in love with it. It is what I currently use.", "media/thumbnails/javascript.jpg"),
     createGridCard("https://www.unrealengine.com/", "Unreal Engine", "I am currently trying to learn visual scripting in UE and make a game.", "media/thumbnails/unreal.jpg"),
     createGridCard("https://flutter.dev/", "Flutter", "I picked up Flutter recently to reach more devices and try something new. I am learning.", "media/thumbnails/flutter.jpg"),
-    createGridCard("empty.html", "HTML & CSS", "I learned them from a book. Now look at me!", "media/thumbnails/html.jpg"),
+    createGridCard("empty", "HTML & CSS", "I learned them from a book. Now look at me!", "media/thumbnails/html.jpg"),
     createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I can remember making a game and a Discord bot.", "media/thumbnails/python.jpg"),
     createGridCard("https://github.com/SkriptLang", "Skript", "I coded several Minecraft plugins in Skript, adding both content and commands.", "media/thumbnails/skript.jpg"),
     createGridCard("https://unity.com/", "Unity", "I made some games in Unity when I was younger.", "media/thumbnails/unity.jpg"),
