@@ -86,7 +86,21 @@
         {text: "I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to get a coding job one day. I want to use this website to show off my work, get across some of my opinions, and to have something to show for myself."
         }) %>
 
-        <%- include("partials/grid", {title: "Links:" }) %>
+    <%- include("partials/grid-top", {title: "Links:" }) %>
+
+    <%- include("partials/card", { domain: "https://github.com/kubgus" , title: "GitHub" , description: "kubgus"
+                , icon: "arrow_forward_ios" , image: "/media/thumbnails/github.jpg" , alt: "" }) %>
+
+    <%- include("partials/card", { domain: "https://discord.com/users/643898809193332786/" , title: "Discord" , description: "Kubo#2383"
+                , icon: "arrow_forward_ios" , image: "/media/thumbnails/discord.jpg" , alt: "" }) %>
+
+    <%- include("partials/card", { domain: "https://www.reddit.com/user/LennyMemes_1" , title: "Reddit" , description: "LennyMemes_1"
+                , icon: "arrow_forward_ios" , image: "/media/thumbnails/reddit.jpg" , alt: "" }) %>
+
+    <%- include("partials/card", { domain: "https://steamcommunity.com/id/laiq79/" , title: "Steam" , description: "LaIQ79"
+                , icon: "arrow_forward_ios" , image: "/media/thumbnails/steam.jpg" , alt: "" }) %>
+
+    <%- include("partials/grid-bottom") %>
 
 </body>
 
