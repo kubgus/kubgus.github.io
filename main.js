@@ -41,27 +41,27 @@ function createGridCard(url, title, description, image, alt, icon) {
     const copy = template.content.cloneNode(true);
 
     if (url)
-        copy.children[0].id = url;
+        copy.children[0].children[0].href = url;
 
     if (title)
-        copy.children[0].children[1].children[0].children[0].innerText = title;
+        copy.children[0].children[0].children[1].children[0].children[0].innerText = title;
 
     if (description)
-        copy.children[0].children[1].children[0].children[1].innerText = description;
+        copy.children[0].children[0].children[1].children[0].children[1].innerText = description;
 
     if (icon)
-        copy.children[0].children[1].children[1].innerText = icon;
+        copy.children[0].children[0].children[1].children[1].innerText = icon;
 
     if (image) {
 
-        copy.children[0].children[0].src = image;
+        copy.children[0].children[0].children[0].src = image;
 
         if (alt)
-            copy.children[0].children[0].alt = alt;
+            copy.children[0].children[0].children[0].alt = alt;
 
     } else {
 
-        copy.children[0].children[0].remove();
+        copy.children[0].children[0].children[0].remove();
 
     }
 
@@ -110,19 +110,19 @@ addGridSection("Other weird places you can find me:", [
 
 
 // Make links clickable
-const links = document.getElementsByClassName("clickable-card");
-for (var i = 0; i < links.length; i++) {
+// const links = document.getElementsByClassName("clickable-card");
+// for (var i = 0; i < links.length; i++) {
 
-    links[i].addEventListener("click", (event) => {
+//     links[i].addEventListener("click", (event) => {
 
-        const element = event.target.closest(".clickable-card");
+//         const element = event.target.closest(".clickable-card");
 
-        const url = element.id;
+//         const url = element.id;
 
-        window.open(url, '_blank').focus();
+//         window.open(url, '_blank').focus();
 
-    });
+//     });
 
-}
+// }
 
 console.log(document.body)

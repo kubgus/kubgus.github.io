@@ -94,25 +94,30 @@ section.grid > div > div {
   }
 }
 
-section.grid > div > div > img {
+section.grid > div > div > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+section.grid > div > div > a > img {
   width: 100%;
 }
 
-section.grid > div > div > div {
+section.grid > div > div > a > div {
   padding: 1.5rem;
   display: flex;
   flex-direction: row;
 }
 
-section.grid > div > div > div > div {
+section.grid > div > div > a > div > div {
   margin-right: 1.25rem;
 }
 
-section.grid > div > div > div > div > h4 {
+section.grid > div > div > a > div > div > h4 {
   margin-bottom: 0.8rem;
 }
 
-section.grid > div > div > div > span {
+section.grid > div > div > a > div > span {
   margin-left: auto;
 }
 
