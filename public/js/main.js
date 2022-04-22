@@ -110,19 +110,19 @@ addGridSection("Other weird places you can find me:", [
 
 
 // Make links clickable
-const links = document.getElementsByClassName("clickable-card");
-for (var i = 0; i < links.length; i++) {
+// const links = document.getElementsByClassName("clickable-card");
+// for (var i = 0; i < links.length; i++) {
 
-    links[i].addEventListener("click", (event) => {
+//     links[i].addEventListener("click", (event) => {
 
-        const element = event.target.closest(".clickable-card");
+//         const element = event.target.closest(".clickable-card");
 
-        const url = element.id;
+//         const url = element.id;
 
-        window.open(url, '_blank').focus();
+//         window.open(url, '_blank').focus();
 
-    });
+//     });
 
-}
+// }
 
 console.log(document.body)

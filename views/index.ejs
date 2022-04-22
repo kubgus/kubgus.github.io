@@ -22,56 +22,6 @@
     <title>LaIQ</title>
 </head>
 
-<template id="title-template">
-
-    <h2>Lorem ipsum dolor sit amet</h2>
-
-</template>
-
-<template id="article-template">
-
-    <article>
-
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum repudiandae earum officiis, ipsum est atque
-            velit veritatis, blanditiis, architecto odio assumenda magni impedit. Necessitatibus cumque saepe quidem
-            et
-            maiores animi.</p>
-
-    </article>
-
-</template>
-
-<template id="grid-template">
-
-    <section class="grid">
-
-        <h2>Lorem, ipsum:</h2>
-
-        <div class="grid-container">
-
-            <!-- CARDS GO HERE -->
-
-        </div>
-
-    </section>
-
-</template>
-
-<template id="card-template">
-
-    <div class="clickable-card" id="https://en.wikipedia.org/wiki/Lorem_ipsum">
-        <img src="" alt="">
-        <div>
-            <div>
-                <h4>Lorem</h4>
-                <p>ipsum</p>
-            </div>
-            <span class="material-icons">arrow_forward_ios</span>
-        </div>
-    </div>
-
-</template>
-
 <body>
 
     <header>
@@ -82,26 +32,50 @@
 
     </header>
 
-    <%- include("partials/article",
-        {text: "I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to get a coding job one day. I want to use this website to show off my work, get across some of my opinions, and to have something to show for myself."
-        }) %>
+    <%- include("partials/article", {text: `I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to get a coding job one day. I want to use this website to show off my work, get across some of my opinions, and to have something to show for myself.`}) %>
 
     <%- include("partials/grid-top", {title: "Links:" }) %>
-
-    <%- include("partials/card", { domain: "https://github.com/kubgus" , title: "GitHub" , description: "kubgus"
-                , icon: "arrow_forward_ios" , image: "/media/thumbnails/github.jpg" , alt: "" }) %>
-
-    <%- include("partials/card", { domain: "https://discord.com/users/643898809193332786/" , title: "Discord" , description: "Kubo#2383"
-                , icon: "arrow_forward_ios" , image: "/media/thumbnails/discord.jpg" , alt: "" }) %>
-
-    <%- include("partials/card", { domain: "https://www.reddit.com/user/LennyMemes_1" , title: "Reddit" , description: "LennyMemes_1"
-                , icon: "arrow_forward_ios" , image: "/media/thumbnails/reddit.jpg" , alt: "" }) %>
-
-    <%- include("partials/card", { domain: "https://steamcommunity.com/id/laiq79/" , title: "Steam" , description: "LaIQ79"
-                , icon: "arrow_forward_ios" , image: "/media/thumbnails/steam.jpg" , alt: "" }) %>
-
+    <%- include("partials/card-image", { domain: "https://github.com/kubgus" , title: "GitHub" , description: "kubgus", icon: "arrow_forward_ios" , image: "/media/thumbnails/github.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://discord.com/users/643898809193332786/" , title: "Discord" , description: "Kubo#2383", icon: "arrow_forward_ios" , image: "/media/thumbnails/discord.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://www.reddit.com/user/LennyMemes_1" , title: "Reddit" , description: "LennyMemes_1", icon: "arrow_forward_ios" , image: "/media/thumbnails/reddit.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://steamcommunity.com/id/laiq79/" , title: "Steam" , description: "LaIQ79", icon: "arrow_forward_ios" , image: "/media/thumbnails/steam.jpg" , alt: "" }) %>
     <%- include("partials/grid-bottom") %>
 
+    <%- include("partials/title", {text: "A piece of my mind:"}) %>
+    <%- include("partials/article", {text: `I really wanted to write some of my opinions on this website. For example, my hatred towards social media. I just don't like how they spy on us and also change our perception of reality a lot. They can silence the ones they don't want to talk and embrace the ones that say what they want. I would also like to point out how short-form content reduces the average attention span by a lot. It's not healthy for the brain, and it's not healthy for society either. I just don't see why we still use them.`}) %>
+    <%- include("partials/article", {text: `But don't mind my opinions too much. Do and think what makes you happy. Just think about it.`}) %>
+    <%- include("partials/article", {text: `Now, I want to show off some of my projects. Most of the "bigger" projects are unfinished, or I have stopped working on them. It's just really hard when you have a huge thing to manage.`}) %>
+
+    <%- include("partials/grid-top", {title: "My bigger projects:"}) %>
+    <%- include("partials/card-text", { domain: "/empty" , title: "KillbY" , description: "An online shooter game where you can build your guns. This is more of a concept than a project, but it is being worked on." , icon: "sports_esports" }) %>
+    <%- include("partials/card-text", { domain: "/empty" , title: "Remify" , description: "An online to-do app that improves learning and doing homework with your classmates." , icon: "checklist" }) %>
+    <%- include("partials/card-text", { domain: "/empty" , title: "Monez" , description: "An innovative Discord economy bot. Discontinued because of a new Discord.js version." , icon: "chat_bubble" }) %>
+    <%- include("partials/grid-bottom") %>
+
+    <%- include("partials/article", {text: "Since I don't publish source code for the big projects, here are some smaller things to try out!"})  %>
+
+    <%- include("partials/grid-top", {title: "My smaller projects:"}) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/QuickLang" , title: "QuickLang" , description: "An easy-to-learn language similar to BrainFuck, but it's made in JavaScript." , icon: "code" }) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/Speed-Read" , title: "Speed Read" , description: "A website for speed reading. I am actually quite proud of this one." , icon: "code" }) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/Node-Projects" , title: "Node Projects" , description: "Some random Node.js stuff I made in like 2 seconds." , icon: "code" }) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/Planet-Generator" , title: "Planet Generator" , description: "A website that generates random planets. It's really inefficient but it works." , icon: "code" }) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/Simple-Meme-Creator" , title: "Simple Meme Creator" , description: "This is not a very serious project. But it exists." , icon: "code" }) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/kubgus.github.io" , title: "kubgus.github.io" , description: "This is where you are right now." , icon: "code" }) %>
+    <%- include("partials/grid-bottom") %>
+
+    <%- include("partials/grid-top", {title: "Things I can do:"}) %>
+    <%- include("partials/card-image", { domain: "https://www.javascript.com/" , title: "Javascript" , description: "I tried this language after learning Python and I fell in love with it. It is what I currently use.", icon: "arrow_forward_ios" , image: "/media/thumbnails/javascript.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://www.unrealengine.com/" , title: "Unreal Engine" , description: "I am currently trying to learn visual scripting in UE and make a game.", icon: "arrow_forward_ios" , image: "/media/thumbnails/unreal.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://www.flutter.dev/" , title: "Flutter" , description: "I picked up Flutter recently to reach more devices and try something new. I am learning.", icon: "arrow_forward_ios" , image: "/media/thumbnails/flutter.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "/empty" , title: "HTML & CSS" , description: "I learned them from a book. Now look at me!", icon: "arrow_forward_ios" , image: "/media/thumbnails/html.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://www.python.org/" , title: "Python" , description: "Python was my first real programming language. I can remember making a game and a Discord bot.", icon: "arrow_forward_ios" , image: "/media/thumbnails/python.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://github.com/SkriptLang" , title: "Skript" , description: "I coded several Minecraft plugins in Skript, adding both content and commands.", icon: "arrow_forward_ios" , image: "/media/thumbnails/skript.jpg" , alt: "" }) %>
+    <%- include("partials/card-image", { domain: "https://www.unity.com/" , title: "Unity" , description: "I made some games in Unity when I was younger.", icon: "arrow_forward_ios" , image: "/media/thumbnails/unity.jpg" , alt: "" }) %>
+    <%- include("partials/grid-bottom") %>
+
+    <%- include("partials/grid-top", {title: "Other weird places you can find me:"}) %>
+    <%- include("partials/card-image", { domain: "https://scratch.mit.edu/users/LaIQ79/" , title: "Scratch" , description: "LaIQ79", icon: "arrow_forward_ios" , image: "/media/thumbnails/scratch.jpg" , alt: "" }) %>
+    <%- include("partials/grid-bottom") %>
 </body>
 
 </html>
