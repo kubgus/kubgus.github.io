@@ -88,12 +88,6 @@ section.grid > div > div {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.45);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  section.grid > div > div:hover {
-    transform: scale(1.1);
-  }
-}
-
 section.grid > div > div > a {
   color: inherit;
   text-decoration: inherit;
@@ -119,6 +113,13 @@ section.grid > div > div > a > div > div > h4 {
 
 section.grid > div > div > a > div > span {
   margin-left: auto;
+}
+
+/* HOVER EFFECTS */
+@media (hover: hover) and (pointer: fine) {
+  section.grid > div > div:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* MEDIA QUERIES (help) */

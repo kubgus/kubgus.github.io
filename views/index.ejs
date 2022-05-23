@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
     <!-- JAVASCRIPT -->
-    <!-- <script src="/js/main.js" defer></script> -->
+    <script src="/js/main.js" defer></script>
 
     <!-- FAVICON -->
     <link rel="icon" href="/media/favicon.png">
@@ -56,6 +56,7 @@
 
     <%- include("partials/grid-top", {title: "My smaller projects:"}) %>
     <%- include("partials/card-text", { domain: "https://github.com/kubgus/QuickLang" , title: "QuickLang" , description: "An easy-to-learn language similar to BrainFuck, but it's made in JavaScript." , icon: "code" }) %>
+    <%- include("partials/card-text", { domain: "https://github.com/kubgus/Learning-CPP" , title: "Learning C++" , description: "My journey learning C++." , icon: "code" }) %>
     <%- include("partials/card-text", { domain: "https://github.com/kubgus/Speed-Read" , title: "Speed Read" , description: "A website for speed reading. I am actually quite proud of this one." , icon: "code" }) %>
     <%- include("partials/card-text", { domain: "https://github.com/kubgus/Node-Projects" , title: "Node Projects" , description: "Some random Node.js stuff I made in like 2 seconds." , icon: "code" }) %>
     <%- include("partials/card-text", { domain: "https://github.com/kubgus/Planet-Generator" , title: "Planet Generator" , description: "A website that generates random planets. It's really inefficient but it works." , icon: "code" }) %>
@@ -64,13 +65,14 @@
     <%- include("partials/grid-bottom") %>
 
     <%- include("partials/grid-top", {title: "Things I can do:"}) %>
-    <%- include("partials/card-image", { domain: "https://www.javascript.com/" , title: "Javascript" , description: "I tried this language after learning Python and I fell in love with it. It is what I currently use.", icon: "arrow_forward_ios" , image: "/media/thumbnails/javascript.jpg" , alt: "" }) %>
-    <%- include("partials/card-image", { domain: "https://www.unrealengine.com/" , title: "Unreal Engine" , description: "I am currently trying to learn visual scripting in UE and make a game.", icon: "arrow_forward_ios" , image: "/media/thumbnails/unreal.jpg" , alt: "" }) %>
-    <%- include("partials/card-image", { domain: "https://www.flutter.dev/" , title: "Flutter" , description: "I picked up Flutter recently to reach more devices and try something new. I am learning.", icon: "arrow_forward_ios" , image: "/media/thumbnails/flutter.jpg" , alt: "" }) %>
-    <%- include("partials/card-image", { domain: "/empty" , title: "HTML & CSS" , description: "I learned them from a book. Now look at me!", icon: "arrow_forward_ios" , image: "/media/thumbnails/html.jpg" , alt: "" }) %>
-    <%- include("partials/card-image", { domain: "https://www.python.org/" , title: "Python" , description: "Python was my first real programming language. I can remember making a game and a Discord bot.", icon: "arrow_forward_ios" , image: "/media/thumbnails/python.jpg" , alt: "" }) %>
-    <%- include("partials/card-image", { domain: "https://github.com/SkriptLang" , title: "Skript" , description: "I coded several Minecraft plugins in Skript, adding both content and commands.", icon: "arrow_forward_ios" , image: "/media/thumbnails/skript.jpg" , alt: "" }) %>
-    <%- include("partials/card-image", { domain: "https://www.unity.com/" , title: "Unity" , description: "I made some games in Unity when I was younger.", icon: "arrow_forward_ios" , image: "/media/thumbnails/unity.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "https://www.javascript.com/" , title: "Javascript" , description: "I tried this language after learning Python and I fell in love with it. It is what I currently use.", icon: "arrow_forward_ios" , image: "/media/thumbnails/javascript.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "/empty" , title: "C++" , description: "I am actively learning C++ now.", icon: "arrow_forward_ios" , image: "/media/thumbnails/cpp.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "https://www.unrealengine.com/" , title: "Unreal Engine" , description: "I am currently trying to learn visual scripting in UE and make a game.", icon: "arrow_forward_ios" , image: "/media/thumbnails/unreal.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "https://www.flutter.dev/" , title: "Flutter" , description: "I have very basic experience in Flutter.", icon: "arrow_forward_ios" , image: "/media/thumbnails/flutter.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "/empty" , title: "HTML & CSS" , description: "I learned them from a book. Now look at me!", icon: "arrow_forward_ios" , image: "/media/thumbnails/html.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "https://www.python.org/" , title: "Python" , description: "Python was my first real programming language. I can remember making a game and a Discord bot.", icon: "arrow_forward_ios" , image: "/media/thumbnails/python.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "https://github.com/SkriptLang" , title: "Skript" , description: "I coded several Minecraft plugins in Skript, adding both content and commands.", icon: "arrow_forward_ios" , image: "/media/thumbnails/skript.jpg" , alt: "" }) %>
+    <%- include("partials/card-skill", { domain: "https://www.unity.com/" , title: "Unity" , description: "I made some games in Unity when I was younger.", icon: "arrow_forward_ios" , image: "/media/thumbnails/unity.jpg" , alt: "" }) %>
     <%- include("partials/grid-bottom") %>
 
     <%- include("partials/grid-top", {title: "Other weird places you can find me:"}) %>
