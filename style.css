@@ -16,7 +16,7 @@ html * {
 body {
   background-color: var(--page-background);
   color: rgb(244, 244, 244);
-  font-family: Rubik;
+  font-family: Rubik, sans-serif;
 }
 
 /* SCROLLBAR */

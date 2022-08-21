@@ -70,42 +70,38 @@ function createGridCard(url, title, description, image, alt, icon) {
 }
 
 // Add content to website
-addArticle(`I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to get a coding job one day. I want to use this website to show off my work, get across some of my opinions, and to have something to show for myself.`);
+addArticle(`I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to own a tech-related company one day.`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
     createGridCard("https://www.reddit.com/user/LennyMemes_1", "Reddit", "LennyMemes_1", "media/thumbnails/reddit.jpg"),
     createGridCard("https://steamcommunity.com/id/laiq79/", "Steam", "LaIQ79", "media/thumbnails/steam.jpg"),
 ]);
-addTitle("A piece of my mind:");
-addArticle(`I really wanted to write some of my opinions on this website. For example, my hatred towards social media. I just don't like how they spy on us and also change our perception of reality a lot. They can silence the ones they don't want to talk and embrace the ones that say what they want. I would also like to point out how short-form content reduces the average attention span by a lot. It's not healthy for the brain, and it's not healthy for society either. I just don't see why we still use them.`);
-addArticle(`But don't mind my opinions too much. Do and think what makes you happy. Just think about it.`);
-addArticle(`Now, I want to show off some of my projects. Most of the "bigger" projects are unfinished, or I have stopped working on them. It's just really hard when you have a huge thing to manage.`);
-addGridSection("My bigger projects:", [
-    createGridCard("empty", "KillbY", "An online shooter game where you can build your guns. This is more of a concept than a project, but it is being worked on.", "", "", "sports_esports"),
-    createGridCard("empty", "Remify", "An online to-do app that improves learning and doing homework with your classmates.", "", "", "checklist"),
-    createGridCard("empty", "Monez", "An innovative Discord economy bot. Discontinued because of a new Discord.js version.", "", "", "chat_bubble"),
+addGridSection("Active Projects:", [
+    createGridCard("empty", "StepEngine", "A 3D low-level C# game engine with great focus on consistency and ease of use.", "", "", "sports_esports"),
+    createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
-addArticle("Since I don't publish source code for the big projects, here are some smaller things to try out!");
-addGridSection("My smaller projects:", [
-    createGridCard("https://github.com/kubgus/QuickLang", "QuickLang", "An easy-to-learn language similar to BrainFuck, but it's made in JavaScript.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Speed-Read", "Speed Read", "A website for speed reading. I am actually quite proud of this one.", "", "", "code"),
+addGridSection("My Side Projects:", [
+    createGridCard("https://github.com/kubgus/Learning-CPP", "Learning C++", "My journey learning C++.", "", "", "code"),
+    createGridCard("https://github.com/kubgus/KudoEngine", "KudoEngine", "A low-level 2D C# game engine.", "", "", "code"),
+    createGridCard("https://github.com/kubgus/IPComs", "IPComs", "Communicate between two local IP adresses.", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Pygorithms", "Pygorithms", "A collection of algorithms in Python.", "", "", "code"),
     createGridCard("https://github.com/kubgus/Node-Projects", "Node Projects", "Some random Node.js stuff I made in like 2 seconds.", "", "", "code"),
+    createGridCard("https://github.com/kubgus/FirstTMod", "FirstTMod", "My very first (very serious) Terraria mod.", "", "", "code"),
     createGridCard("https://github.com/kubgus/Planet-Generator", "Planet Generator", "A website that generates random planets. It's really inefficient but it works.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Simple-Meme-Creator", "Simple Meme Creator", "This is not a very serious project. But it exists.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/kubgus.github.io", "kubgus.github.io", "This is where you are right now.", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Speed-Read", "Speed Read", "A website for speed reading. I am actually quite proud of this one.", "", "", "code"),
 ]);
-addGridSection("Things I can do:", [
-    createGridCard("https://www.javascript.com/", "Javascript", "I tried this language after learning Python and I fell in love with it. It is what I currently use.", "media/thumbnails/javascript.jpg"),
-    createGridCard("https://www.unrealengine.com/", "Unreal Engine", "I am currently trying to learn visual scripting in UE and make a game.", "media/thumbnails/unreal.jpg"),
-    createGridCard("https://flutter.dev/", "Flutter", "I picked up Flutter recently to reach more devices and try something new. I am learning.", "media/thumbnails/flutter.jpg"),
-    createGridCard("empty", "HTML & CSS", "I learned them from a book. Now look at me!", "media/thumbnails/html.jpg"),
-    createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I can remember making a game and a Discord bot.", "media/thumbnails/python.jpg"),
-    createGridCard("https://github.com/SkriptLang", "Skript", "I coded several Minecraft plugins in Skript, adding both content and commands.", "media/thumbnails/skript.jpg"),
-    createGridCard("https://unity.com/", "Unity", "I made some games in Unity when I was younger.", "media/thumbnails/unity.jpg"),
+addGridSection("Languages I have mastered:", [
+    createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
+    createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I usually use it for side projects.", "media/thumbnails/python.jpg"),
+    createGridCard("https://www.javascript.com/", "Javascript", "A language very close to my heart. I used it for a long period of time in my programming career and still do from time to time.", "media/thumbnails/javascript.jpg"),
+    createGridCard("empty", "HTML & CSS", "These aren't languages, but I included them anyways.", "media/thumbnails/html.jpg"),
+]);
+addGridSection("Languages I have yet to master:", [
+    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I have basics in this language, but I'm still not a pro.", "media/thumbnails/cpp.jpg"),
 ]);
 addGridSection("Other weird places you can find me:", [
-    createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg")
+    createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg"),
 ]);
 
 
@@ -124,5 +120,3 @@ addGridSection("Other weird places you can find me:", [
 //     });
 
 // }
-
-console.log(document.body)
