@@ -166,7 +166,7 @@ addGridSection("Other weird places you can find me:", [
         let _mouseY = e.clientY;
         let _depth1 = `${50 + (_mouseX - _w) * 0.003}% ${50 + (_mouseY - _h) * 0.015}%`;
         let x = `${_depth1}`;
-        console.log(x);
+        // console.log(x);
         elem.style.backgroundPosition = x;
     }
 
