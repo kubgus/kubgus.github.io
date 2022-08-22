@@ -1,7 +1,7 @@
 async function getGitInfo(url) {
     var a = [];
     await $.ajax({
-        url: "http://textance.herokuapp.com/title/" + url.substr(8),
+        url: "https://textance.herokuapp.com/title/" + url.substr(8),
         complete: function (data) {
             var title = data.responseText;
             a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
