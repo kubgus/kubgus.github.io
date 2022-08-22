@@ -98,7 +98,7 @@ function createGridCard(url, title, description, image, alt, icon) {
 }
 
 // Add content to website
-addArticle(`I publish decent stuff on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I usually create websites, services and software, but I don't hesitate to experiment. I want to start a tech-related company one day.`);
+addArticle(`I publish decent stuff on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I usually create websites, services, and software, but I don't hesitate to experiment. I want to start a tech-related company one day.`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
