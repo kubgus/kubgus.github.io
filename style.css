@@ -13,6 +13,10 @@ html * {
   padding: 0;
 }
 
+/* html#loading {
+  filter: blur(20px);
+} */
+
 body {
   background-color: var(--page-background);
   color: rgb(244, 244, 244);
@@ -64,6 +68,7 @@ body > h2 {
 article {
   padding: 1rem 2rem 2rem 2rem;
   line-height: 1.75rem;
+  /* margin-right: 5rem; */
 }
 
 /* GRID SECTION */
@@ -138,4 +143,34 @@ section.grid > div > div > a > div > span {
   section.grid > div.grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* BG parallax effect */
+#parallax {
+  z-index: -200;
+  position: absolute;
+  width: 100%;
+  height: 45vw;
+  background-image: url(media/background.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-position: 50% 50%;
+  background-size: 20rem;
+  opacity: 0.015;
+}
+
+#parallax:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    var(--page-background) 90%
+  );
+  width: 100%;
+  height: 10em;
 }

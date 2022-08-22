@@ -1,3 +1,25 @@
+async function getGitInfo(url) {
+    var a = [];
+    await $.ajax({
+        url: "http://textance.herokuapp.com/title/" + url.substr(8),
+        complete: function (data) {
+            var title = data.responseText;
+            a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
+            a.push(title.substr(title.indexOf(":") + 2));
+            a.push(title);
+        }
+    });
+    return a;
+}
+
+function updateWithGit(url, titleP, descriptionP) {
+    if (url.startsWith("https://github.com/kubgus/"))
+        getGitInfo(url).then((info) => {
+            titleP.innerText = info[0];
+            descriptionP.innerText = info[1];
+        })
+}
+
 // Content functions
 function addTitle(content) {
     const template = document.getElementById("title-template");
@@ -40,37 +62,43 @@ function createGridCard(url, title, description, image, alt, icon) {
     const template = document.getElementById("card-template");
     const copy = template.content.cloneNode(true);
 
-    if (url)
-        copy.children[0].children[0].href = url;
+    const titleP = copy.children[0].children[0].children[1].children[0].children[0];
+    const descriptionP = copy.children[0].children[0].children[1].children[0].children[1];
+    const iconP = copy.children[0].children[0].children[1].children[1];
+    const imgP = copy.children[0].children[0].children[0];
 
     if (title)
-        copy.children[0].children[0].children[1].children[0].children[0].innerText = title;
+        titleP.innerText = title;
 
     if (description)
-        copy.children[0].children[0].children[1].children[0].children[1].innerText = description;
+        descriptionP.innerText = description;
 
     if (icon)
-        copy.children[0].children[0].children[1].children[1].innerText = icon;
+        iconP.innerText = icon;
 
     if (image) {
 
-        copy.children[0].children[0].children[0].src = image;
+        imgP.src = image;
 
         if (alt)
-            copy.children[0].children[0].children[0].alt = alt;
+            imgP = alt;
 
     } else {
 
-        copy.children[0].children[0].children[0].remove();
+        imgP.remove();
 
     }
 
+    if (url) {
+        copy.children[0].children[0].href = url;
+        updateWithGit(url, titleP, descriptionP)
+    }
 
     return copy;
 }
 
 // Add content to website
-addArticle(`I publish decent websites on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I want to own a tech-related company one day.`);
+addArticle(`I publish decent stuff on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I usually create websites, services and software, but I don't hesitate to experiment. I want to start a tech-related company one day.`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
@@ -81,15 +109,15 @@ addGridSection("Active Projects:", [
     createGridCard("empty", "StepEngine", "A 3D low-level C# game engine with great focus on consistency and ease of use.", "", "", "sports_esports"),
     createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
-addGridSection("My Side Projects:", [
-    createGridCard("https://github.com/kubgus/Learning-CPP", "Learning C++", "My journey learning C++.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/KudoEngine", "KudoEngine", "A low-level 2D C# game engine.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/IPComs", "IPComs", "Communicate between two local IP adresses.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Pygorithms", "Pygorithms", "A collection of algorithms in Python.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Node-Projects", "Node Projects", "Some random Node.js stuff I made in like 2 seconds.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/FirstTMod", "FirstTMod", "My very first (very serious) Terraria mod.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Planet-Generator", "Planet Generator", "A website that generates random planets. It's really inefficient but it works.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Speed-Read", "Speed Read", "A website for speed reading. I am actually quite proud of this one.", "", "", "code"),
+addGridSection("Side Projects:", [
+    createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
 ]);
 addGridSection("Languages I have mastered:", [
     createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
@@ -101,8 +129,12 @@ addGridSection("Languages I have yet to master:", [
     createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I have basics in this language, but I'm still not a pro.", "media/thumbnails/cpp.jpg"),
 ]);
 addGridSection("Other weird places you can find me:", [
+    createGridCard("https://laiq.itch.io/", "Itch.io", "LaIQ", "media/thumbnails/itch.jpg"),
     createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg"),
 ]);
+
+// Remove loading blur
+// document.getElementById("loading").removeAttribute("id", "loading");
 
 
 // Make links clickable
@@ -120,3 +152,22 @@ addGridSection("Other weird places you can find me:", [
 //     });
 
 // }
+
+// BG parallax effect
+(function () {
+    // Add event listener
+    document.addEventListener("mousemove", parallax);
+    const elem = document.querySelector("#parallax");
+    // Magic happens here
+    function parallax(e) {
+        let _w = window.innerWidth / 2;
+        let _h = window.innerHeight / 2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let _depth1 = `${50 + (_mouseX - _w) * 0.003}% ${50 + (_mouseY - _h) * 0.015}%`;
+        let x = `${_depth1}`;
+        console.log(x);
+        elem.style.backgroundPosition = x;
+    }
+
+})();
