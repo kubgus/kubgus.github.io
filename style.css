@@ -50,7 +50,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5rem 2rem 3rem 2rem;
+  padding: 5rem 2rem 0.5rem 2rem;
 }
 
 header img {
@@ -61,12 +61,12 @@ header img {
 
 /* TITLE */
 body > h2 {
-  padding: 2rem;
+  padding: 2rem 2rem 0.2rem 2rem;
 }
 
 /* ARTICLE */
 article {
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem 5rem 2rem 2rem;
   line-height: 1.75rem;
   /* margin-right: 5rem; */
 }
@@ -150,7 +150,7 @@ section.grid > div > div > a > div > span {
   z-index: -199;
   position: absolute;
   width: 100%;
-  height: 45vw;
+  height: 47vw;
 }
 
 #parallax-overlay {

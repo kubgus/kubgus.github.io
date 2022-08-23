@@ -1,14 +1,19 @@
 async function getGitInfo(url) {
     var a = [];
-    await $.ajax({
-        url: "https://textance.herokuapp.com/title/" + url.substr(8),
-        complete: function (data) {
-            var title = data.responseText;
-            a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
-            a.push(title.substr(title.indexOf(":") + 2));
-            a.push(title);
-        }
-    });
+    try {
+        await $.ajax({
+            url: "https://textance.herokuapp.com/title/" + url.substr(8),
+            complete: function (data) {
+                var title = data.responseText;
+                a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
+                a.push(title.substr(title.indexOf(":") + 2));
+                a.push(title);
+            }
+        });
+    } catch (e) {
+        a.push(`This card could not be loaded...`);
+        a.push(`Try reloading the page.`);
+    }
     return a;
 }
 
@@ -98,13 +103,20 @@ function createGridCard(url, title, description, image, alt, icon) {
 }
 
 // Add content to website
-addArticle(`I publish decent stuff on the internet. I like programming, browsing Reddit, listening to music, playing video games, and sometimes other things. I usually create websites, services, and software, but I don't hesitate to experiment. I want to start a tech-related company one day.`);
+addArticle(`
+⌨️ Programmer
+🎮 Gamer
+🎓 Student
+
+"I publish decent stuff on the internet."`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
     createGridCard("https://www.reddit.com/user/LennyMemes_1", "Reddit", "LennyMemes_1", "media/thumbnails/reddit.jpg"),
     createGridCard("https://steamcommunity.com/id/laiq79/", "Steam", "LaIQ79", "media/thumbnails/steam.jpg"),
 ]);
+addTitle("About Me:");
+addArticle("My name is Jakub, but you can call me Kubo. I am a student from Slovakia and I love programming. It has been my hobby since childhood. I like programming, browsing Reddit, listening to music, and playing video games. I usually create websites, services, and software, but I don't hesitate to experiment. I want to start a tech-related company one day.")
 addGridSection("Active Projects:", [
     createGridCard("empty", "StepEngine", "A 3D low-level C# game engine with great focus on consistency and ease of use.", "", "", "sports_esports"),
     createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
