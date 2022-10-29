@@ -165,10 +165,20 @@ addGridSection("Other weird places you can find me:", [
 
 // }
 
-
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+        left: rect.left + window.scrollX,
+        top: rect.top + window.scrollY,
+        bottom: rect.bottom + window.scrollY,
+    };
+}
 
 // BG parallax effect
 const elem = document.querySelector("#parallax");
+let pch = getOffset(document.querySelector(".grid"));
+console.log(pch);
+document.querySelector("#parallax-container").style.height = `${pch.bottom}px`;
 var auto = 0;
 let x = ``;
 let y = ``;
