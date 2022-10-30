@@ -1,14 +1,12 @@
 async function getGitInfo(url) {
     var a = [];
     try {
-        await $.ajax({
-            url: "https://textance.herokuapp.com/title/" + url.substr(8),
-            complete: function (data) {
-                var title = data.responseText;
-                a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
-                a.push(title.substr(title.indexOf(":") + 2));
-                a.push(title);
-            }
+        await $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent(url), function (data) {
+            var title = data.contents.match("<title>(.*?)</title>")[0].substr(7);
+            title = title.substr(0, title.indexOf("<"));
+            a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
+            a.push(title.substr(title.indexOf(":") + 2));
+            a.push(title);
         });
     } catch (e) {
         a.push(`This card could not be loaded...`);
