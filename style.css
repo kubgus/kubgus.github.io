@@ -147,6 +147,8 @@ section.grid > div > div > a > div > span {
 
 /* BG parallax effect */
 #parallax-container {
+  /* display: none; */
+
   z-index: -199;
   position: absolute;
   width: 100%;

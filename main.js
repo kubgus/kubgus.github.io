@@ -183,29 +183,36 @@ var auto = 0;
 let x = ``;
 let y = ``;
 
-function a() {
-    auto += 0.02;
+function moveBackground() {
+    auto += 0.006;
     if (auto > 999999) {
         auto = 0
     }
     elem.style.backgroundPosition = `${auto + x}% ${y}%`;
-    window.requestAnimationFrame(a);
+    window.requestAnimationFrame(moveBackground);
 }
 
-a();
+moveBackground();
 
-(function () {
-    // Add event listener
-    document.addEventListener("mousemove", parallax);
+
+let prX = 0;
+let prY = 0;
+// Add event listener
+document.addEventListener("mousemove", (e) => {
     // Magic happens here
-    function parallax(e) {
-        let _w = window.innerWidth / 2;
-        let _h = window.innerHeight / 2;
-        let _mouseX = e.clientX;
-        let _mouseY = e.clientY;
-        x = 50 + (_mouseX - _w) * 0.003;
-        y = 50 + (_mouseY - _h) * 0.015;
-        // console.log(x);
-    }
+    let _w = window.innerWidth / 2;
+    let _h = window.innerHeight / 2;
+    let _mouseX = e.clientX;
+    let _mouseY = e.clientY;
 
-})();
+    let accX = _mouseX - prX;
+    let accY = _mouseY - prY;
+    let accM = 0.05;
+
+    prX = _mouseX;
+    prY = _mouseY;
+
+    x = 50 + (_mouseX - _w) * 0.001 /*+ accX * accM*/;
+    y = 50 + (_mouseY - _h) * 0.01 /*+ accY * accM*/;
+    // console.log(x);
+});
