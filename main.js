@@ -101,12 +101,6 @@ function createGridCard(url, title, description, image, alt, icon) {
 }
 
 // Add content to website
-addArticle(`
-⌨️ Programmer
-🎮 Gamer
-🎓 Student
-
-"I publish decent stuff on the internet."`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
