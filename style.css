@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
 
 /* VARIABLES */
 :root {
@@ -20,7 +21,8 @@ html * {
 body {
   background-color: var(--page-background);
   color: rgb(244, 244, 244);
-  font-family: Rubik, sans-serif;
+  font-family: Kanit, sans-serif;
+  letter-spacing: 1.5px;
 }
 
 /* SCROLLBAR */
@@ -59,9 +61,14 @@ header img {
   margin-right: 1.5rem;
 }
 
+header h1 {
+  text-transform: uppercase;
+}
+
 /* TITLE */
 body > h2 {
   padding: 2rem 2rem 0.2rem 2rem;
+  text-transform: uppercase;
 }
 
 /* ARTICLE */
@@ -75,6 +82,10 @@ article {
 section.grid {
   padding: 2rem;
   padding-top: 1.2rem;
+}
+
+section.grid h2 {
+  text-transform: uppercase;
 }
 
 section.grid > div.grid-container {
@@ -120,6 +131,7 @@ section.grid > div > div > a > div > div {
 
 section.grid > div > div > a > div > div > h4 {
   margin-bottom: 0.8rem;
+  text-transform: uppercase;
 }
 
 section.grid > div > div > a > div > span {
