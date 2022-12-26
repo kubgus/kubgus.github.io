@@ -120,14 +120,16 @@ addGridSection("Active Projects:", [
     createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
 addGridSection("Side Projects:", [
-    createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
+    // createGridCard("https://github.com/kubgus/Recraft", "", "", "", "", "code"),
+    // createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
 ]);
 addGridSection("Languages I have mastered:", [
     createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
