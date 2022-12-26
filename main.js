@@ -116,7 +116,7 @@ addGridSection("Links:", [
 addTitle("About Me:");
 addArticle("My name is Jakub, but you can call me Kubo. I am a student from Slovakia and I love programming. It has been my hobby since childhood. I like programming, browsing Reddit, listening to music, and playing video games. I usually create websites, services, and software, but I don't hesitate to experiment. I want to start a tech-related company one day.")
 addGridSection("Active Projects:", [
-    createGridCard("empty", "StepEngine", "A 3D low-level C# game engine with great focus on consistency and ease of use.", "", "", "sports_esports"),
+    createGridCard("empty", "Step", "A 3D low-level C# game engine with great focus on consistency and ease of use.", "", "", "sports_esports"),
     createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
 addGridSection("Side Projects:", [
