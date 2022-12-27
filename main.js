@@ -116,7 +116,7 @@ addGridSection("Links:", [
 addTitle("About Me:");
 addArticle("My name is Jakub, but you can call me Kubo. I am a student from Slovakia and I love programming. It has been my hobby since childhood. I like programming, browsing Reddit, listening to music, and playing video games. I usually create websites, services, and software, but I don't hesitate to experiment. I want to start a tech-related company one day.")
 addGridSection("Active Projects:", [
-    createGridCard("empty", "Step", "A 3D low-level C# game engine with great focus on consistency and ease of use.", "", "", "sports_esports"),
+    createGridCard("empty", "Step", "A 3D low-level C# software engine with great focus on consistency and ease of use.", "", "", "wysiwyg"),
     createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
 addGridSection("Side Projects:", [
@@ -128,8 +128,10 @@ addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
-    // createGridCard("https://github.com/kubgus/Recraft", "", "", "", "", "code"),
-    // createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Recraft", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
+    createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
 ]);
 addGridSection("Languages I have mastered:", [
     createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
@@ -138,7 +140,7 @@ addGridSection("Languages I have mastered:", [
     createGridCard("empty", "HTML & CSS", "These aren't languages, but I included them anyways.", "media/thumbnails/html.jpg"),
 ]);
 addGridSection("Languages I have yet to master:", [
-    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I have basics in this language, but I'm still not a pro.", "media/thumbnails/cpp.jpg"),
+    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I am pretty advanced in C++, but I still have a lot to learn.", "media/thumbnails/cpp.jpg"),
 ]);
 addGridSection("Other weird places you can find me:", [
     createGridCard("https://laiq.itch.io/", "Itch.io", "LaIQ", "media/thumbnails/itch.jpg"),
