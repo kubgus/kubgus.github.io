@@ -128,7 +128,7 @@ addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Recraft", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/TickoaTTwo", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
     createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
