@@ -123,15 +123,15 @@ addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/TickoaTTwo", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/TickoaTTwo", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
     createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
+    createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
 ]);
 addGridSection("Languages I have mastered:", [
     createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
