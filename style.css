@@ -4,14 +4,20 @@
 
 /* VARIABLES */
 :root {
-  --page-background: rgb(37, 32, 42);
-  --card-background: rgb(98, 40, 134);
+  --page-color: rgb(15, 15, 15);
+  --active-color: #888;
+  /* rgb(180, 65, 184) */
 }
 
 /* DEFAULT STYLE */
+html {
+  scroll-behavior: smooth;
+}
+
 html * {
   margin: 0;
   padding: 0;
+  z-index: 5;
 }
 
 /* html#loading {
@@ -19,10 +25,35 @@ html * {
 } */
 
 body {
-  background-color: var(--page-background);
+  background-color: var(--page-color);
   color: rgb(244, 244, 244);
   font-family: Kanit, sans-serif;
   letter-spacing: 1.5px;
+}
+
+a {
+  color: var(--active-color);
+}
+
+h1.i {
+  font-size: 10vw;
+  line-height: 10.5vw;
+}
+
+span.i {
+  font-size: 1.75vw;
+  line-height: 2.25vw;
+  margin-top: 3rem;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 17vw;
+  }
+
+  span {
+    font-size: 3.5vw;
+  }
 }
 
 /* SCROLLBAR */
@@ -31,7 +62,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--page-background);
+  background: var(--page-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -40,176 +71,139 @@ body {
 
 /* SELECTION */
 ::selection {
-  background: var(--card-background);
+  background: var(--active-color);
 }
 
 ::-moz-selection {
-  background: var(--card-background);
+  background: var(--active-color);
 }
 
 /* HEADER */
-header {
+nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5rem 2rem 0.5rem 2rem;
+  padding: 1rem 1rem 5vh 1rem;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 1rem);
+  z-index: 1030; /* to prevent the navbar getting covered up by other content */
+  background: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
-header img {
-  height: 5rem;
+nav img {
+  align-self: baseline;
+  height: clamp(2.5rem, 3.75vw, 2.75rem);
   border-radius: 50%;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 
-header h1 {
+nav h2 {
+  align-self: flex-start;
+  font-size: clamp(1.75rem, 2.35vw, 2rem);
   text-transform: uppercase;
 }
 
-/* TITLE */
-body > h2 {
-  padding: 2rem 2rem 0.2rem 2rem;
-  text-transform: uppercase;
-}
-
-/* ARTICLE */
-article {
-  padding: 1rem 5rem 2rem 2rem;
-  line-height: 1.75rem;
-  /* margin-right: 5rem; */
-}
-
-/* GRID SECTION */
-section.grid {
-  padding: 2rem;
-  padding-top: 1.2rem;
-}
-
-section.grid h2 {
-  text-transform: uppercase;
-}
-
-section.grid > div.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-  margin-top: 2rem;
-}
-
-section.grid > div > div {
-  background-color: var(--card-background);
-  border-radius: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.45);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  section.grid > div > div:hover {
-    transform: scale(1.1);
-  }
-}
-
-section.grid > div > div > a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-section.grid > div > div > a > img {
-  width: 100%;
-}
-
-section.grid > div > div > a > div {
-  padding: 1.5rem;
+nav ul {
+  margin-left: auto;
   display: flex;
   flex-direction: row;
 }
 
-section.grid > div > div > a > div > div {
-  margin-right: 1.25rem;
-}
-
-section.grid > div > div > a > div > div > h4 {
-  margin-bottom: 0.8rem;
-  text-transform: uppercase;
-}
-
-section.grid > div > div > a > div > span {
-  margin-left: auto;
-}
-
-/* MEDIA QUERIES (help) */
-@media (max-width: 1000px) {
-  section.grid > div.grid-container {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 500px) {
+  nav ul {
+    margin-top: 0.3rem;
+    flex-direction: column;
   }
 }
 
-@media (max-width: 900px) {
-  section.grid > div.grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+nav ul li {
+  margin: 0.3rem 1rem 0.7rem 1rem;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
-@media (max-width: 520px) {
-  section.grid > div.grid-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+nav ul li:active {
+  color: var(--active-color);
 }
 
-/* BG parallax effect */
-#parallax-container {
-  /* display: none; */
+/* SPACE */
+@import "susy";
+@import "compass/reset";
 
-  z-index: -199;
-  position: absolute;
-  width: 100%;
-}
-
-#parallax-overlay {
-  z-index: -199;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  background: linear-gradient(
-    90deg,
-    var(--page-background) 0%,
-    rgba(255, 255, 255, 0) 1.5%,
-    rgba(255, 255, 255, 0) 98.5%,
-    var(--page-background)
-  );
-}
-
-#parallax {
-  z-index: -200;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(media/background2.png);
-  background-repeat: repeat;
-  background-position: center;
-  background-position: 50% 50%;
-  background-size: 20rem;
-  opacity: 0.02;
-}
-
-#parallax:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
+.stars,
+.twinkling,
+.clouds {
+  position: fixed;
+  display: block;
+  top: 0;
   bottom: 0;
   left: 0;
-  pointer-events: none;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    var(--page-background) 90%
-  );
+  right: 0;
   width: 100%;
-  height: 10em;
+  height: 100%;
+  overflow: hidden;
 }
 
-a {
-  color: rgb(124, 41, 176);
+.stars {
+  z-index: 0;
+  background: #000 url("https://i.imgur.com/YKY28eT.png") repeat top center;
+}
+
+.twinkling {
+  z-index: 1;
+  background: transparent url("https://i.imgur.com/XYMF4ca.png") repeat top
+    center;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+  z-index: 2;
+  background: transparent url("https://i.imgur.com/mHbScrQ.png") repeat top
+    center;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+/* =================================== */
+
+nav ul li:active {
+  animation: mobileClick 0.2s;
+}
+
+#page {
+  padding: 5vh 10vw;
+}
+
+article {
+  margin-top: 10rem;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  /* height: 50vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
