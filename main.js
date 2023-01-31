@@ -44,6 +44,16 @@ function addArticle(content) {
     document.body.appendChild(copy);
 }
 
+function addArticle2(content) {
+    const template = document.getElementById("article-template");
+    const copy = template.content.cloneNode(true);
+
+    if (content)
+        copy.children[0].children[0].innerHTML = content;
+
+    document.body.appendChild(copy);
+}
+
 function addGridSection(title, cards) {
     const template = document.getElementById("grid-template");
     const copy = template.content.cloneNode(true);
@@ -103,21 +113,22 @@ function createGridCard(url, title, description, image, alt, icon) {
 // Add content to website
 addArticle(`
 ⌨️ Programmer
-🎮 Gamer
+👨‍💼 Entrepeneur
 🎓 Student
 
 "I publish decent stuff on the internet."`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
+    // TODO: Replace Reddit and Steam with more recent websites
     createGridCard("https://www.reddit.com/user/LennyMemes_1", "Reddit", "LennyMemes_1", "media/thumbnails/reddit.jpg"),
     createGridCard("https://steamcommunity.com/id/laiq79/", "Steam", "LaIQ79", "media/thumbnails/steam.jpg"),
 ]);
 addTitle("About Me:");
-addArticle("My name is Jakub, but you can call me Kubo. I am a student from Slovakia and I love programming. It has been my hobby since childhood. I like programming, browsing Reddit, listening to music, and playing video games. I usually create websites, services, and software, but I don't hesitate to experiment. I want to start a tech-related company one day.")
+addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. I like spending time with people who provide me with everyday value. I take interest in creating businesses and everything surrounding it going hand-in-hand with programming. When I'm not working, I like to listen to podcasts, sleep, and read. I learn from people such as Andrew Tate and Hamza. I usually live a pretty sustainable lifestyle. I eat pretty healthy, work out, and meditate. I am a big advocate for men's mental health. And that's about everything you need to know about me for now! If you have any interest in talking to me, hit me up at <a href=\"mailto:contact@gustafik.com\">contact@gustafik.com</a>.")
 addGridSection("Active Projects:", [
     createGridCard("empty", "Step", "A 3D low-level C# software engine with great focus on consistency and ease of use.", "", "", "wysiwyg"),
-    createGridCard("http://instant.gustafik.com/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
+    createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
 addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
@@ -133,6 +144,13 @@ addGridSection("Side Projects:", [
     createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
     createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
 ]);
+addTitle("Other interests:");
+addArticle(`🔥 Self Improvement
+💪 Working out
+📖 Reading
+🧘 Meditation
+🌲 Bushcrafting
+`)
 addGridSection("Languages I have mastered:", [
     createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
     createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I usually use it for side projects.", "media/thumbnails/python.jpg"),
