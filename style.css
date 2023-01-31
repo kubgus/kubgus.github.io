@@ -37,26 +37,14 @@ a {
 }
 
 h1.i {
-  font-size: 10vw;
+  font-size: max(3.25rem, 10vw);
   line-height: 10.5vw;
 }
 
 span.i {
-  font-size: 1.75vw;
-  line-height: 2.25vw;
+  font-size: max(1rem, 1.75vw);
+  line-height: max(1.15rem, 2.25vw);
   margin-top: 4.2vh;
-}
-
-@media (max-width: 800px) {
-  h1.i {
-    font-size: 13vw;
-    line-height: 17vw;
-  }
-
-  span.i {
-    line-height: 5vw;
-    font-size: 3.5vw;
-  }
 }
 
 /* SCROLLBAR */
@@ -116,6 +104,7 @@ nav h2 {
   font-size: clamp(1.75rem, 2.35vw, 1.9rem);
   text-transform: uppercase;
   cursor: default;
+  white-space: nowrap;
 }
 
 nav ul {
@@ -126,9 +115,14 @@ nav ul {
 }
 
 @media (max-width: 500px) {
+  nav {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+  }
   nav ul {
-    margin-top: 0.3rem;
-    flex-direction: column;
+    display: none;
   }
 }
 
