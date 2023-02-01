@@ -136,7 +136,7 @@ nav {
   top: 0;
   width: calc(100% - 1rem);
   z-index: 1030; /* to prevent the navbar getting covered up by other content */
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.895), rgba(0, 0, 0, 0));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.741), rgba(0, 0, 0, 0));
   transition-property: opacity transform;
   transition: 0.23s cubic-bezier(0.47, 0, 0.745, 0.715);
 }

@@ -89,7 +89,7 @@ function fadeElementsOnScroll() {
     const opacity = (SCROLL_FADE - scrollY) / SCROLL_FADE;
     STARS_EL.style.opacity = opacity + 0.1;
     TWINK_EL.style.opacity = opacity - 0.3;
-    CLOUD_EL.style.opacity = opacity;
+    CLOUD_EL.style.opacity = opacity * 1.5;
 }
 
 // SHOW NAV WHEN SCROLLED DOWN
