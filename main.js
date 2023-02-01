@@ -70,7 +70,7 @@ UP.addEventListener("click", (e) => {
 
 // SCROLL BACK TO TOP BY CLICKING TITLE ON SMALL DEVICES
 if (window.screen.width < 500) {
-    document.getElementsByTagName("h2")[0].addEventListener("click", () => {
+    NAV.addEventListener("click", () => {
         window.scrollTo(0, 0);
     });
 }
