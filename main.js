@@ -103,7 +103,9 @@ document.querySelectorAll(".acheivement").forEach((el) => {
         TOOLTIP.children[1].innerText = el.getElementsByClassName("tip")[1].innerHTML; // p
 
         TOOLTIP.style.top = `${getPosition(el).top - el.clientHeight * 1.5}px`;
-        TOOLTIP.style.left = `${getPosition(el).left - TOOLTIP.clientWidth / 2 + el.clientWidth / 2}px`;
+        const left = getPosition(el).left - TOOLTIP.clientWidth / 2 + el.clientWidth / 2;
+        const leftOut = left < 0 ? 0 : left;
+        TOOLTIP.style.left = `${leftOut}px`;
         TOOLTIP.style.opacity = 1;
     });
     el.addEventListener("mouseleave", (e) => {

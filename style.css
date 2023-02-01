@@ -13,6 +13,7 @@
 /* DEFAULT STYLE */
 html {
   scroll-behavior: smooth;
+  height: 300vh;
 }
 
 html * {
