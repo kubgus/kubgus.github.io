@@ -311,6 +311,7 @@ article {
 
 #acheivements h1 {
   margin-bottom: 3.75rem;
+  white-space: nowrap;
 }
 
 #acheivementsys {
@@ -346,7 +347,7 @@ article {
 }
 
 .faded {
-  opacity: 0.3;
+  opacity: 0.23;
 }
 
 .faded:hover {

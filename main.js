@@ -15,7 +15,8 @@ const ACHEIVEMENTS = document.getElementById("acheivementsys");
 const SCROLL_FADE = getPosition(WELCOME).top + WELCOME.offsetHeight - 20;
 
 // ACHIEVEMENT JSON IMPORT
-import acheivements from './acheivements.json' assert { type: 'json' };
+// import acheivements from './acheivements.json' assert { type: 'json' };
+const acheivements = await fetch('./acheivements.json').then(res => res.json()).then(data => { return data; });
 
 // ACHEIVEMENT JSON PARSE
 let acheivementsParsed = [];
