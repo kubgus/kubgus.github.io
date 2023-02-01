@@ -317,7 +317,7 @@ article {
 #acheivementsys {
   width: 90vw;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
 }
 

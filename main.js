@@ -58,6 +58,7 @@ acheivementsSorted.forEach((a) => {
     ael.style.backgroundColor = colorTable[a.rarity];
 
     ael.getElementsByTagName("img")[0].src = a.icon;
+    ael.getElementsByTagName("img")[0].alt = a.icon.split("/").slice(-1); //format alt string
     ael.getElementsByClassName("tip")[0].innerText = a.locked ? `🔒 ${a.name}` : a.name;
     ael.getElementsByClassName("tip")[1].innerText = a.description;
 
@@ -70,10 +71,15 @@ UP.addEventListener("click", (e) => {
 });
 
 // SCROLL BACK TO TOP BY CLICKING TITLE ON SMALL DEVICES
-if (window.screen.width < 500) {
-    NAV.addEventListener("click", () => {
-        window.scrollTo(0, 0);
-    });
+setInterval(() => {
+    if (window.screen.width < 500) {
+        NAV.addEventListener("click", enableScrollTitle);
+    } else {
+        NAV.removeEventListener("click", enableScrollTitle);
+    }
+}, 1000);
+function enableScrollTitle() {
+    window.scrollTo(0, 0);
 }
 
 // FADE OUT BACKGROUND WITH SCROLL

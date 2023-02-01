@@ -1,9 +1,9 @@
 [
   {
     "name": "Nullptr",
-    "icon": "./media/acheivements/c++.svg",
+    "icon": "./media/acheivements/coding/c++.png",
     "stages": [
-      { "ext": "I", "rarity": 1, "description": "Start learning C++." },
+      { "ext": "I", "rarity": 0, "description": "Start learning C++." },
       {
         "ext": "II",
         "rarity": 2,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Into the Abyss",
-    "icon": "./media/acheivements/css.svg",
+    "icon": "./media/acheivements/coding/css.svg",
     "stages": [
       { "ext": "I", "rarity": 0, "description": "Start learning CSS." },
       {
@@ -36,7 +36,7 @@
   },
   {
     "name": "Types are for Losers",
-    "icon": "./media/acheivements/python.svg",
+    "icon": "./media/acheivements/coding/python.svg",
     "stages": [
       { "ext": "I", "rarity": 0, "description": "Start learning Python." },
       {
@@ -54,7 +54,7 @@
   },
   {
     "name": "Blessed are the Sitemakers",
-    "icon": "./media/acheivements/js.svg",
+    "icon": "./media/acheivements/coding/js.svg",
     "stages": [
       { "ext": "I", "rarity": 0, "description": "Start learning Javascript." },
       {
@@ -66,6 +66,23 @@
         "ext": "III",
         "rarity": 3,
         "description": "Reach expert level in Javascript."
+      }
+    ]
+  },
+  {
+    "name": "The better Java",
+    "icon": "./media/acheivements/coding/cs.png",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Start learning C#." },
+      {
+        "ext": "II",
+        "rarity": 2,
+        "description": "Reach advanced level in C#."
+      },
+      {
+        "ext": "III",
+        "rarity": 3,
+        "description": "Reach expert level in C#."
       }
     ]
   }
