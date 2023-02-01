@@ -38,6 +38,11 @@
         "rarity": 4,
         "description": "Actually be extremely buff.",
         "locked": true
+      },
+      {
+        "ext": "- Don't forget the Legs!",
+        "rarity": 2.1,
+        "description": "Learn about the importance of leg day."
       }
     ]
   },
