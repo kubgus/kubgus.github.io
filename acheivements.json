@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Nullptr",
+    "icon": "./media/acheivements/c++.svg",
+    "stages": [
+      { "ext": "I", "rarity": 1, "description": "Start learning C++." },
+      {
+        "ext": "II",
+        "rarity": 2,
+        "description": "Reach advanced level in C++."
+      },
+      {
+        "ext": "III",
+        "rarity": 4,
+        "description": "Reach expert level in C++.",
+        "locked": true
+      }
+    ]
+  },
+  {
+    "name": "Into the Abyss",
+    "icon": "./media/acheivements/css.svg",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Start learning CSS." },
+      {
+        "ext": "II",
+        "rarity": 1,
+        "description": "Reach advanced level in CSS."
+      },
+      {
+        "ext": "III",
+        "rarity": 3,
+        "description": "Reach expert level in CSS."
+      }
+    ]
+  },
+  {
+    "name": "Types are for Losers",
+    "icon": "./media/acheivements/python.svg",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Start learning Python." },
+      {
+        "ext": "II",
+        "rarity": 1,
+        "description": "Reach advanced level in Python."
+      },
+      {
+        "ext": "III",
+        "rarity": 4,
+        "description": "Reach expert level in Python.",
+        "locked": true
+      }
+    ]
+  },
+  {
+    "name": "Blessed are the Sitemakers",
+    "icon": "./media/acheivements/js.svg",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Start learning Javascript." },
+      {
+        "ext": "II",
+        "rarity": 1,
+        "description": "Reach advanced level in Javascript."
+      },
+      {
+        "ext": "III",
+        "rarity": 3,
+        "description": "Reach expert level in Javascript."
+      }
+    ]
+  }
+]
