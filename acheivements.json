@@ -1,5 +1,47 @@
 [
   {
+    "name": "Chopping on",
+    "icon": "./media/acheivements/lifestyle/bushcraft.png",
+    "stages": [
+      { "ext": "Grass", "rarity": 0, "description": "Get into bushcrafting." },
+      {
+        "ext": "Rocks",
+        "rarity": 4,
+        "description": "Learn the ins and outs of bushcrafting.",
+        "locked": true
+      }
+    ]
+  },
+  {
+    "name": "Rip and Tear",
+    "icon": "./media/acheivements/lifestyle/workout.png",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Get into working out." },
+      {
+        "ext": "II",
+        "rarity": 1,
+        "description": "Start working out regularly."
+      },
+      {
+        "ext": "III",
+        "rarity": 2,
+        "description": "Learn about working out."
+      },
+      {
+        "ext": "IV",
+        "rarity": 3,
+        "description": "Know most things about working out.",
+        "locked": true
+      },
+      {
+        "ext": "V",
+        "rarity": 4,
+        "description": "Actually be extremely buff.",
+        "locked": true
+      }
+    ]
+  },
+  {
     "name": "Nullptr",
     "icon": "./media/acheivements/coding/c++.png",
     "stages": [
@@ -83,6 +125,47 @@
         "ext": "III",
         "rarity": 3,
         "description": "Reach expert level in C#."
+      }
+    ]
+  },
+  {
+    "name": "Commonly Mistaken",
+    "icon": "./media/acheivements/coding/java.svg",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Start learning Java." },
+      {
+        "ext": "II",
+        "rarity": 2,
+        "description": "Reach advanced level in Java.",
+        "locked": true
+      },
+      {
+        "ext": "III",
+        "rarity": 3,
+        "description": "Reach expert level in Java.",
+        "locked": true
+      }
+    ]
+  },
+  {
+    "name": "Not a Programming Language",
+    "icon": "./media/acheivements/coding/html.png",
+    "stages": [
+      { "ext": "I", "rarity": 0, "description": "Start learning HTML." },
+      {
+        "ext": "II",
+        "rarity": 2,
+        "description": "Reach advanced level in HTML."
+      },
+      {
+        "ext": "III",
+        "rarity": 3,
+        "description": "Reach expert level in HTML."
+      },
+      {
+        "ext": "- Really?!",
+        "rarity": 2.1,
+        "description": "Learn that HTML is not a programming language."
       }
     ]
   }
