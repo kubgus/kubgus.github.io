@@ -80,7 +80,7 @@ window.addEventListener("scroll", fadeElementsOnScroll);
 fadeElementsOnScroll();
 function fadeElementsOnScroll() {
     const opacity = (SCROLL_FADE - scrollY) / SCROLL_FADE;
-    STARS_EL.style.opacity = opacity;
+    STARS_EL.style.opacity = opacity + 0.1;
     TWINK_EL.style.opacity = opacity - 0.3;
     CLOUD_EL.style.opacity = opacity;
 }
