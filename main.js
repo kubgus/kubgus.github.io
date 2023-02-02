@@ -34,7 +34,8 @@ acheivements.forEach((type) => {
 });
 
 // SORT ACHEIVEMENTS BY RARITY
-const acheivementsSorted = acheivementsParsed.sort((a, b) => {
+const achievementsRandomized = acheivementsParsed.sort((a, b) => 0.5 - Math.random());
+const acheivementsSorted = achievementsRandomized.sort((a, b) => {
     if (a.rarity > b.rarity && !a.locked || b.locked) {
         return -1;
     }
