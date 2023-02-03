@@ -310,6 +310,70 @@ article {
 
 /* =============== */
 
+#stats_s {
+  margin-top: 10vh;
+  padding: 0.5rem;
+}
+
+.barlabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* .barlabel span {
+  width: 7vw;
+} */
+
+.barlabel span.label {
+  width: 7vw;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 70vw;
+  height: 5vh;
+  border-radius: 0.6rem;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.barsection {
+  width: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 2rem;
+  overflow: hidden;
+  /* transition: all 5s cubic-bezier(0.35, 0.7, 0.1, 0.93); */
+  height: 5vh;
+  white-space: nowrap;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.barsection span:last-child {
+  margin-left: auto;
+}
+
+.barsection:last-child {
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.barsection p {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .barsection span {
+    display: none;
+  }
+}
+
+/* =============== */
+
 #acheivements h1 {
   margin-bottom: 3.75rem;
   white-space: nowrap;

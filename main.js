@@ -9,14 +9,22 @@ const CLOUD_EL = document.getElementsByClassName("clouds")[0];
 
 const TOOLTIP = document.getElementById("tooltip");
 
+const STATS = document.getElementById("stats_s");
 const ACHEIVEMENTS = document.getElementById("acheivementsys");
 
 // CONSTANT VALUES
 const SCROLL_FADE = getPosition(WELCOME).top + WELCOME.offsetHeight - 20;
 
+// Clamp number between two values with the following line:
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+
 // ACHIEVEMENT JSON IMPORT
-// import acheivements from './acheivements.json' assert { type: 'json' };
-const acheivements = await fetch('./acheivements.json').then(res => res.json()).then(data => { return data; });
+// import acheivements from './data/acheivements.json' assert { type: 'json' };
+const acheivements = await fetch('./data/acheivements.json').then(res => res.json()).then(data => { return data; });
+
+// STATS JSON IMPORT
+const stats = await fetch('./data/stats.json').then(res => res.json()).then(data => { return data; });
+
 
 // ACHEIVEMENT JSON PARSE
 let acheivementsParsed = [];
@@ -66,6 +74,57 @@ acheivementsSorted.forEach((a) => {
 
     ACHEIVEMENTS.appendChild(ael);
 });
+
+// STAT HTML CREATE
+stats.forEach((a) => {
+    const template = document.getElementById("stat_template");
+    const bel = template.content.cloneNode(true);
+
+    // Generate sections
+    const bar = document.createElement("div");
+    bar.classList.add("bar");
+    Object.keys(a.sections).forEach((s) => {
+        const sel = document.createElement("div");
+        sel.classList.add("barsection");
+        sel.classList.add("short");
+
+        sel.style.background = `linear-gradient(100deg, rgba(0,0,0,0), rgba(0,0,0,0.3)) ${a.sections[s][1]}`;
+        sel.appendChild(document.createElement("p"));
+        sel.children[0].innerHTML = `${bar.offsetWidth / Object.keys(a.sections).length * a.sections[s][0]}%`;
+
+        sel.innerHTML = `<span>${a.sections[s][0] * 100}%</span> <span>${s}</span>`;
+
+        bar.appendChild(sel);
+    });
+    bel.appendChild(bar)
+
+    bel.children[0].innerHTML = a.name;
+
+    bel.children[1].style.backgroundColor = `${a.color}`;
+
+    const barWithTitle = document.createElement("div");
+    barWithTitle.classList.add("barlabel");
+    barWithTitle.appendChild(bel);
+
+    STATS.appendChild(barWithTitle);
+});
+
+
+// SCROLL OBSERVER
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.children[0].innerHTML;
+            entry.target.classList.remove("re");
+            entry.target.classList.add("mo");
+        }// else {
+        //     entry.target.style.width = `0px`;
+        //     entry.target.classList.remove("mo");
+        //     entry.target.classList.add("re");
+        // }
+    });
+});
+document.querySelectorAll(".short").forEach(el => observer.observe(el));
 
 // SCROLL UP BUTTON
 UP.addEventListener("click", (e) => {

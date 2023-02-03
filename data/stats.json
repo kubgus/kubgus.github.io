@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Programming",
+    "color": "rgba(0,0,0,0)",
+    "sections": {
+      "JS": [0.9, "#fadc16"],
+      "C++": [0.5, "#8416fa"],
+      "Py": [0.8, "#168cfa"],
+      "C#": [0.7, "#000"],
+      "Web": [1, "#ccc"]
+    }
+  },
+  {
+    "name": "Strength",
+    "color": "rgba(0,0,0,0)",
+    "sections": {
+      "Arms": [0.5, "#ff9d00"],
+      "Legs": [0.25, "#58f52c"],
+      "Core": [0.4, "#f52c62"]
+    }
+  },
+  {
+    "name": "Others",
+    "color": "rgba(0,0,0,0)",
+    "sections": {
+      "Bushcraft": [0.4, "#217a00"],
+      "School": [0.9, "#7929ba"],
+      "📈": [0.17, "#416fd9"]
+    }
+  }
+]
