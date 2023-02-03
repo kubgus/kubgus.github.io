@@ -13,7 +13,6 @@
 /* DEFAULT STYLE */
 html {
   scroll-behavior: smooth;
-  height: 300vh;
 }
 
 html * {
@@ -367,6 +366,13 @@ article {
 }
 
 @media (max-width: 1200px) {
+  .barlabel {
+    flex-direction: column;
+    margin-top: 4vh;
+  }
+  .barlabel span.label {
+    width: initial;
+  }
   .barsection span {
     display: none;
   }
