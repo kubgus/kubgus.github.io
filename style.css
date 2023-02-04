@@ -435,20 +435,43 @@ article {
 
 /* ================ */
 
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+
+  /* TEMP */
+  margin-bottom: 50vh;
+}
+
 .projectcontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 7vh;
-  min-height: 7rem;
+  margin-top: 8vh;
+  min-height: 20rem;
   width: 83vw;
   border-radius: 1rem;
   text-align: left;
-  padding: 1.5rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 255);
+  padding: 3rem;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  box-shadow: 8px 5px 10px rgb(0, 0, 0);
+  transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border: 2px black solid;
+}
+
+.projectcontainer:hover {
+  transform: scale(1.02);
+  border: 10px rgba(174, 174, 174, 0.382) solid;
 }
 
 .projectitle {
   margin-bottom: 0.8rem;
-  font-size: 2rem;
+  font-size: 4rem;
+}
+
+.projectdescription {
+  font-size: 1.3rem;
 }
