@@ -11,6 +11,7 @@ const TOOLTIP = document.getElementById("tooltip");
 
 const STATS = document.getElementById("stats_s");
 const ACHEIVEMENTS = document.getElementById("acheivementsys");
+const PROJECTS = document.getElementById("projectsystem");
 
 // CONSTANT VALUES
 const SCROLL_FADE = getPosition(WELCOME).top + WELCOME.offsetHeight - 20;
@@ -24,6 +25,9 @@ const acheivements = await fetch('./data/acheivements.json').then(res => res.jso
 
 // STATS JSON IMPORT
 const stats = await fetch('./data/stats.json').then(res => res.json()).then(data => { return data; });
+
+// PROJECTS JSON IMPORT
+const projects = await fetch('./data/projects.json').then(res => res.json()).then(data => { return data; });
 
 
 // ACHEIVEMENT JSON PARSE
@@ -109,6 +113,18 @@ stats.forEach((a) => {
     STATS.appendChild(barWithTitle);
 });
 
+// PROJECTS HTML CREATE
+projects.forEach(project => {
+    const template = document.getElementById("project_template");
+    const pel = template.content.cloneNode(true).children[0];
+
+    pel.style.background = `url(${project.img}) rgb(0,0,0) no-repeat center center`;
+    pel.style.backgroundSize = "cover";
+    pel.getElementsByClassName("projectitle")[0].innerText = project.name;
+    pel.getElementsByClassName("projectdescription")[0].innerText = project.description;
+
+    PROJECTS.appendChild(pel);
+});
 
 // SCROLL OBSERVER
 const observer = new IntersectionObserver((entries) => {
