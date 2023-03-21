@@ -3,30 +3,31 @@
     "name": "Programming",
     "color": "rgba(0,0,0,0)",
     "sections": {
-      "JS": [0.9, "#fadc16"],
+      "JavaScript": [0.9, "#fadc16"],
       "C++": [0.5, "#8416fa"],
-      "Py": [0.8, "#168cfa"],
+      "Python": [0.8, "#168cfa"],
       "C#": [0.7, "#000"],
-      "Web": [1, "#ccc"]
+      "HTML & CSS": [1, "#ccc"]
     }
   },
   {
-    "name": "Strength",
+    "name": "Hobbies",
     "color": "rgba(0,0,0,0)",
     "sections": {
-      "Arms": [0.5, "#ff9d00"],
-      "Legs": [0.25, "#58f52c"],
-      "Core": [0.4, "#f52c62"]
-    }
-  },
-  {
-    "name": "Others",
-    "color": "rgba(0,0,0,0)",
-    "sections": {
+      "Self Improvement": [0.7, "#e757f7"],
+      "Lifting": [0.6, "#e3b900"],
       "Bushcraft": [0.4, "#217a00"],
-      "School": [0.9, "#7929ba"],
-      "📈": [0.17, "#416fd9"],
-      "Self Improvement": [0.7, "#e757f7"]
+      "BJJ": [0.15, "#e36a00"],
+      "Money": [0.17, "#416fd9"]
+    }
+  },
+  {
+    "name": "Languages",
+    "color": "rgba(0,0,0,0)",
+    "sections": {
+      "Slovak & Czech": [1, "#b32020"],
+      "English": [0.95, "#0b3cb8"],
+      "German": [0.3, "#f7f7f7"]
     }
   }
 ]

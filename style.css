@@ -357,8 +357,19 @@ article {
   text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
+.barsection span:first-child {
+  display: none;
+}
+
+/* If % are displayed
+
 .barsection span:last-child {
   margin-left: auto;
+} */
+
+.barsection span:last-child {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .barsection:last-child {
@@ -443,6 +454,7 @@ article {
   padding: 5rem;
 
   /* TEMP */
+  display: none;
   margin-bottom: 50vh;
 }
 

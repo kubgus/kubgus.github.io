@@ -94,7 +94,7 @@ stats.forEach((a) => {
 
         sel.style.background = `linear-gradient(100deg, rgba(0,0,0,0), rgba(0,0,0,0.3)) ${a.sections[s][1]}`;
         sel.appendChild(document.createElement("p"));
-        sel.children[0].innerHTML = `${bar.offsetWidth / Object.keys(a.sections).length * a.sections[s][0]}%`;
+        // sel.children[0].innerHTML = `${bar.offsetWidth / Object.keys(a.sections).length * a.sections[s][0]}%`;
 
         sel.innerHTML = `<span>${a.sections[s][0] * 100}%</span> <span>${s}</span>`;
 
