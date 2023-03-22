@@ -6,6 +6,7 @@ const WELCOME = document.getElementById("qlinks");
 const STARS_EL = document.getElementsByClassName("stars")[0];
 const TWINK_EL = document.getElementsByClassName("twinkling")[0];
 const CLOUD_EL = document.getElementsByClassName("clouds")[0];
+const FLICKER = document.getElementsByClassName("flicker")[0];
 
 const TOOLTIP = document.getElementById("tooltip");
 
@@ -209,4 +210,61 @@ function getPosition(el) {
         el = el.offsetParent;
     }
     return { top: y, left: x };
+}
+
+// MATRIX
+var mcanvas = document.getElementById('mcanvas'),
+    mctx = mcanvas.getContext('2d');
+mcanvas.width = window.innerWidth;
+mcanvas.height = window.innerHeight;
+
+var letters = 'they want your soul stick around and claim your freedom click out is the way ?!@#$%^&*()_+=-0987654321` 🔞';
+letters = letters.split('');
+
+var fontSize = 10,
+    columns = mcanvas.width / fontSize;
+
+var drops = [];
+for (var i = 0; i < columns; i++) {
+    drops[i] = 1;
+}
+
+var fps = 20;
+var now;
+var then;
+var interval = 1000 / fps;
+var delta;
+function matrix(now) {
+
+    if (!then) { then = now; }
+    requestAnimationFrame(matrix);
+    delta = now - then;
+
+    if (delta > interval) {
+        then = now - (delta % interval);
+
+        mctx.fillStyle = 'rgba(0, 0, 0, .1)';
+        mctx.fillRect(0, 0, mcanvas.width, mcanvas.height);
+        for (var i = 0; i < drops.length; i++) {
+            var text = letters[Math.floor(Math.random() * letters.length)];
+            mctx.fillStyle = 'rgb(22, 248, 22)';
+            mctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            drops[i]++;
+            if (drops[i] * fontSize > mcanvas.height && Math.random() > .95) {
+                drops[i] = 0;
+            }
+        }
+    }
+}
+
+matrix();
+// requestAnimationFrame(draw);
+
+// FADE OUT MATRIX WITH SCROLL
+window.addEventListener("scroll", fadeMatrixOnScroll);
+fadeMatrixOnScroll();
+function fadeMatrixOnScroll() {
+    const matrixsMiddlePos = getPosition(mcanvas).top - mcanvas.offsetHeight / 2;
+    const opacity = scrollY < matrixsMiddlePos ? scrollY / matrixsMiddlePos : -4 - scrollY / matrixsMiddlePos;
+    mcanvas.style.opacity = opacity * 0.9;
 }
