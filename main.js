@@ -134,6 +134,7 @@ addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/lohost", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/TickoaTTwo", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
@@ -142,7 +143,6 @@ addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
     createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
-    createGridCard("https://github.com/kubgus/FirstTMod", "", "", "", "", "code"),
 ]);
 addTitle("Other interests:");
 addArticle(`🔥 Self Improvement
