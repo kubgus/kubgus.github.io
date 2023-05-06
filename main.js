@@ -10,138 +10,11 @@ const FLICKER = document.getElementsByClassName("flicker")[0];
 
 const TOOLTIP = document.getElementById("tooltip");
 
-const STATS = document.getElementById("stats_s");
-const ACHEIVEMENTS = document.getElementById("acheivementsys");
-const PROJECTS = document.getElementById("projectsystem");
-
 // CONSTANT VALUES
 const SCROLL_FADE = getPosition(WELCOME).top + WELCOME.offsetHeight - 20;
 
 // Clamp number between two values with the following line:
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
-
-// ACHIEVEMENT JSON IMPORT
-// import acheivements from './data/acheivements.json' assert { type: 'json' };
-const acheivements = await fetch('./data/acheivements.json').then(res => res.json()).then(data => { return data; });
-
-// STATS JSON IMPORT
-const stats = await fetch('./data/stats.json').then(res => res.json()).then(data => { return data; });
-
-// PROJECTS JSON IMPORT
-const projects = await fetch('./data/projects.json').then(res => res.json()).then(data => { return data; });
-
-
-// ACHEIVEMENT JSON PARSE
-let acheivementsParsed = [];
-acheivements.forEach((type) => {
-    type.stages.forEach((stage) => {
-        const _acheivement = {
-            name: type.name + " " + stage.ext,
-            description: stage.description,
-            icon: type.icon,
-            rarity: stage.rarity,
-            locked: stage.locked ? stage.locked : false
-        }
-        acheivementsParsed.push(_acheivement);
-    });
-});
-
-// SORT ACHEIVEMENTS BY RARITY
-const achievementsRandomized = acheivementsParsed.sort((a, b) => 0.5 - Math.random());
-const acheivementsSorted = achievementsRandomized.sort((a, b) => {
-    if (a.rarity > b.rarity && !a.locked || b.locked) {
-        return -1;
-    }
-});
-
-// RARITY COLOR TABLE
-const colorTable = {
-    0: "rgb(79, 79, 79)",
-    1: "rgb(70, 114, 81)",
-    2: "rgb(69, 96, 184)",
-    2.1: "rgb(116, 36, 36)",
-    3: "rgb(132, 57, 156)",
-    4: "rgb(173, 132, 36)",
-};
-
-// ACHEIVEMENT HTML CREATE
-acheivementsSorted.forEach((a) => {
-    const template = document.getElementById("acheivement_template");
-    const ael = template.content.cloneNode(true).children[0];
-
-    if (a.locked) ael.classList.add("faded");
-    ael.style.backgroundColor = colorTable[a.rarity];
-
-    ael.getElementsByTagName("img")[0].src = a.icon;
-    ael.getElementsByTagName("img")[0].alt = a.icon.split("/").slice(-1); //format alt string
-    ael.getElementsByClassName("tip")[0].innerText = a.locked ? `🔒 ${a.name}` : a.name;
-    ael.getElementsByClassName("tip")[1].innerText = a.description;
-
-    ACHEIVEMENTS.appendChild(ael);
-});
-
-// STAT HTML CREATE
-stats.forEach((a) => {
-    const template = document.getElementById("stat_template");
-    const bel = template.content.cloneNode(true);
-
-    // Generate sections
-    const bar = document.createElement("div");
-    bar.classList.add("bar");
-    Object.keys(a.sections).forEach((s) => {
-        const sel = document.createElement("div");
-        sel.classList.add("barsection");
-        sel.classList.add("short");
-
-        sel.style.background = `linear-gradient(100deg, rgba(0,0,0,0), rgba(0,0,0,0.3)) ${a.sections[s][1]}`;
-        sel.appendChild(document.createElement("p"));
-        // sel.children[0].innerHTML = `${bar.offsetWidth / Object.keys(a.sections).length * a.sections[s][0]}%`;
-
-        sel.innerHTML = `<span>${a.sections[s][0] * 100}%</span> <span>${s}</span>`;
-
-        bar.appendChild(sel);
-    });
-    bel.appendChild(bar)
-
-    bel.children[0].innerHTML = a.name;
-
-    bel.children[1].style.backgroundColor = `${a.color}`;
-
-    const barWithTitle = document.createElement("div");
-    barWithTitle.classList.add("barlabel");
-    barWithTitle.appendChild(bel);
-
-    STATS.appendChild(barWithTitle);
-});
-
-// PROJECTS HTML CREATE
-projects.forEach(project => {
-    const template = document.getElementById("project_template");
-    const pel = template.content.cloneNode(true).children[0];
-
-    pel.style.background = `url(${project.img}) rgb(0,0,0) no-repeat center center`;
-    pel.style.backgroundSize = "cover";
-    pel.getElementsByClassName("projectitle")[0].innerText = project.name;
-    pel.getElementsByClassName("projectdescription")[0].innerText = project.description;
-
-    PROJECTS.appendChild(pel);
-});
-
-// SCROLL OBSERVER
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.style.width = entry.target.children[0].innerHTML;
-            entry.target.classList.remove("re");
-            entry.target.classList.add("mo");
-        }// else {
-        //     entry.target.style.width = `0px`;
-        //     entry.target.classList.remove("mo");
-        //     entry.target.classList.add("re");
-        // }
-    });
-});
-document.querySelectorAll(".short").forEach(el => observer.observe(el));
 
 // SCROLL UP BUTTON
 UP.addEventListener("click", (e) => {
@@ -160,7 +33,7 @@ function enableScrollTitle() {
     window.scrollTo(0, 0);
 }
 
-// FADE OUT BACKGROUND WITH SCROLL
+// FADE OUT STAR BACKGROUND WITH SCROLL
 window.addEventListener("scroll", fadeElementsOnScroll);
 fadeElementsOnScroll();
 function fadeElementsOnScroll() {
@@ -181,11 +54,11 @@ function showNav() {
         NAV.classList.remove("show");
 }
 
-// ACHEIVEMENT TOOLTIP BACKEND
-document.querySelectorAll(".acheivement").forEach((el) => {
+// TOOLTIP BACKEND
+document.querySelectorAll(".tooltip-target").forEach((el) => {
     el.addEventListener("mouseover", (e) => {
-        TOOLTIP.children[0].innerText = el.getElementsByClassName("tip")[0].innerHTML; // h2
-        TOOLTIP.children[1].innerText = el.getElementsByClassName("tip")[1].innerHTML; // p
+        TOOLTIP.children[0].innerText = el.querySelectorAll(".tooltip-title")[0].innerHTML; // h2
+        TOOLTIP.children[1].innerText = el.querySelectorAll(".tooltip-description")[0].innerHTML; // p
 
         TOOLTIP.style.top = `${getPosition(el).top - el.clientHeight * 1.5}px`;
         const left = getPosition(el).left - TOOLTIP.clientWidth / 2 + el.clientWidth / 2;
@@ -193,6 +66,7 @@ document.querySelectorAll(".acheivement").forEach((el) => {
         TOOLTIP.style.left = `${leftOut}px`;
         TOOLTIP.style.opacity = 1;
     });
+
     el.addEventListener("mouseleave", (e) => {
         TOOLTIP.style.top = "0px";
         TOOLTIP.style.left = "0px";
@@ -200,7 +74,7 @@ document.querySelectorAll(".acheivement").forEach((el) => {
     });
 });
 
-// GET EL POS
+// GET POSITION OF ELEMENT ON SCREEN
 function getPosition(el) {
     var x = 0;
     var y = 0;
@@ -210,61 +84,4 @@ function getPosition(el) {
         el = el.offsetParent;
     }
     return { top: y, left: x };
-}
-
-// MATRIX
-var mcanvas = document.getElementById('mcanvas'),
-    mctx = mcanvas.getContext('2d');
-mcanvas.width = window.innerWidth;
-mcanvas.height = window.innerHeight;
-
-var letters = 'they want your soul stick around and claim your freedom click out is the way ?!@#$%^&*()_+=-0987654321` 🔞';
-letters = letters.split('');
-
-var fontSize = 10,
-    columns = mcanvas.width / fontSize;
-
-var drops = [];
-for (var i = 0; i < columns; i++) {
-    drops[i] = 1;
-}
-
-var fps = 20;
-var now;
-var then;
-var interval = 1000 / fps;
-var delta;
-function matrix(now) {
-
-    if (!then) { then = now; }
-    requestAnimationFrame(matrix);
-    delta = now - then;
-
-    if (delta > interval) {
-        then = now - (delta % interval);
-
-        mctx.fillStyle = 'rgba(0, 0, 0, .1)';
-        mctx.fillRect(0, 0, mcanvas.width, mcanvas.height);
-        for (var i = 0; i < drops.length; i++) {
-            var text = letters[Math.floor(Math.random() * letters.length)];
-            mctx.fillStyle = 'rgb(22, 248, 22)';
-            mctx.fillText(text, i * fontSize, drops[i] * fontSize);
-            drops[i]++;
-            if (drops[i] * fontSize > mcanvas.height && Math.random() > .95) {
-                drops[i] = 0;
-            }
-        }
-    }
-}
-
-matrix();
-// requestAnimationFrame(draw);
-
-// FADE OUT MATRIX WITH SCROLL
-window.addEventListener("scroll", fadeMatrixOnScroll);
-fadeMatrixOnScroll();
-function fadeMatrixOnScroll() {
-    const matrixsMiddlePos = getPosition(mcanvas).top - mcanvas.offsetHeight / 2;
-    const opacity = scrollY < matrixsMiddlePos ? scrollY / matrixsMiddlePos : -4 - scrollY / matrixsMiddlePos;
-    mcanvas.style.opacity = opacity * 0.9;
 }

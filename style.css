@@ -8,7 +8,6 @@
   --page-color: rgb(15, 15, 15);
   --active-color: rgba(218, 218, 218, 0.926);
   --select-color: rgba(114, 114, 114, 0.493);
-  /* rgb(180, 65, 184) */
 }
 
 /* DEFAULT STYLE */
@@ -22,27 +21,25 @@ html * {
   z-index: 5;
 }
 
-/* html#loading {
-  filter: blur(20px);
-} */
-
 body {
   background-color: var(--page-color);
   color: rgb(244, 244, 244);
   font-family: Kanit, sans-serif;
   letter-spacing: 1.5px;
+  text-align: center;
 }
 
 i {
   font-size: 1.15rem;
 }
 
-/* SPEC ICON SIZES */
+/* DISCORD ICON CONSISTENCY */
 #bd {
   font-size: 0.9rem;
   margin-top: 0.45rem;
 }
-/* ==== */
+
+/* GENERAL */
 
 a {
   color: var(--active-color);
@@ -122,13 +119,7 @@ span.si {
   z-index: 10;
 }
 
-/* SHOW CLASS */
-nav.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* HEADER */
+/* NAV */
 nav {
   opacity: 0;
   transform: translateY(-2rem);
@@ -139,10 +130,16 @@ nav {
   position: fixed;
   top: 0;
   width: calc(100% - 1rem);
-  z-index: 1030; /* to prevent the navbar getting covered up by other content */
+  z-index: 1030;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.741), rgba(0, 0, 0, 0));
   transition-property: opacity transform;
   transition: 0.23s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+/* nav show class (when scrolled down) */
+nav.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 nav img {
@@ -174,6 +171,7 @@ nav ul {
     justify-content: center;
     padding-left: 0;
   }
+
   nav ul {
     display: none;
   }
@@ -190,7 +188,7 @@ nav ul li {
   -o-user-select: none;
 }
 
-nav ul li:hover > a,
+nav ul li:hover>a,
 nav ul li:hover {
   color: rgba(255, 255, 255, 0.734);
 }
@@ -218,21 +216,19 @@ nav ul li:active {
 }
 
 .stars {
-  z-index: 0;
+  z-index: -10;
   background: #000 url("https://i.imgur.com/YKY28eT.png") repeat top center;
 }
 
 .twinkling {
-  z-index: 1;
-  background: transparent url("https://i.imgur.com/XYMF4ca.png") repeat top
-    center;
+  z-index: -9;
+  background: transparent url("https://i.imgur.com/XYMF4ca.png") repeat top center;
   animation: move-twink-back 200s linear infinite;
 }
 
 .clouds {
-  z-index: 2;
-  background: transparent url("https://i.imgur.com/mHbScrQ.png") repeat top
-    center;
+  z-index: -8;
+  background: transparent url("https://i.imgur.com/mHbScrQ.png") repeat top center;
   animation: move-clouds-back 200s linear infinite;
 }
 
@@ -240,6 +236,7 @@ nav ul li:active {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -10000px 5000px;
   }
@@ -249,15 +246,13 @@ nav ul li:active {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 10000px 0;
   }
 }
-/* =================================== */
 
-nav ul li:active {
-  animation: mobileClick 0.2s;
-}
+/* LESS GENERAL */
 
 #page {
   margin-top: 1vw;
@@ -267,7 +262,6 @@ nav ul li:active {
 article {
   margin-top: 7vh;
   margin-bottom: 23vh;
-  text-align: center;
   align-self: center;
   justify-self: center;
   min-height: 50vh;
@@ -277,7 +271,7 @@ article {
   flex-direction: column;
 }
 
-/* ================= */
+/* TITLE */
 
 #welcome {
   height: 76.5vh;
@@ -310,220 +304,4 @@ article {
   transform: scale(1.15);
   background-color: rgba(255, 255, 255, 0.503);
   color: #000;
-}
-
-/* =============== */
-
-#stats_s {
-  margin-top: 10vh;
-  padding: 0.5rem;
-}
-
-.barlabel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-/* .barlabel span {
-  width: 7vw;
-} */
-
-.barlabel span.label {
-  width: 7vw;
-}
-
-.bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  width: 70vw;
-  height: 5vh;
-  border-radius: 0.6rem;
-  margin: 2rem;
-  overflow: hidden;
-}
-
-.barsection {
-  width: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 2rem;
-  overflow: hidden;
-  /* transition: all 5s cubic-bezier(0.35, 0.7, 0.1, 0.93); */
-  height: 5vh;
-  white-space: nowrap;
-  text-shadow: 0 0 5px rgb(0, 0, 0);
-}
-
-.barsection span:first-child {
-  display: none;
-}
-
-/* If % are displayed
-
-.barsection span:last-child {
-  margin-left: auto;
-} */
-
-.barsection span:last-child {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.barsection:last-child {
-  border-radius: 0 0.6rem 0.6rem 0;
-}
-
-.barsection p {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .barlabel {
-    flex-direction: column;
-    margin-top: 4vh;
-  }
-  .barlabel span.label {
-    width: initial;
-  }
-  .barsection span {
-    display: none;
-  }
-}
-
-/* =============== */
-
-#acheivements h1 {
-  margin-bottom: 3.75rem;
-  white-space: nowrap;
-}
-
-#acheivementsys {
-  width: 90vw;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-}
-
-.acheivement {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(79, 79, 79);
-  padding: 0.75rem;
-  border-radius: 1rem;
-  display: flex;
-  width: 3.25rem;
-  justify-content: center;
-  align-items: center;
-  transition: 0.2s all cubic-bezier(0.19, 1, 0.22, 1);
-  opacity: 0.8;
-}
-
-.acheivement:hover {
-  transform: scale(1.15);
-  opacity: 1;
-  filter: brightness(1.1);
-}
-
-.acheivement img {
-  width: calc(100% - 2px);
-  filter: drop-shadow(0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.336));
-}
-
-.faded {
-  opacity: 0.23;
-}
-
-.faded:hover {
-  opacity: 0.7;
-}
-
-.tip {
-  display: none;
-}
-
-/* ================ */
-
-#projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
-
-  /* TEMP */
-  display: none;
-  margin-bottom: 50vh;
-}
-
-.projectcontainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 8vh;
-  min-height: 20rem;
-  width: 83vw;
-  border-radius: 1rem;
-  text-align: left;
-  padding: 3rem;
-  text-shadow: 0 0 10px rgb(0, 0, 0);
-  box-shadow: 8px 5px 10px rgb(0, 0, 0);
-  transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  border: 2px black solid;
-}
-
-.projectcontainer:hover {
-  transform: scale(1.02);
-  border: 10px rgba(174, 174, 174, 0.382) solid;
-}
-
-.projectitle {
-  margin-bottom: 0.8rem;
-  font-size: 4rem;
-}
-
-.projectdescription {
-  font-size: 1.3rem;
-}
-
-/* ================ */
-
-#mcanvas {
-  z-index: -999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#matrix {
-  margin-top: 5rem;
-
-  font-family: Share Tech Mono;
-  color: rgb(22, 248, 22);
-  text-shadow: 0.06rem 0 0.06rem #27ff39, -0.125rem 0 0.06rem #75fa69;
-  letter-spacing: 0.125em;
-  animation-duration: 0.05s;
-  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#matrix a {
-  color: rgb(22, 248, 22);
-  text-decoration: none;
-  cursor: default;
-}
-
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 #27ff39, -2.5px 1px 0 #75fa69;
-  }
-  to {
-    text-shadow: 2px 0.5px 2px #27ff39, -1px -0.5px 0 #75fa69;
-  }
 }
