@@ -113,19 +113,18 @@ function createGridCard(url, title, description, image, alt, icon) {
 // Add content to website
 addArticle(`
 ⌨️ Programmer
-👨‍💼 Entrepeneur
 🎓 Student
+👨‍💼 Entrepeneur
 
 "I publish decent stuff on the internet."`);
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
+    createGridCard("https://www.linkedin.com/in/kubgus/", "LinkedIn", "Jakub Guštafik", "media/thumbnails/linkedin.jpg"),
+    createGridCard("mailto:business@gustafik.com", "E-mail", "business@gustafik.com", "media/thumbnails/gmail.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
-    // TODO: Replace Reddit and Steam with more recent websites
-    createGridCard("https://www.reddit.com/user/LennyMemes_1", "Reddit", "LennyMemes_1", "media/thumbnails/reddit.jpg"),
-    createGridCard("https://steamcommunity.com/id/laiq79/", "Steam", "LaIQ79", "media/thumbnails/steam.jpg"),
 ]);
 addTitle("About Me:");
-addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. I like spending time with people who provide me with everyday value. I take interest in creating businesses and everything surrounding it going hand-in-hand with programming. When I'm not working, I like to listen to podcasts, sleep, and read. I learn from people such as Andrew Tate and Hamza. I usually live a pretty sustainable lifestyle. I eat pretty healthy, work out, and meditate. I am a big advocate for men's mental health. And that's about everything you need to know about me for now! If you have any interest in talking to me, hit me up at <a href=\"mailto:contact@gustafik.com\">contact@gustafik.com</a>.")
+addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. I like spending time with people I love. I like doing things I love. And I try to love things that push me forward. Give me value. It doesn't always work out - no-one's perfect. I try to live a simple life - not have too much going on, focus on the things that are truly important to me and to the people I care about. I want to provide for my surroundings. I cannot imagine a life where I am just taken care of. I want to be the one taking care of others. I want to be a leader. But you don't need to know this. You are likely here because of my code. Or maybe you just want to find a way to contact me. In that case, you've scrolled too far. I wish you all the best. 👋")
 addGridSection("Active Projects:", [
     createGridCard("empty", "Step", "A 3D low-level C# software engine with great focus on consistency and ease of use.", "", "", "wysiwyg"),
     createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
@@ -149,17 +148,17 @@ addArticle(`🔥 Self Improvement
 💪 Working out
 📖 Reading
 🧘 Meditation
-🌲 Bushcrafting
+🌲 Bushcraft
 `)
-addGridSection("Languages I have mastered:", [
-    createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "My current favorite language. A jack of all trades. I mostly use it to make apps and games.", "media/thumbnails/cs.jpg"),
-    createGridCard("https://www.python.org/", "Python", "Python was my first real programming language. I usually use it for side projects.", "media/thumbnails/python.jpg"),
-    createGridCard("https://www.javascript.com/", "Javascript", "A language very close to my heart. I used it for a long period of time in my programming career and still do from time to time.", "media/thumbnails/javascript.jpg"),
-    createGridCard("empty", "HTML & CSS", "These aren't languages, but I included them anyways.", "media/thumbnails/html.jpg"),
+addGridSection("Programming languages:", [
+    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "This is my most recent language. There's still a lot of things I have to learn, but I would say I know most of what C++ has to offer.", "media/thumbnails/cpp.jpg"),
+    createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "I basically know all the ins and outs of this language. I really fell in love with C# for its versatility and ease of use.", "media/thumbnails/cs.jpg"),
+    createGridCard("https://www.javascript.com/", "Javascript", "I use Javascript for anything web related. Landing pages, web-apps, servers, and more...", "media/thumbnails/javascript.jpg"),
+    createGridCard("empty", "HTML & CSS", "These technically aren't programming languages, but I included them because I think they are worth mentioning. I have a lot of experience in both of them.", "media/thumbnails/html.jpg"),
+    createGridCard("https://www.python.org/", "Python", "Python was the first programming language I've ever learned and I use it to this day, usually for side projects.", "media/thumbnails/python.jpg"),
 ]);
-addGridSection("Languages I have yet to master:", [
-    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I am pretty advanced in C++, but I still have a lot to learn.", "media/thumbnails/cpp.jpg"),
-]);
+// addGridSection("Languages I have yet to master:", [
+// ]);
 addGridSection("Other weird places you can find me:", [
     createGridCard("https://laiq.itch.io/", "Itch.io", "LaIQ", "media/thumbnails/itch.jpg"),
     createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg"),
