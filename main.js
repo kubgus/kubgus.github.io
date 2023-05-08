@@ -1,12 +1,9 @@
-async function getGitInfo(url) {
+async function getGitInfo(user, repo) {
     var a = [];
     try {
-        await $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent(url), function (data) {
-            var title = data.contents.match("<title>(.*?)</title>")[0].substr(7);
-            title = title.substr(0, title.indexOf("<"));
-            a.push(title.substr(title.indexOf('/') + 1, title.indexOf(":") - title.indexOf("/") - 1).replaceAll("-", " "));
-            a.push(title.substr(title.indexOf(":") + 2));
-            a.push(title);
+        await $.getJSON(`https://api.github.com/repos/${user}/${repo}`, function (data) {
+            a.push(repo);
+            a.push(data.description);
         });
     } catch (e) {
         a.push(`This card could not be loaded...`);
@@ -16,11 +13,14 @@ async function getGitInfo(url) {
 }
 
 function updateWithGit(url, titleP, descriptionP) {
-    if (url.startsWith("https://github.com/kubgus/"))
-        getGitInfo(url).then((info) => {
+    if (url.startsWith("https://github.com/kubgus/")) {
+        user = url.split("/")[3];
+        repo = url.split("/")[4];
+        getGitInfo(user, repo).then((info) => {
             titleP.innerText = info[0];
             descriptionP.innerText = info[1];
-        })
+        });
+    }
 }
 
 // Content functions
