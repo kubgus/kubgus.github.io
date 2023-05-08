@@ -235,3 +235,23 @@ document.addEventListener("mousemove", (e) => {
     y = 50 + (_mouseY - _h) * 0.01 /*+ accY * accM*/;
     // console.log(x);
 });
+
+
+const observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            entry.target.classList.add('card-animation');
+        }
+        // else {
+        //     entry.target.classList.remove('card-animation');
+        // }
+    });
+});
+
+const viewbox = document.querySelectorAll('.clickable-card');
+viewbox.forEach(image => {
+    observer.observe(image);
+});

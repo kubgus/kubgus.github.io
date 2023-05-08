@@ -66,7 +66,7 @@ header h1 {
 }
 
 /* TITLE */
-body > h2 {
+body>h2 {
   padding: 2rem 2rem 0.2rem 2rem;
   text-transform: uppercase;
 }
@@ -88,14 +88,14 @@ section.grid h2 {
   text-transform: uppercase;
 }
 
-section.grid > div.grid-container {
+section.grid>div.grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   margin-top: 2rem;
 }
 
-section.grid > div > div {
+section.grid>div>div {
   background-color: var(--card-background);
   border-radius: 1rem;
   overflow: hidden;
@@ -105,54 +105,54 @@ section.grid > div > div {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  section.grid > div > div:hover {
+  section.grid>div>div:hover {
     transform: scale(1.1);
   }
 }
 
-section.grid > div > div > a {
+section.grid>div>div>a {
   color: inherit;
   text-decoration: inherit;
 }
 
-section.grid > div > div > a > img {
+section.grid>div>div>a>img {
   width: 100%;
 }
 
-section.grid > div > div > a > div {
+section.grid>div>div>a>div {
   padding: 1.5rem;
   display: flex;
   flex-direction: row;
 }
 
-section.grid > div > div > a > div > div {
+section.grid>div>div>a>div>div {
   margin-right: 1.25rem;
 }
 
-section.grid > div > div > a > div > div > h4 {
+section.grid>div>div>a>div>div>h4 {
   margin-bottom: 0.8rem;
   text-transform: uppercase;
 }
 
-section.grid > div > div > a > div > span {
+section.grid>div>div>a>div>span {
   margin-left: auto;
 }
 
 /* MEDIA QUERIES (help) */
 @media (max-width: 1000px) {
-  section.grid > div.grid-container {
+  section.grid>div.grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 900px) {
-  section.grid > div.grid-container {
+  section.grid>div.grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 520px) {
-  section.grid > div.grid-container {
+  section.grid>div.grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -172,13 +172,11 @@ section.grid > div > div > a > div > span {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
-  background: linear-gradient(
-    90deg,
-    var(--page-background) 0%,
-    rgba(255, 255, 255, 0) 1.5%,
-    rgba(255, 255, 255, 0) 98.5%,
-    var(--page-background)
-  );
+  background: linear-gradient(90deg,
+      var(--page-background) 0%,
+      rgba(255, 255, 255, 0) 1.5%,
+      rgba(255, 255, 255, 0) 98.5%,
+      var(--page-background));
 }
 
 #parallax {
@@ -201,15 +199,31 @@ section.grid > div > div > a > div > span {
   bottom: 0;
   left: 0;
   pointer-events: none;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    var(--page-background) 90%
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      var(--page-background) 90%);
   width: 100%;
   height: 10em;
 }
 
 a {
   color: rgb(124, 41, 176);
+}
+
+
+@keyframes enter-animation {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card-animation {
+    animation: enter-animation 0.5s 1;
+  }
 }
