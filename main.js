@@ -13,7 +13,7 @@ addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://www.linkedin.com/in/kubgus/", "LinkedIn", "Jakub Guštafik", "media/thumbnails/linkedin.jpg"),
     createGridCard("mailto:business@gustafik.com", "E-mail", "business@gustafik.com", "media/thumbnails/gmail.jpg"),
-    createGridCard("https://discord.com/users/643898809193332786/", "Discord", "Kubo#2383", "media/thumbnails/discord.jpg"),
+    createGridCard("https://discord.com/users/643898809193332786/", "Discord", "kubgus", "media/thumbnails/discord.jpg"),
 ]);
 addTitle("About Me:");
 addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. I like spending time with people I love. I like doing things I love. And I try to love things that push me forward. Give me value. It doesn't always work out - no-one's perfect. I try to live a simple life - not have too much going on, focus on the things that are truly important to me and to the people I care about. I want to provide for my surroundings. I cannot imagine a life where I am just taken care of. I want to be the one taking care of others. I want to be a leader. But you don't need to know this. You are likely here because of my code. Or maybe you just want to find a way to contact me. In that case, you've scrolled too far. I wish you all the best. 👋")
