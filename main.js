@@ -18,9 +18,10 @@ addGridSection("Links:", [
 addTitle("About Me:");
 addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. I like spending time with people I love. I like doing things I love. And I try to love things that push me forward. Give me value. It doesn't always work out - no-one's perfect. I try to live a simple life - not have too much going on, focus on the things that are truly important to me and to the people I care about. I want to provide for my surroundings. I cannot imagine a life where I am just taken care of. I want to be the one taking care of others. I want to be a leader. But you don't need to know this. You are likely here because of my code. Or maybe you just want to find a way to contact me. In that case, you've scrolled too far. I wish you all the best. 👋")
 addGridSection("Active Projects:", [
-    createGridCard("empty", "Step", "A 3D low-level C# software engine with great focus on consistency and ease of use.", "", "", "wysiwyg"),
-    createGridCard("empty", "Bloodline", "A 2D game engine made as a proof on concept for IRCS.", "", "", "wysiwyg"),
+    createGridCard("empty", "Faux", "A free to use browser extension where users can create temporary accounts.", "", "", "token"),
     createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
+    createGridCard("https://github.com/kubgus/Bloodline", "Bloodline", "A 2D game engine made as a proof on concept for IRCS.", "", "", "wysiwyg"),
+    createGridCard("empty", "Step", "A 3D low-level C# software engine with great focus on consistency and ease of use.", "", "", "wysiwyg"),
 ]);
 addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
