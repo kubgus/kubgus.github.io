@@ -28,7 +28,7 @@ addGridSection("Side Projects:", [
     createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/lohost", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/TickoaTTwo", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/nuxt-tailwind-template", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
