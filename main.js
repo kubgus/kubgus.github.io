@@ -16,26 +16,25 @@ addGridSection("Links:", [
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "kubgus", "media/thumbnails/discord.jpg"),
 ]);
 addTitle("About Me:");
-addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. I like spending time with people I love. I like doing things I love. And I try to love things that push me forward. Give me value. It doesn't always work out - no-one's perfect. I try to live a simple life - not have too much going on, focus on the things that are truly important to me and to the people I care about. I want to provide for my surroundings. I cannot imagine a life where I am just taken care of. I want to be the one taking care of others. I want to be a leader. But you don't need to know this. You are likely here because of my code. Or maybe you just want to find a way to contact me. In that case, you've scrolled too far. I wish you all the best. 👋")
+addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. My big passion is programming. ⌨️ I mostly do web and software development in languages like Javascript, Typescript, C#, and C++. I'm open for business and always looking for new opportunities. You can contact me on LinkedIn or via <a href=\"mailto:business@gustafik.com\" style=\"color:white\">e-mail</a>. I try to improve myself. Money is not my priority, but I always look for clever ways to gain money through business or work. I'm currently registered in a few freelance agencies, but I mostly work on my own projects you can find below. 👇");
 addGridSection("Active Projects:", [
-    createGridCard("empty", "Faux", "A free to use browser extension where users can create temporary accounts.", "", "", "token"),
+    createGridCard("https://heystak.netlify.app/hey", "Heystack!", "An upcoming social media platform for sharing your thoughts and ideas on any topic you can think of.", "", "", "public"),
+    createGridCard("https://github.com/kubgus/Bloodline", "", "", "", "", "wysiwyg"),
+    createGridCard("https://chrome.google.com/webstore/detail/faux/kffcggckolacihcclnifefneifapjcdl", "Faux", "A free to use browser extension where users can create temporary accounts.", "", "", "person"),
     createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
-    createGridCard("https://github.com/kubgus/Bloodline", "Bloodline", "A 2D game engine made as a proof on concept for IRCS.", "", "", "wysiwyg"),
-    createGridCard("empty", "Step", "A 3D low-level C# software engine with great focus on consistency and ease of use.", "", "", "wysiwyg"),
 ]);
-addGridSection("Side Projects:", [
-    createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
+addGridSection("Other Projects:", [
+    createGridCard("https://github.com/kubgus/filefly", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/super-tic-tac-toe", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
+    createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
     createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/lohost", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/TickoaTTwo", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/IPComs", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
-    createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
 ]);
 addGridSection("Template Projects:", [
     createGridCard("https://github.com/kubgus/nuxt-tailwind-template", "", "", "", "", "code"),
@@ -43,9 +42,6 @@ addGridSection("Template Projects:", [
 ]);
 addTitle("Other Interests:");
 addArticle(`🔥 Self Improvement
-💪 Working out
-📖 Reading
-🧘 Meditation
 🌲 Bushcraft
 `)
 addGridSection("Programming languages:", [
@@ -55,8 +51,14 @@ addGridSection("Programming languages:", [
     createGridCard("empty", "HTML & CSS", "These technically aren't programming languages, but I included them because I think they are worth mentioning. I have a lot of experience in both of them.", "media/thumbnails/html.jpg"),
     createGridCard("https://www.python.org/", "Python", "Python was the first programming language I've ever learned and I use it to this day, usually for side projects.", "media/thumbnails/python.jpg"),
 ]);
-// addGridSection("Languages I have yet to master:", [
-// ]);
+addGridSection("Technologies I use:", [
+    createGridCard("https://www.nuxtjs.org/", "Nuxt.js", "I use Nuxt.js for Vue.js projects. Currently, I am using it to build Heystack!"),
+    createGridCard("https://nodejs.org/en/", "Node.js", "Node is my go-to for backend development. I use it for most of my projects. I use it on my website Instant."),
+    createGridCard("https://supabase.io/", "Supabase", "I use Supabase for my projects that require a scalable database. I use it for Heystack!"),
+    createGridCard("https://mongodb.com/", "MongoDB", "I use MongoDB when I need a simple database for my projects. I use it for Discord bots."),
+    createGridCard("https://aws.amazon.com/", "AWS", "I used AWS for hosting and storing my older projects. I'm fairly familiar with it."),
+    createGridCard("https://fonts.google.com/", "Google Fonts", "Google Fonts is my go-to for fonts and icons. I use it for all of my projects."),
+]);
 addGridSection("Other weird places you can find me:", [
     createGridCard("https://laiq.itch.io/", "Itch.io", "LaIQ", "media/thumbnails/itch.jpg"),
     createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg"),
