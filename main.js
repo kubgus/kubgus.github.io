@@ -20,21 +20,12 @@ addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slo
 addGridSection("Active Projects:", [
     createGridCard("https://heystak.netlify.app/hey", "Heystack!", "An upcoming social media platform for sharing your thoughts and ideas on any topic you can think of.", "", "", "public"),
     createGridCard("https://github.com/kubgus/Bloodline", "", "", "", "", "wysiwyg"),
-    createGridCard("https://chrome.google.com/webstore/detail/faux/kffcggckolacihcclnifefneifapjcdl", "Faux", "A free to use browser extension where users can create temporary accounts.", "", "", "person"),
-    createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "chat_bubble"),
 ]);
 addGridSection("Other Projects:", [
+    createGridCard("https://chrome.google.com/webstore/detail/faux/kffcggckolacihcclnifefneifapjcdl", "faux", "A Chrome extension that creates fake internet identities and email addresses.", "", "", "code"),
+    createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "code"),
+    createGridCard("https://github.com/kubgus/flashcards", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/filefly", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/super-tic-tac-toe", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
-    createGridCard("https://mavelan.itch.io/copycat", "Copycat", "A short puzzle platformer game with a twist.", "", "", "videogame_asset"),
-    createGridCard("https://github.com/kubgus/Learning-CPP", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Node-Projects", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Pygorithms", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/KudoEngine", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Discord-Text-to-Speech-Bot", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Planet-Generator", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/Speed-Read", "", "", "", "", "code"),
 ]);
 addGridSection("Template Projects:", [
     createGridCard("https://github.com/kubgus/nuxt-tailwind-template", "", "", "", "", "code"),
@@ -45,13 +36,13 @@ addArticle(`🔥 Self Improvement
 🌲 Bushcraft
 `)
 addGridSection("Programming languages:", [
-    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "This is my most recent language. There's still a lot of things I have to learn, but I would say I know most of what C++ has to offer.", "media/thumbnails/cpp.jpg"),
-    createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "I basically know all the ins and outs of this language. I really fell in love with C# for its versatility and ease of use.", "media/thumbnails/cs.jpg"),
-    createGridCard("https://www.javascript.com/", "Javascript", "I use Javascript for anything web related. Landing pages, web-apps, servers, and more...", "media/thumbnails/javascript.jpg"),
+    createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I currently use C++ for all my non-web projects. I like its versatility, lightweight and flexibility. I know most advanced topics in C++.", "media/thumbnails/cpp.jpg"),
+    createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "I basically know all the ins and outs of this language. I really fell in love with C# for its and ease of use.", "media/thumbnails/cs.jpg"),
+    createGridCard("https://www.javascript.com/", "Javascript", "I wouldn't hesitate to call myself very advanced when it comes to Javascript. I have profound knowledge of everything this language has to offer.", "media/thumbnails/javascript.jpg"),
     createGridCard("empty", "HTML & CSS", "These technically aren't programming languages, but I included them because I think they are worth mentioning. I have a lot of experience in both of them.", "media/thumbnails/html.jpg"),
-    createGridCard("https://www.python.org/", "Python", "Python was the first programming language I've ever learned and I use it to this day, usually for side projects.", "media/thumbnails/python.jpg"),
+    createGridCard("https://www.python.org/", "Python", "Python was the first programming language I've ever learned. I am still familiar with it, but I sometimes need to go over syntax after a long time.", "media/thumbnails/python.jpg"),
 ]);
-addGridSection("Technologies I use:", [
+addGridSection("What I've worked with:", [
     createGridCard("https://www.nuxtjs.org/", "Nuxt.js", "I use Nuxt.js for Vue.js projects. Currently, I am using it to build Heystack!"),
     createGridCard("https://nodejs.org/en/", "Node.js", "Node is my go-to for backend development. I use it for most of my projects. I use it on my website Instant."),
     createGridCard("https://supabase.io/", "Supabase", "I use Supabase for my projects that require a scalable database. I use it for Heystack!"),
