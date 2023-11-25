@@ -60,20 +60,27 @@ addGridSection("Programming languages:", [
     createGridCard("https://en.wikipedia.org/wiki/C%2B%2B", "C++", "I currently use C++ for all my non-web projects. I like its versatility, lightweight and flexibility. I know most advanced topics in C++.", "media/thumbnails/cpp.jpg"),
     createGridCard("https://docs.microsoft.com/en-us/dotnet/csharp/", "C#", "I basically know all the ins and outs of this language. I really fell in love with C# for its and ease of use.", "media/thumbnails/cs.jpg"),
     createGridCard("https://www.javascript.com/", "Javascript", "I wouldn't hesitate to call myself very advanced when it comes to Javascript. I have profound knowledge of everything this language has to offer.", "media/thumbnails/javascript.jpg"),
+    createGridCard("https://www.typescriptlang.org/", "Typescript", "Typescript belongs to my more recent languages. However, its similarity to JS makes it seamless for me.", "media/thumbnails/typescript.jpg"),
     createGridCard("empty", "HTML & CSS", "These technically aren't programming languages, but I included them because I think they are worth mentioning. I have a lot of experience in both of them.", "media/thumbnails/html.jpg"),
     createGridCard("https://www.python.org/", "Python", "Python was the first programming language I've ever learned. I am still familiar with it, but I sometimes need to go over syntax after a long time.", "media/thumbnails/python.jpg"),
 ]);
-addGridSection("What I've worked with:", [
-    createGridCard("https://www.nuxtjs.org/", "Nuxt.js", "I use Nuxt.js for Vue.js projects. Currently, I am using it to build Heystack!"),
-    createGridCard("https://nodejs.org/en/", "Node.js", "Node is my go-to for backend development. I use it for most of my projects. I use it on my website Instant."),
-    createGridCard("https://supabase.io/", "Supabase", "I use Supabase for my projects that require a scalable database. I use it for Heystack!"),
-    createGridCard("https://mongodb.com/", "MongoDB", "I use MongoDB when I need a simple database for my projects. I use it for Discord bots."),
-    createGridCard("https://aws.amazon.com/", "AWS", "I used AWS for hosting and storing my older projects. I'm fairly familiar with it."),
-    createGridCard("https://fonts.google.com/", "Google Fonts", "Google Fonts is my go-to for fonts and icons. I use it for all of my projects."),
+addGridSection("Technologies:", [
+    createGridCard("https://www.nuxtjs.org/", "Nuxt.js", " "),
+    createGridCard("https://nodejs.org/en/", "Node.js", " "),
+    createGridCard("https://htmx.org/", "HTMX", " "),
+    createGridCard("https://bun.sh/", "Bun", " "),
+    createGridCard("https://tailwindcss.com/", "Tailwind CSS", " "),
+    createGridCard("https://fonts.google.com/", "Google Fonts", " "),
+    createGridCard("https://socket.io/", "Socket.io", " "),
+    createGridCard("https://expressjs.com/", "Express.js", " "),
+    createGridCard("https://supabase.io/", "Supabase", " "),
+    createGridCard("https://mongodb.com/", "MongoDB", " "),
+    createGridCard("https://aws.amazon.com/", "AWS", " "),
 ]);
 addGridSection("Other weird places you can find me:", [
     createGridCard("https://laiq.itch.io/", "Itch.io", "LaIQ", "media/thumbnails/itch.jpg"),
     createGridCard("https://scratch.mit.edu/users/LaIQ79/", "Scratch", "LaIQ79", "media/thumbnails/scratch.jpg"),
+    createGridCard("https://patreon.com/user?u=96061849&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link", "Patreon 👀", "Jakub Gustafik", "media/thumbnails/patreon.jpg"),
 ]);
 
 function addTitle(content) {
