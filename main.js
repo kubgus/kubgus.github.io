@@ -19,17 +19,38 @@ addTitle("About Me:");
 addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. My big passion is programming. ⌨️ I mostly do web and software development in languages like Javascript, Typescript, C#, and C++. I'm open for business and always looking for new opportunities. You can contact me on LinkedIn or via <a href=\"mailto:business@gustafik.com\" style=\"color:white\">e-mail</a>. I try to improve myself. Money is not my priority, but I always look for clever ways to gain money through business or work. I'm currently registered in a few freelance agencies, but I mostly work on my own projects you can find below. 👇");
 addGridSection("Active Projects:", [
     createGridCard("https://heystak.netlify.app/hey", "Heystack!", "An upcoming social media platform for sharing your thoughts and ideas on any topic you can think of.", "", "", "public"),
-    createGridCard("https://github.com/kubgus/Bloodline", "", "", "", "", "wysiwyg"),
-]);
-addGridSection("Other Projects:", [
-    createGridCard("https://chrome.google.com/webstore/detail/faux/kffcggckolacihcclnifefneifapjcdl", "faux", "A Chrome extension that creates fake internet identities and email addresses.", "", "", "code"),
-    createGridCard("https://1n574n7.online/", "Instant", "A public chat board that is all about safety and freedom of speech.", "", "", "code"),
-    createGridCard("https://github.com/kubgus/flashcards", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/filefly", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/bloodline", "", "", "", "", "wysiwyg"),
 ]);
 addGridSection("Template Projects:", [
     createGridCard("https://github.com/kubgus/nuxt-tailwind-template", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/discord-js-14-template", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/express-sio-ts-template", "", "", "", "", "code"),
+]);
+addGridSection("Learning Projects:", [
+    createGridCard("https://github.com/kubgus/cpp-cheatsheet", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/learning-htmx", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/learning-nuxt", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/learning-glsl", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/algorithms-in-python", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/snippets-in-node", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/flutter-one", "", "", "", "", "code"),
+]);
+addGridSection("Fun Projects:", [
+    createGridCard("https://github.com/kubgus/bloodline", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/kudo", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/online-game", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/filefly", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/super-tic-tac-toe", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/tick-oat-two", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/magnet-io", "", "", "", "", "code"),
+    createGridCard("https://mavelan.itch.io/copycat", "copycat", "A game I made with a friend for a game jam.", "", "", "game"),
+    createGridCard("https://github.com/kubgus/discord-tts-bot", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/flashcards", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/planet-generator", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/speed-read", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/tmod-one", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/quicklang", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/syntax-jazyk", "", "", "", "", "code"),
 ]);
 addTitle("Other Interests:");
 addArticle(`🔥 Self Improvement
