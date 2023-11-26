@@ -28,11 +28,12 @@ addGridSection("Template Projects:", [
 ]);
 addGridSection("Learning Projects:", [
     createGridCard("https://github.com/kubgus/cpp-cheatsheet", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/cpp-playground", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/learning-htmx", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/learning-nuxt", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/node-playground", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/python-algorithms", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/learning-glsl", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/algorithms-in-python", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/snippets-in-node", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/flutter-one", "", "", "", "", "code"),
 ]);
 addGridSection("Fun Projects:", [
