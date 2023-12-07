@@ -93,7 +93,7 @@ function addTitle(content) {
     if (content)
         copy.children[0].innerText = content;
 
-    document.body.appendChild(copy);
+    document.querySelector("main").appendChild(copy);
 }
 
 function addArticle(content) {
@@ -103,7 +103,7 @@ function addArticle(content) {
     if (content)
         copy.children[0].children[0].innerText = content;
 
-    document.body.appendChild(copy);
+    document.querySelector("main").appendChild(copy);
 }
 
 function addArticle2(content) {
@@ -113,7 +113,7 @@ function addArticle2(content) {
     if (content)
         copy.children[0].children[0].innerHTML = content;
 
-    document.body.appendChild(copy);
+    document.querySelector("main").appendChild(copy);
 }
 
 function addGridSection(title, cards) {
@@ -130,7 +130,7 @@ function addGridSection(title, cards) {
 
         });
 
-    document.body.appendChild(copy);
+    document.querySelector("main").appendChild(copy);
 }
 
 function createGridCard(url, title, description, image, alt, icon) {
