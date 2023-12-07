@@ -1,0 +1,51 @@
+---
+import '../styles/global.css'
+import '../styles/index.css'
+
+import SocialLink from '../components/social-link.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<!-- FONTAWESOME -->
+		<script src="https://kit.fontawesome.com/6cb26f3348.js" crossorigin="anonymous" defer></script>
+	
+		<!-- GOOGLE ICONS -->
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,200" />
+
+		<!-- TITLE -->
+		<title>Jakub Gustafik</title>
+	</head>
+	<body>
+		<header>
+			<img id="title-logo" src="/image/logo.png" alt="personal logo" />
+			<h1 id="title-header">Jakub Guštafik</h1>
+			<h2 id="title-quote">
+				"I publish decent stuff on the internet."
+			</h2>
+			
+			<section id="title-links">
+				<SocialLink href="mailto:business@gustafik.com">
+					<i class="fas fa-envelope"></i>
+				</SocialLink>
+				<SocialLink href="https://github.com/kubgus">
+					<i class="fab fa-github"></i>
+				</SocialLink>
+				<SocialLink href="https://www.linkedin.com/in/kubgus/">
+					<i class="fab fa-linkedin"></i>
+				</SocialLink>
+				<SocialLink href="https://twitter.com/gustafik_dev/">
+					<i class="fab fa-twitter"></i>
+				</SocialLink>
+				<SocialLink href="https://discord.com/users/643898809193332786/">
+					<i class="fab fa-discord"></i>
+				</SocialLink>
+			</section>
+		</header>
+	</body>
+</html>

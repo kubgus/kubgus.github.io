@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kanit, 'Roboto', sans-serif;
+}
+
+body {
+    padding: 15vh clamp(0.5rem, 5vw, 5rem);
+}

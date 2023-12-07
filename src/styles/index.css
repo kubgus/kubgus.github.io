@@ -1,0 +1,41 @@
+img#title-logo {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 3rem auto;
+    display: block;
+    border-radius: 100%;
+    border: 3px solid #000;
+}
+
+h1#title-header {
+    text-align: center;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+h2#title-quote {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+section#title-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+section#title-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+}
+
+section#title-links a:hover {
+    background-color: #000;
+    color: #fff;
+}
