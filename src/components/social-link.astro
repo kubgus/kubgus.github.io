@@ -7,15 +7,18 @@ const { href, title } = Astro.props;
         color: rgb(236, 231, 246);
         font-size: 1.5rem;
         padding: 0.5rem 1rem;
-        border: 2px solid rgb(236, 231, 246);
         width: 4rem;
         text-align: center;
         border-radius: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        background-color: rgba(255, 255, 255, .11);  
+        backdrop-filter: blur(2px);
     }
 
     a:hover {
-        background: rgb(236, 231, 246);
-        color: black;
+        scale: 0.9;
+        backdrop-filter: blur(4px);
+        background-color: rgba(255, 255, 255, .19);
     }
 </style>
 <a href={ href } title={ title } target="_blank">
