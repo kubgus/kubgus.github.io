@@ -8,5 +8,11 @@
 }
 
 body {
-    padding: 15vh clamp(0.5rem, 5vw, 5rem);
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: min(10vw, 4rem) clamp(0.5rem, 5vw, 5rem);
+}
+
+li {
+    list-style: none;
 }

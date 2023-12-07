@@ -1,0 +1,43 @@
+---
+const { href } = Astro.props;
+---
+<style>
+    li {
+        /* TODO: Fixed height is not an ideal solution; might cause future issues */
+        height: 9rem;
+        width: clamp(20rem, 20vw, 40rem);
+        padding: 0.5rem;
+        display: inline-block;
+        border: 3px solid #000;
+        overflow: hidden;
+    }
+
+    li:hover {
+        color: #fff;
+        background-color: #000;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    li:hover a {
+        color: #fff;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+</style>
+<li>
+    <a href={ href } target="_blank">
+        <div>
+            <slot />
+        </div>
+    </a>
+</li>

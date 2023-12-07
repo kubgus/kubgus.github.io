@@ -1,22 +1,22 @@
 img#title-logo {
+    display: block;
     width: 8rem;
     height: 8rem;
-    margin: 0 auto 3rem auto;
-    display: block;
+    margin: 0 auto min(2vw, 2rem) auto;
+    border: 4px solid #000;
     border-radius: 100%;
-    border: 3px solid #000;
 }
 
 h1#title-header {
-    text-align: center;
-    font-size: 4rem;
     margin: 1rem 0;
+    font-size: 4rem;
+    text-align: center;
 }
 
 h2#title-quote {
-    text-align: center;
-    font-size: 1.5rem;
     margin: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 section#title-links {
@@ -26,16 +26,43 @@ section#title-links {
     margin: 3rem 0;
 }
 
-section#title-links a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid #000;
-    border-radius: 0.5rem;
+main {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    flex-direction: column;
 }
 
-section#title-links a:hover {
-    background-color: #000;
-    color: #fff;
+main h2 {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+section>p {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+section>p>a {
+    color: #000;
+}
+
+section ul {
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+}
+
+@media (max-width: 750px) {
+    section ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section ul li {
+        width: 100%;
+    }
 }

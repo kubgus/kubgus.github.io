@@ -2,6 +2,8 @@
 import '../styles/global.css'
 import '../styles/index.css'
 
+import GithubProjectLink from '../components/github-project-link.astro'
+import ProjectLink from '../components/project-link.astro'
 import SocialLink from '../components/social-link.astro'
 ---
 
@@ -28,24 +30,76 @@ import SocialLink from '../components/social-link.astro'
 			<h2 id="title-quote">
 				"I publish decent stuff on the internet."
 			</h2>
-			
 			<section id="title-links">
-				<SocialLink href="mailto:business@gustafik.com">
+				<SocialLink href="mailto:business@gustafik.com" title="Email">
 					<i class="fas fa-envelope"></i>
 				</SocialLink>
-				<SocialLink href="https://github.com/kubgus">
+				<SocialLink href="https://github.com/kubgus" title="GitHub">
 					<i class="fab fa-github"></i>
 				</SocialLink>
-				<SocialLink href="https://www.linkedin.com/in/kubgus/">
+				<SocialLink href="https://www.linkedin.com/in/kubgus/" title="LinkedIn">
 					<i class="fab fa-linkedin"></i>
 				</SocialLink>
-				<SocialLink href="https://twitter.com/gustafik_dev/">
+				<SocialLink href="https://twitter.com/gustafik_dev/" title="Twitter">
 					<i class="fab fa-twitter"></i>
 				</SocialLink>
-				<SocialLink href="https://discord.com/users/643898809193332786/">
+				<SocialLink href="https://discord.com/users/643898809193332786/" title="Discord">
 					<i class="fab fa-discord"></i>
+				</SocialLink>
+				<SocialLink href="https://patreon.com/user?u=96061849&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link" title="Patreon">
+					<i class="fab fa-patreon"></i>
 				</SocialLink>
 			</section>
 		</header>
+
+		<main>
+			<section id="projects">
+				<article>
+					<h2>Active projects</h2>
+					<ul>
+						<ProjectLink href="https://heystak.netlify.app/hey">
+							<h3>Heystack!</h3>
+            				<p>An upcoming social media platform for sharing your thoughts and ideas on any topic you can think of.</p>
+						</ProjectLink>
+						<GithubProjectLink href="https://github.com/kubgus/bloodline" />
+					</ul>
+				</article>
+				<article>
+					<h2>Template projects</h2>
+					<ul>
+						<GithubProjectLink href="https://github.com/kubgus/nuxt-tailwind-template" />
+						<GithubProjectLink href="https://github.com/kubgus/discord-js-14-template" />
+						<GithubProjectLink href="https://github.com/kubgus/express-sio-ts-template" />
+					</ul>
+				</article>
+				<article>
+					<h2>Learning projects</h2>
+					<ul>
+						<GithubProjectLink href="https://github.com/kubgus/cpp-cheatsheet" />
+						<GithubProjectLink href="https://github.com/kubgus/cpp-playground" />
+						<GithubProjectLink href="https://github.com/kubgus/learning-astro" />
+						<GithubProjectLink href="https://github.com/kubgus/learning-htmx" />
+						<GithubProjectLink href="https://github.com/kubgus/learning-nuxt" />
+						<GithubProjectLink href="https://github.com/kubgus/node-playground" />
+						<GithubProjectLink href="https://github.com/kubgus/python-algorithms" />
+						<GithubProjectLink href="https://github.com/kubgus/flutter-one" />
+					</ul>
+				</article>
+				<p>Find more projects on my <a href="https://github.com/kubgus?tab=repositories" target="_blank">GitHub</a>!</p>
+			</section>
+			<section id="other">
+				<article>
+					<h2>Other links</h2>
+					<ul>
+						<ProjectLink href="https://laiq.itch.io/">
+							<h3>Itch.io</h3>
+							<p>My game development profile.</p>
+						</ProjectLink>
+						<ProjectLink href="https://scratch.mit.edu/users/LaIQ79/">
+							<h3>Scratch</h3>
+							<p>My Scratch profile.</p>
+						</ProjectLink>
+			</section>
+		</main>
 	</body>
 </html>
