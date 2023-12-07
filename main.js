@@ -12,9 +12,11 @@ addArticle(`
 addGridSection("Links:", [
     createGridCard("https://github.com/kubgus", "GitHub", "kubgus", "media/thumbnails/github.jpg"),
     createGridCard("https://www.linkedin.com/in/kubgus/", "LinkedIn", "Jakub Guštafik", "media/thumbnails/linkedin.jpg"),
-    createGridCard("mailto:business@gustafik.com", "E-mail", "business@gustafik.com", "media/thumbnails/gmail.jpg"),
+    createGridCard("https://twitter.com/gustafik_dev/", "Twitter", "gustafik_dev", "media/thumbnails/x.jpg"),
     createGridCard("https://discord.com/users/643898809193332786/", "Discord", "kubgus", "media/thumbnails/discord.jpg"),
 ]);
+addTitle("✉️ Write me an e-mail!");
+addArticle2(`I am always open for business. You can contact me via <a href="mailto:business@gustafik.com" style="color: white">e-mail</a> or on my social networks above.`);
 addTitle("About Me:");
 addArticle2("My name is Jakub, but you can call me Kubo. I am a student from Slovakia. My big passion is programming. ⌨️ I mostly do web and software development in languages like Javascript, Typescript, C#, and C++. I'm open for business and always looking for new opportunities. You can contact me on LinkedIn or via <a href=\"mailto:business@gustafik.com\" style=\"color:white\">e-mail</a>. I try to improve myself. Money is not my priority, but I always look for clever ways to gain money through business or work. I'm currently registered in a few freelance agencies, but I mostly work on my own projects you can find below. 👇");
 addGridSection("Active Projects:", [
@@ -29,11 +31,11 @@ addGridSection("Template Projects:", [
 addGridSection("Learning Projects:", [
     createGridCard("https://github.com/kubgus/cpp-cheatsheet", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/cpp-playground", "", "", "", "", "code"),
+    createGridCard("https://github.com/kubgus/learning-astro", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/learning-htmx", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/learning-nuxt", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/node-playground", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/python-algorithms", "", "", "", "", "code"),
-    createGridCard("https://github.com/kubgus/learning-glsl", "", "", "", "", "code"),
     createGridCard("https://github.com/kubgus/flutter-one", "", "", "", "", "code"),
 ]);
 addGridSection("Fun Projects:", [
