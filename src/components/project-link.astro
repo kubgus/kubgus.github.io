@@ -5,25 +5,25 @@ const { href } = Astro.props;
     li {
         /* TODO: Fixed height is not an ideal solution; might cause future issues */
         height: 9rem;
-        width: clamp(20rem, 20vw, 40rem);
         padding: 0.5rem;
         display: inline-block;
-        border: 3px solid #000;
+        border: 3px solid rgb(236, 231, 246);
         overflow: hidden;
+        border-radius: 0.5rem;
     }
 
     li:hover {
-        color: #fff;
-        background-color: #000;
+        color: black;
+        background-color: rgb(236, 231, 246);
     }
 
     a {
         text-decoration: none;
-        color: #000;
+        color: rgb(236, 231, 246);
     }
 
     li:hover a {
-        color: #fff;
+        color: black;
     }
 
     div {
