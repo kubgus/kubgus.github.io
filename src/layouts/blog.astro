@@ -13,6 +13,10 @@ const { frontmatter } = Astro.props;
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- FAVICON -->
+        <link rel="icon" href="/image/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/image/favicon.png" type="image/png" />
+
 		<!-- TITLE -->
 		<title>Jakub Gustafik: { frontmatter.title }</title>
 	</head>
@@ -20,10 +24,9 @@ const { frontmatter } = Astro.props;
 		<NightSky />
 
 		<header>
-                <h1>{ frontmatter.title }</h1>
-                <h2>{ frontmatter.description }</h2>
-                <p>By { frontmatter.author } on { frontmatter.pubDate.slice(0,10) }</p>
-
+            <h1>{ frontmatter.title }</h1>
+            <h2>{ frontmatter.description }</h2>
+            <p>By { frontmatter.author } on { frontmatter.pubDate.slice(0,10) }</p>
 		</header>
 
 		<main>
