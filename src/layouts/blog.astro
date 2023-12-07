@@ -1,0 +1,33 @@
+---
+import "../styles/global.css"
+import "../styles/blog.css"
+
+import NightSky from '../components/night-sky.astro'
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- TITLE -->
+		<title>Jakub Gustafik: { frontmatter.title }</title>
+	</head>
+	<body>
+		<NightSky />
+
+		<header>
+                <h1>{ frontmatter.title }</h1>
+                <h2>{ frontmatter.description }</h2>
+                <p>By { frontmatter.author } on { frontmatter.pubDate.slice(0,10) }</p>
+
+		</header>
+
+		<main>
+            <slot />
+		</main>
+	</body>
+</html>
