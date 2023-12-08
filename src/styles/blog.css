@@ -26,8 +26,8 @@ header p {
 
 main {
     padding: 1.5rem;
-    background-color: rgba(255, 255, 255, .17);
-    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, .11);
+    backdrop-filter: blur(1px);
     border-radius: 1rem;
 }
 
@@ -71,6 +71,7 @@ main img {
     border-radius: 1rem;
     text-shadow: 1px 1px 1px black;
     width: clamp(10rem, 50vw, 45rem);
+    margin: 1rem 0 !important;
 }
 
 main pre {

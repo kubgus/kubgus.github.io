@@ -10,15 +10,15 @@ const { href, title } = Astro.props;
         width: 4rem;
         text-align: center;
         border-radius: 0.5rem;
-        transition: all 0.2s ease-in-out;
-        background-color: rgba(255, 255, 255, .11);  
+        transition: all 0.1s ease-in-out;
+        background-color: rgba(255, 255, 255, .09);  
         backdrop-filter: blur(2px);
     }
 
     a:hover {
-        scale: 0.9;
-        backdrop-filter: blur(4px);
-        background-color: rgba(255, 255, 255, .19);
+        transform: scale(0.9);
+        backdrop-filter: blur(0px);
+        background-color: rgba(255, 255, 255, .17);
     }
 </style>
 <a href={ href } title={ title } target="_blank">
