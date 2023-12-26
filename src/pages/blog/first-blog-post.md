@@ -60,5 +60,5 @@ This is a paragraph with a table:
 
 | Name | Age |
 | ---- | --- |
-| John | 20  |
-| Jane | 21  |
+| John | 20 |
+| Jane | 21 |
