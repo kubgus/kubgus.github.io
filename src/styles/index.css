@@ -8,6 +8,10 @@ p {
     opacity: 0.95;
 }
 
+a {
+    color: rgb(236, 231, 246);
+}
+
 img#title-logo {
     display: block;
     width: min(20vw, 8rem);
@@ -52,17 +56,18 @@ main {
 }
 
 main h2 {
-    margin: 2rem 0;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-section>p {
+article {
+    margin-top: 2rem;
+}
+
+section>p,
+article>p {
     margin-top: 2rem;
     font-size: 1.3rem;
-}
-
-section>p>a {
-    color: rgb(236, 231, 246);
 }
 
 section ul {
@@ -85,4 +90,13 @@ section ul {
         width: clamp(20rem, 20vw, 40rem);
         margin: 0.25rem;
     }
+}
+
+article.frost {
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, .09);
+    backdrop-filter: blur(1px);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 }
