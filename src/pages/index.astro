@@ -1,16 +1,51 @@
 ---
-
+import NavbarLayout from "../layouts/navbar-layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<NavbarLayout>
+    <article class="flex flex-col xl:flex-row gap-6 md:gap-12">
+        <figure class="md:grid md:grid-cols-1 md:grid-rows-[1fr_0.3fr_6fr]">
+            <h1>Jakub Gustafik</h1>
+            <span class="text-2xl text-brand-teal">Student, Freelancer • Software development, Web development, IT</span>
+            <section class="w-full mt-7 flex flex-col md:flex-row gap-6 md:gap-12">
+                <figure class="flex flex-col gap-4 bg-brand-black w-full rounded-md p-3">
+                    <h2>Skills</h2>
+                    <ul class="text-xl flex flex-col gap-2 [&_li]:list-disc pl-7">
+                        <li>English/Slovak bilingual</li>
+                        <li>Conversational German</li>
+                        <li>Programming</li>
+                        <li>Software/Web development</li>
+                        <li>Responsive web design</li>
+                        <li>Technical documentation</li>
+                        <li>Personal development</li>
+                    </ul>
+                </figure>
+                <figure class="flex flex-col gap-4 bg-brand-black w-full rounded-md p-3">
+                    <h2>Knowledge</h2>
+                    <ul class="text-xl flex flex-col gap-2 [&_li]:list-disc pl-7">
+                        <li>C++, C#</li>
+                        <li>HTML, CSS, JavaScript, Typescript</li>
+                        <li>Node.js, Vue.js, Nuxt.js, Astro</li>
+                        <li>Supabase, Firebase, MongoDB</li>
+                        <li>Git, GitHub</li>
+                        <li>Python</li>
+                    </ul>
+                </figure>
+            </section>
+        </figure>
+        <figure class="flex flex-col gap-3 h-full xl:w-[50%] p-6 bg-brand-black rounded-md">
+            <h2>Bio</h2>
+            <span class="text-lg">Volám sa Jakub a študujem na strednej škole v Pezinku. Už od pomerne nízkeho veku mám veľký zápal pre programovanie a digitálnu tvorbu, čo vo mne prerástlo v nezanedbateľnú skúsenosť s vývojom softvéru a webových aplikácií a riešení.
+            Mimo profesionálnych skúseností mám dlhodobú skúsenosť s tvorbou vlastných "passion" projektov, ktoré spravujem a publikujem na svojej webstránke a GitHub profile.
+            Medzi moje záľuby patrí (samozrejme) programovanie, cvičenie a učenie sa hre na gitare, no taktiež sa dlhodobo venujem skautingu v dobrovoľníckej organizácii SLSK a pomáham aj s organizáciou a eventami CoderDojo.
+            Som otvorený novým pracovným vzťahom a skúsenostiam.</span>
+            <h2>Articles</h2>
+            <div class="flex flex-row gap-3 overflow-hidden">
+                <figure class="flex flex-col gap-2 p-3 bg-brand-gray rounded-md">
+                    <a href="/blog"><h3>Title</h3></a>
+                    <p>Explaining what this is about.</p>
+                </figure>
+            </div>
+        </figure>
+    </article>
+</NavbarLayout>

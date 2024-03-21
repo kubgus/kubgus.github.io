@@ -1,0 +1,35 @@
+---
+import NavbarLayout from "../layouts/navbar-layout.astro";
+
+import SocialsBar from "../components/socials-bar.astro";
+---
+
+<style>
+    #socials {
+        margin-left: 0.5rem;
+    }
+
+    input, textarea {
+        @apply bg-brand-gray rounded-md p-2;
+    }
+
+    button {
+        @apply ml-auto bg-brand-teal rounded-md p-2 w-1/4;
+    }
+</style>
+
+<NavbarLayout>
+    <article class="flex flex-col gap-6 p-6 bg-brand-black rounded-md w-full">
+        <h1>Contact me</h1>
+        <div id="socials">
+            <SocialsBar />
+        </div>
+        <form action="https://formspree.io/f/mrgnaryl" method="POST" class="ml-[0.5rem] flex flex-col gap-6">
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </article>
+</NavbarLayout>
