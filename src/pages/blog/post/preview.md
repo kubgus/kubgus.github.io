@@ -1,8 +1,8 @@
 ---
 layout: "../../../layouts/blog-layout.astro"
-title: "First blog post"
+title: "Preview of markdown styles"
 pubDate: 2024-03-26
-description: "I'm building a blog page with Astro!"
+description: "This post doesn't hold any relevance, it's just a preview to test markdown styles."
 author: "Jakub Gustafik"
 image:
     url: "https://st2.depositphotos.com/1592314/10545/i/450/depositphotos_105455422-stock-photo-nice-mediterranean-sea-france.jpg"

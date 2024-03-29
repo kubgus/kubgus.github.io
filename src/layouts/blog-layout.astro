@@ -33,8 +33,8 @@ pre {
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-[100%] h-[30vh] object-cover rounded-lg" />
         <div id="info" class="flex flex-col gap-6 mb-6">
             <h1 class="text-[5.5rem]">{frontmatter.title}</h1>
-            <p class="text-2xl">{frontmatter.description}</p>
-            <span id="date">{frontmatter.author} • {new Date(frontmatter.pubDate).toDateString()}</span>
+            <p class="text-2xl opacity-80 mt-6">{frontmatter.description}</p>
+            <span id="date" class="opacity-50">{frontmatter.author} • {new Date(frontmatter.pubDate).toDateString()}</span>
         </div>
         <slot />
     </article>

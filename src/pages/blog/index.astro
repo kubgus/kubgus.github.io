@@ -2,6 +2,7 @@
 import NavbarLayout from "../../layouts/navbar-layout.astro";
 
 const posts = await Astro.glob("./post/*.md");
+posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 ---
 
 <style>
@@ -26,8 +27,8 @@ figure span#date {
     <h1>Blog</h1>
     <section>
         { posts.map((post) => 
-            <figure class="">
-                <a href={post.url}>
+            <figure> 
+                <a href={post.url} class="flex flex-row gap-4 items-center">
                     <h2>{post.frontmatter.title}</h2>
                 </a>
                 <span id="date">{post.frontmatter.author} • {new Date(post.frontmatter.pubDate).toDateString()}</span>
