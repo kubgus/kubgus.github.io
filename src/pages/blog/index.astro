@@ -1,0 +1,37 @@
+---
+import NavbarLayout from "../../layouts/navbar-layout.astro";
+
+const posts = await Astro.glob("./post/*.md");
+---
+
+<style>
+section {
+    @apply flex flex-col gap-6 mt-12 p-8 rounded-lg bg-brand-black
+}
+
+figure {
+    @apply flex flex-col gap-1 bg-brand-gray rounded-lg p-6
+}
+
+figure h2 {
+    @apply mb-1.5
+}
+
+figure span#date {
+    @apply opacity-40
+}
+</style>
+
+<NavbarLayout>
+    <h1>Blog</h1>
+    <section>
+        { posts.map((post) => 
+            <figure class="">
+                <a href={post.url}>
+                    <h2>{post.frontmatter.title}</h2>
+                </a>
+                <span id="date">{post.frontmatter.author} • {new Date(post.frontmatter.pubDate).toDateString()}</span>
+            </figure>
+        ) }
+    </section>
+</NavbarLayout>
