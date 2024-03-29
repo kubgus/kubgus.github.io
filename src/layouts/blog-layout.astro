@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "./base-layout.astro";
 
+import SocialsBar from "../components/socials-bar.astro";
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -18,9 +20,10 @@ pre {
 </style>
 
 <BaseLayout>
-    <header class="flex flex-row justify-between px-6 py-3 bg-brand-gray font-dela-gothic-one text-lg">
-        <nav class="flex flex-row">
+    <header class="flex flex-row justify-between sticky top-0 left-0 w-full px-6 py-3 bg-brand-gray font-dela-gothic-one text-lg">
+        <nav class="flex flex-row gap-12">
             <a href="/blog">← Go back</a>
+            <SocialsBar />
         </nav>
         <a href="/">
             <h6>JG</h6>
