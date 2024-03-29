@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 
 <style>
 article {
-    @apply flex flex-col gap-12 bg-brand-black px-[20vw] py-12
+    @apply flex flex-col gap-12 bg-brand-black px-6 lg:px-[20vw] py-12
 }
 </style>
 
@@ -17,10 +17,14 @@ pre {
     background-color: #151520 !important;
     @apply p-3 rounded-lg
 }
+
+img {
+    @apply rounded-lg
+}
 </style>
 
 <BaseLayout>
-    <header class="flex flex-row justify-between sticky top-0 left-0 w-full px-6 py-3 bg-brand-gray font-dela-gothic-one text-lg">
+    <header class="z-20 flex flex-row justify-between sticky top-0 left-0 w-full px-6 py-3 bg-brand-gray font-dela-gothic-one text-lg">
         <nav class="flex flex-row gap-12">
             <a href="/blog">← Go back</a>
             <SocialsBar />
