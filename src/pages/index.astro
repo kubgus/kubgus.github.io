@@ -1,5 +1,9 @@
 ---
 import NavbarLayout from "../layouts/navbar-layout.astro";
+
+const posts = await Astro.glob("./blog/post/*.md");
+posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+posts.splice(3);
 ---
 
 <NavbarLayout>
@@ -33,18 +37,20 @@ import NavbarLayout from "../layouts/navbar-layout.astro";
                 </figure>
             </section>
         </figure>
-        <figure class="flex flex-col gap-3 h-full xl:w-[50%] p-6 bg-brand-black rounded-md">
+        <figure class="flex flex-col gap-6 h-full xl:w-[50%] p-6 bg-brand-black rounded-md">
             <h2>Bio</h2>
             <span class="text-lg">Volám sa Jakub a študujem na strednej škole v Pezinku. Už od pomerne nízkeho veku mám veľký zápal pre programovanie a digitálnu tvorbu, čo vo mne prerástlo v nezanedbateľnú skúsenosť s vývojom softvéru a webových aplikácií a riešení.
             Mimo profesionálnych skúseností mám dlhodobú skúsenosť s tvorbou vlastných "passion" projektov, ktoré spravujem a publikujem na svojej webstránke a GitHub profile.
             Medzi moje záľuby patrí (samozrejme) programovanie, cvičenie a učenie sa hre na gitare, no taktiež sa dlhodobo venujem skautingu v dobrovoľníckej organizácii SLSK a pomáham aj s organizáciou a eventami CoderDojo.
             Som otvorený novým pracovným vzťahom a skúsenostiam.</span>
-            <h2>Articles</h2>
-            <div class="flex flex-row gap-3 overflow-hidden">
-                <figure class="flex flex-col gap-2 p-3 bg-brand-gray rounded-md">
-                    <a href="/blog"><h3>Title</h3></a>
-                    <p>Explaining what this is about.</p>
-                </figure>
+            <h2>Latest Articles</h2>
+            <div class="grid grid-cols-3 gap-3">
+                { posts.map((post) =>
+                    <figure class="flex flex-col gap-2 p-3 bg-brand-gray rounded-md">
+                        <a href={post.url}><h3>{post.frontmatter.title}</h3></a>
+                        <span id="date">{post.frontmatter.author} • {new Date(post.frontmatter.pubDate).toDateString()}</span>
+                    </figure>
+                ) }
             </div>
         </figure>
     </article>
