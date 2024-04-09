@@ -10,6 +10,10 @@ body::-webkit-scrollbar-thumb {
     @apply bg-brand-black;
 }
 
+body {
+    @apply selection:bg-brand-white selection:text-brand-black;
+}
+
 h1, h2, h3, h4, h5, h6 {
     @apply font-dela-gothic-one;
 }
