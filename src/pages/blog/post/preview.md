@@ -6,7 +6,7 @@ description: "This post doesn't hold any relevance, it's just a preview to test 
 author: "Jakub Gustafik"
 image:
     url: "https://st2.depositphotos.com/1592314/10545/i/450/depositphotos_105455422-stock-photo-nice-mediterranean-sea-france.jpg"
-    alt: "Astro logo"
+    alt: "Seaside France"
 ---
 
 # Heading 1
@@ -25,7 +25,7 @@ This is a paragraph with a [link](https://astro.build).
 
 This is a paragraph with an image:
 
-![Picture of seaside France](https://st2.depositphotos.com/1592314/10545/i/450/depositphotos_105455422-stock-photo-nice-mediterranean-sea-france.jpg)
+![Seaside France](https://st2.depositphotos.com/1592314/10545/i/450/depositphotos_105455422-stock-photo-nice-mediterranean-sea-france.jpg)
 
 This is a paragraph with a code block:
 

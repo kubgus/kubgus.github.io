@@ -7,14 +7,14 @@ posts.splice(3);
 ---
 
 <NavbarLayout>
-    <article class="flex flex-col xl:flex-row justify-center gap-6 md:gap-12">
-        <figure class="md:grid md:grid-cols-1 md:grid-rows-[1fr_0.3fr_6fr]">
+    <article class="flex flex-col xl:flex-row justify-center gap-3 md:gap-6">
+        <figure class="md:grid md:grid-cols-1 md:grid-rows-[1fr_0.3fr_6fr] h-full">
             <h1>Jakub Gustafik</h1>
-            <span class="text-2xl text-brand-teal">Student, Freelancer • Software development, Web development, IT</span>
-            <section class="w-full mt-7 flex flex-col md:flex-row gap-6 md:gap-12">
+            <span class="text-xl text-brand-teal">Student, Freelancer • Software development, Web development, IT</span>
+            <section class="mt-4 flex flex-col md:flex-row gap-3 md:gap-6">
                 <figure class="flex flex-col gap-4 bg-brand-black w-full rounded-md p-6">
                     <h2>Skills</h2>
-                    <ul class="text-xl flex flex-col gap-2 [&_li]:list-disc pl-7">
+                    <ul class="text-md flex flex-col gap-2 [&_li]:list-disc pl-7">
                         <li>English/Slovak bilingual</li>
                         <li>Conversational German</li>
                         <li>Programming</li>
@@ -26,7 +26,7 @@ posts.splice(3);
                 </figure>
                 <figure class="flex flex-col gap-4 bg-brand-black w-full rounded-md p-6">
                     <h2>Knowledge</h2>
-                    <ul class="text-xl flex flex-col gap-2 [&_li]:list-disc pl-7">
+                    <ul class="text-md flex flex-col gap-2 [&_li]:list-disc pl-7">
                         <li>C++, C#</li>
                         <li>HTML, CSS, JavaScript, Typescript</li>
                         <li>Node.js, Vue.js, Nuxt.js, Astro</li>
@@ -37,18 +37,23 @@ posts.splice(3);
                 </figure>
             </section>
         </figure>
-        <figure class="flex flex-col gap-6 h-full xl:w-[50%] p-6 bg-brand-black rounded-md">
+        <figure class="flex flex-col gap-3 h-full xl:w-[50%] p-6 bg-brand-black rounded-md">
             <h2>Bio</h2>
-            <span class="text-lg">Volám sa Jakub a študujem na strednej škole v Pezinku. Už od pomerne nízkeho veku mám veľký zápal pre programovanie a digitálnu tvorbu, čo vo mne prerástlo v nezanedbateľnú skúsenosť s vývojom softvéru a webových aplikácií a riešení.
-            Mimo profesionálnych skúseností mám dlhodobú skúsenosť s tvorbou vlastných "passion" projektov, ktoré spravujem a publikujem na svojej webstránke a GitHub profile.
-            Medzi moje záľuby patrí (samozrejme) programovanie, cvičenie a učenie sa hre na gitare, no taktiež sa dlhodobo venujem skautingu v dobrovoľníckej organizácii SLSK a pomáham aj s organizáciou a eventami CoderDojo.
-            Som otvorený novým pracovným vzťahom a skúsenostiam.</span>
+            <span class="text-md">
+            My name is Jakub and I am a student from Slovakia also working as
+            a freelancer. I picked up coding when I was young and I've been
+            passionate about it ever since. I am always interested in IT,
+            software development, web development, and personal development.
+            I am bilingual in English
+            and Slovak and I am also learning German. If you're interested in
+            working with me, feel free to <a href="/contact">contact me</a>.
+            </span>
             <h2>Latest Articles</h2>
-            <div class="grid grid-cols-3 gap-3">
+            <div class="grid grid-cols-1 2xl:grid-cols-3 gap-3">
                 { posts.map((post) =>
                     <figure class="flex flex-col gap-2 p-3 bg-brand-gray rounded-md">
-                        <a href={post.url}><h3>{post.frontmatter.title}</h3></a>
-                        <span id="date">{post.frontmatter.author} • {new Date(post.frontmatter.pubDate).toDateString()}</span>
+                        <a href={post.url}><h4>{post.frontmatter.title}</h3></a>
+                        <span id="date" class="text-sm opacity-60">{post.frontmatter.author} • {new Date(post.frontmatter.pubDate).toDateString()}</span>
                     </figure>
                 ) }
             </div>

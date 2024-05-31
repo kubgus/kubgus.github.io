@@ -25,7 +25,7 @@ img {
 
 <BaseLayout>
     <header class="z-20 flex flex-row justify-between sticky top-0 left-0 w-full px-6 py-3 bg-brand-gray font-dela-gothic-one text-lg">
-        <nav class="flex flex-row gap-12">
+        <nav class="flex flex-row gap-6">
             <a href="/blog">← Go back</a>
             <SocialsBar />
         </nav>
@@ -36,7 +36,7 @@ img {
     <article>
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-[100%] h-[30vh] object-cover rounded-lg" />
         <div id="info" class="flex flex-col gap-6 mb-6">
-            <h1 class="text-[5.5rem]">{frontmatter.title}</h1>
+            <h1 class="text-[5.5rem] leading-[5.5rem]">{frontmatter.title}</h1>
             <p class="text-2xl opacity-80 mt-6">{frontmatter.description}</p>
             <span id="date" class="opacity-50">{frontmatter.author} • {new Date(frontmatter.pubDate).toDateString()}</span>
         </div>
