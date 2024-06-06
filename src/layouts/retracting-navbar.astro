@@ -1,0 +1,72 @@
+---
+import CoreLayout from "../layouts/core.astro";
+
+const { title, meta } = Astro.props || {
+    title: "Jakub Gustafik",
+    meta: [],
+}
+---
+
+<style>
+    header {
+        position: fixed;
+        top: -5rem;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0;
+
+        background-color: var(--background-dark);
+        font-size: 1.25rem;
+        font-weight: 600;
+
+        padding: 1rem 2rem;
+
+        transition: top 0.25s, opacity 0.25s;
+    }
+
+    header.scrolled {
+        top: 0;
+        opacity: 1;
+    }
+
+    header ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+    }
+
+    header li {
+        display: inline-block;
+
+        font-size: 1rem;
+    }
+</style>
+
+<CoreLayout title={title} meta={meta}>
+    <header>
+        <figure><a href="/" class="implied">{title}</a></figure>
+        <nav>
+            <ul>
+                <li><a href="/projects" class="implied">Projects</a></li>
+                <li><a href="/blog" class="implied">Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+    <slot />
+</CoreLayout>
+
+<script>
+    const header = document.querySelector("header");
+
+    document.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            header?.classList.add("scrolled");
+        } else {
+            header?.classList.remove("scrolled");
+        }
+    })
+</script>
