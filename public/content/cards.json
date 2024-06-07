@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Linux",
+        "description": "I use Linux on a daily basis for work, but also for personal use. I know my way around the terminal and I can solve most Linux-related problems. Most of all, I enjoy using Linux for its simplicity, customization and the fact that it's open-source. I use Arch, by the way... ;)"
+    },
+    {
+        "title": "NeoVim",
+        "description": "I use NeoVim with Linux to get the best performance and speed while coding. I also have my custom config file loaded with extensions and custom bindings that make my text editor tasks seem trivial."
+    }
+]

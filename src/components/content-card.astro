@@ -5,7 +5,7 @@ const { theme } = Astro.props;
 <style define:vars={{ theme: `var(--${theme || "primary-accent-dark"})` }}>
 .content-card {
     background-color: color-mix(in srgb, var(--text-color-dark) 5%, transparent);
-    border-top: 3px solid var(--theme);
+    border-top: 4px solid var(--theme);
     border-radius: 5px;
 
     padding: 1rem;
