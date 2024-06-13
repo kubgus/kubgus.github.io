@@ -30,6 +30,18 @@ const { fixed } = Astro.props;
         transition: top 0.25s, opacity 0.25s;
     }
 
+    @media (max-width: 768px) {
+        header {
+            padding-inline: 5vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            padding-inline: 3vw;
+        }
+    }
+
     header.scrolled {
         top: 0;
         opacity: 1;
