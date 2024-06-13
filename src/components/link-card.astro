@@ -1,0 +1,17 @@
+---
+import ContentCard from "./content-card.astro";
+
+const { href } = Astro.props;
+---
+
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<ContentCard>
+    <a href={href} target="_blank">
+        <slot />
+    </a>
+</ContentCard>

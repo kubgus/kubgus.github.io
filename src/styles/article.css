@@ -1,0 +1,17 @@
+img {
+    max-width: 100%;
+}
+
+ul, ol {
+    margin-left: 2rem;
+}
+
+pre.astro-code {
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+blockquote {
+    border-left: 0.25rem solid var(--primary-accent-dark);
+    padding-left: 1rem;
+}

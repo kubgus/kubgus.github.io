@@ -1,0 +1,33 @@
+---
+import FixedNavbarLayout from "../../layouts/fixed-navbar.astro";
+import LinkCard from "../../components/link-card.astro";
+
+import "../../styles/default-padding.css";
+
+const posts = await Astro.glob("./p/*.md");
+posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+---
+
+<style>
+    main > h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+</style>
+
+<FixedNavbarLayout title="Articles | Jakub Gustafik">
+    <main>
+        <h1>Articles</h1>
+        <ul>
+            {posts.map((x) => <li><LinkCard href={x.url}>
+                    <h1>{x.frontmatter.title}</h1>
+                    <p>{x.frontmatter.description}</p>
+            </LinkCard></li>)}
+        </ul>
+    </main>
+</FixedNavbarLayout>

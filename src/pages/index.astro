@@ -1,43 +1,22 @@
 ---
 import RetractingNavbarLayout from "../layouts/retracting-navbar.astro";
 import ContactBar from "../components/contact-bar.astro";
-import ContentCard from "../components/content-card.astro";
+import WallOfFame from "../components/wall-of-fame.astro";
 
-const cardContent = await fetch(Astro.url.origin + "/content/cards.json").then((res) => {
+import "../styles/default-padding.css";
+
+const generalSkillCards = await fetch(Astro.url.origin + "/content/skill-cards/general.json").then((res) => {
     if (res.status != 200) return [];
     return res.json();
 });
-
-const availableThemes = [
-    "primary-accent-dark",
-    "complementary-accent-dark-1",
-    "complementary-accent-dark-2",
-    "complementary-accent-dark-3",
-];
 
 const title = "Jakub Gustafik";
 ---
 
 <style>
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2.5rem;
-
-    padding: 6rem 13vw;
-}
-
 @media (max-width: 768px) {
     main {
-        padding: 6rem 5vw;
         text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 6rem 3vw;
     }
 }
 
@@ -66,38 +45,6 @@ main {
     color: var(--secondary-background-dark);
 }
 
-#link-bar {
-    display: flex;
-    justify-content: start;
-    gap: 1rem;
-
-    padding: 1rem 1rem 1rem 0;
-}
-
-#link-bar-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-#link-bar-contact {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-@media (max-width: 1200px) {
-    #link-bar {
-        flex-direction: column-reverse;
-    }
-}
-
-@media (max-width: 768px) {
-    #link-bar {
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 #portrait-container {
     display: flex;
     justify-content: center;
@@ -113,41 +60,47 @@ main {
     border-radius: 50%;
 }
 
-.wall-of-fame {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+#link-bar {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+
+    padding: 1rem 1rem 1rem 0;
 }
 
-@media (max-width: 1100px) {
-    .wall-of-fame {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1200px) {
+    #link-bar {
+        flex-direction: column-reverse;
     }
 }
 
 @media (max-width: 768px) {
-    .wall-of-fame {
-        grid-template-columns: repeat(1, 1fr);
+    #link-bar {
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+
+        font-size: 1.4rem;
     }
 }
-</style>
 
-<style is:global>
-.wall-of-fame > *:nth-child(4n+1),
-.wall-of-fame > *:nth-child(4n+4) {
-    grid-column: span 2;
+#link-bar-buttons {
+    display: flex;
+    gap: 0.5rem;
 }
 
-@media (max-width: 1100px) {
-    .wall-of-fame > *:nth-child(4n+1),
-    .wall-of-fame > *:nth-child(4n+4) {
-        grid-column: span 1; }
+@media (max-width: 480px) {
+    #link-bar-buttons {
+        flex-direction: column;
+    }
 }
 
-@media (max-width: 768px) {
-    .wall-of-fame > *:nth-child(4n+1),
-    .wall-of-fame > *:nth-child(4n+4) {
-        grid-column: span 1; }
+#link-bar-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 </style>
 
@@ -177,14 +130,7 @@ main {
                 <img src="/images/linkedin-portrait.jpg" alt="Portrait" id="portrait" />
             </div>
         </figure>
-        <h1>Skills:</h1>
-        <figure class="wall-of-fame">
-            { cardContent.map((x, i) =>
-                <ContentCard theme=`${availableThemes[i % availableThemes.length]}`>
-                    <h2>{x.title}</h2>
-                    <p>{x.description}</p>
-                </ContentCard>
-            )}
-        </figure>
+        <h1>Skills</h1>
+        <WallOfFame cardContent={generalSkillCards} />
     </main>
 </RetractingNavbarLayout>

@@ -6,126 +6,125 @@ const { title, meta } = Astro.props || {
 ---
 
 <style is:global>
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
 
-:root {
-    --background-dark: #0e0e0e;
-    --text-color-dark: #e6e6e6;
-    --primary-accent-dark: #7054bc;
-    --secondary-background-dark: #555;
-    --complementary-accent-dark-1: #bc54a1;
-    --complementary-accent-dark-2: #a1bc54;
-    --complementary-accent-dark-3: #54bc70
-}
+    :root {
+        --background-dark: #0e0e0e;
+        --text-color-dark: #e6e6e6;
+        --primary-accent-dark: #7054bc;
+        --secondary-background-dark: #555;
+        --complementary-accent-dark-1: #bc54a1;
+        --complementary-accent-dark-2: #a1bc54;
+        --complementary-accent-dark-3: #54bc70
+    }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-::selection {
-    background-color: var(--primary-accent-dark);
-    color: var(--text-color-dark);
-}
+    ::selection {
+        background-color: var(--primary-accent-dark);
+        color: var(--text-color-dark);
+    }
 
-::-webkit-scrollbar {
-    width: 5px;
-}
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-background-dark);
-}
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--secondary-background-dark);
+    }
 
-::-webkit-scrollbar-track {
-    background-color: var(--background-dark);
-}
+    ::-webkit-scrollbar-track {
+        background-color: var(--background-dark);
+    }
 
-body {
-    background-color: var(--background-dark);
-    color: var(--text-color-dark);
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-color-dark);
 
-    font-family: 'Kanit', 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+        font-family: 'Kanit', 'Inter', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
 
-    margin: 0;
-    padding: 0;
-}
+        margin: 0;
+        padding: 0;
+    }
 
-a {
-    color: inherit;
-    text-decoration: underline;
-}
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
 
-a.implied {
-    text-decoration: none;
-}
+    a.implied {
+        text-decoration: none;
+    }
 
-a.btn {
-    text-decoration: none;
-    background-color: var(--primary-accent-dark);
-    border: none;
-    color: var(--text-color-dark);
-    padding: 0.3rem 0.9rem;
-}
+    a.btn {
+        text-decoration: none;
+        background-color: var(--primary-accent-dark);
+        border: none;
+        color: var(--text-color-dark);
+        padding: 0.3rem 0.9rem;
+    }
 
-a.btn:hover {
-    color: var(--text-color-dark);
-    opacity: 0.8;
-}
+    a.btn:hover {
+        color: var(--text-color-dark);
+        opacity: 0.8;
+    }
 
-a:hover {
-    color: var(--primary-accent-dark);
-}
+    a:hover {
+        color: var(--primary-accent-dark);
+    }
 
-a.complementary1:hover {
-    color: var(--complementary-accent-dark-1);
-}
+    a.complementary1:hover {
+        color: var(--complementary-accent-dark-1);
+    }
 
-a.complementary2:hover {
-    color: var(--complementary-accent-dark-2);
-}
+    a.complementary2:hover {
+        color: var(--complementary-accent-dark-2);
+    }
 
-a.complementary3:hover {
-    color: var(--complementary-accent-dark-3);
-}
+    a.complementary3:hover {
+        color: var(--complementary-accent-dark-3);
+    }
 
-button, a.btn, img, video, iframe, input, textarea {
-    border-radius: 5px;
-}
+    button, a.btn, img, video, iframe, input, textarea {
+        border-radius: 5px;
+    }
 
-button {
-    background-color: var(--primary-accent-dark);
-    border: none;
-    color: var(--text-color-dark);
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-}
+    button {
+        background-color: var(--primary-accent-dark);
+        border: none;
+        color: var(--text-color-dark);
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 
-button.complementary1 {
-    background-color: var(--complementary-accent-dark-1);
-}
+    button.complementary1 {
+        background-color: var(--complementary-accent-dark-1);
+    }
 
-button.complementary2 {
-    background-color: var(--complementary-accent-dark-2);
-}
+    button.complementary2 {
+        background-color: var(--complementary-accent-dark-2);
+    }
 
-button.complementary3 {
-    background-color: var(--complementary-accent-dark-3);
-}
+    button.complementary3 {
+        background-color: var(--complementary-accent-dark-3);
+    }
 </style>
 
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         { meta?.map((meta : any) =>
-            <meta name={meta.name} content={meta.content} />)
+        <meta name={meta.name} content={meta.content} />)
         }
 
         <title>{title}</title>

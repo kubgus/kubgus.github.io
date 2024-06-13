@@ -1,0 +1,25 @@
+---
+import FixedNavbarLayout from "../../layouts/fixed-navbar.astro";
+import WallOfFame from "../../components/wall-of-fame.astro";
+
+import "../../styles/default-padding.css";
+
+const activeProjectCards = await fetch(Astro.url.origin + "/content/project-cards/active.json").then((res) => {
+    if (res.status != 200) return [];
+    return res.json();
+});
+---
+
+<style>
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+</style>
+
+<FixedNavbarLayout title="Projects | Jakub Gustafik">
+    <main>
+        <h1>Projects</h1>
+        <WallOfFame cardContent={activeProjectCards} />
+    </main>
+</FixedNavbarLayout>

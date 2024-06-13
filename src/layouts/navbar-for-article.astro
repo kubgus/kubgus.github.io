@@ -1,0 +1,55 @@
+---
+import FixedNavbarLayout from "./fixed-navbar.astro";
+
+import "../styles/default-padding.css";
+import "../styles/article.css";
+
+const { frontmatter } = Astro.props;
+
+const title = `${frontmatter.title} | ${frontmatter.author}` || "Jakub Gustafik";
+const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
+---
+
+<style>
+    .article-header {
+        border-bottom: 1px solid var(--secondary-background-dark);
+
+        padding-bottom: 2.5rem;
+    }
+
+    .article-header h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    #article-description {
+        font-size: 1.5rem;
+        color: var(--secondary-background-dark);
+    }
+
+    #article-info {
+        margin-top: 1rem;
+
+        display: flex;
+        gap: 1rem;
+    }
+
+    #article-info p {
+        font-size: 1.25rem;
+    }
+</style>
+
+<FixedNavbarLayout title={title}>
+    <main>
+        <section class="article-header">
+            <h1>{frontmatter.title}</h1>
+            <p id="article-description">{frontmatter.description}</p>
+            <div id="article-info">
+                <p>{dateString}</p>
+                <p>|</p>
+                <p>{frontmatter.author}</p>
+            </div>
+        </section>
+        <slot />
+    </main>
+</FixedNavbarLayout>
