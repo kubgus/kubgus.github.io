@@ -4,10 +4,12 @@ import WallOfFame from "../../components/wall-of-fame.astro";
 
 import "../../styles/default-padding.css";
 
-const activeProjectCards = await fetch(Astro.url.origin + "/content/project-cards/active.json").then((res) => {
-    if (res.status != 200) return [];
-    return res.json();
-});
+const activeProjectCards = [
+    {
+        title: "Work in progress...",
+        description: "business@gustafik.com"
+    }
+];
 ---
 
 <style>
