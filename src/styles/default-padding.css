@@ -4,7 +4,13 @@ main {
     justify-content: center;
     gap: 2.5rem;
 
-    padding: 6rem 13vw;
+    padding: 6rem 20vw;
+}
+
+@media (max-width: 1420px) {
+    main {
+        padding-inline: 10vw;
+    }
 }
 
 @media (max-width: 768px) {
