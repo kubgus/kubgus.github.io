@@ -11,6 +11,22 @@ const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "
 ---
 
 <style>
+    main {
+        padding-inline: 28vw;
+    }
+
+    @media (max-width: 1000px) {
+        main {
+            padding-inline: 10vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        main {
+            padding-inline: 3vw;
+        }
+    }
+
     .article-header {
         border-bottom: 1px solid var(--secondary-background-dark);
 
