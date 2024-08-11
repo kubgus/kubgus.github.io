@@ -13,7 +13,7 @@ const { title, meta } = Astro.props || {
         --background-dark: #0e0e0e;
         --text-color-dark: #e6e6e6;
         --primary-accent-dark: #7054bc;
-        --secondary-background-dark: #555;
+        --secondary-background-dark: #333;
         --complementary-accent-dark-1: #bc54a1;
         --complementary-accent-dark-2: #a1bc54;
         --complementary-accent-dark-3: #54bc70
@@ -52,6 +52,11 @@ const { title, meta } = Astro.props || {
 
         margin: 0;
         padding: 0;
+    }
+
+    .container {
+        border: solid 1px var(--secondary-background-dark);
+        border-radius: 12px;
     }
 
     a {

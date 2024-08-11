@@ -1,0 +1,57 @@
+---
+---
+
+<figure class="container">
+    <div class="content-selector-container">
+        <button class="content-selector">About me</button>
+        <button class="content-selector">Timeline</button>
+        <button class="content-selector">Blog</button>
+    </div>
+    <div class="select-indicator">
+</figure>
+
+<script>
+    const buttons = document.getElementsByClassName("content-selector");
+    // I hate Typescript
+    const selector = Array.from(document.getElementsByClassName("select-indicator") as HTMLCollectionOf<HTMLElement>)[0];
+
+    for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        button.addEventListener("click", () => {
+            selector.style.transform = `translateX(${i * 100}%`;
+        });
+    }
+</script>
+
+<style>
+    figure {
+        position: relative;
+    }
+
+    .content-selector-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    button.content-selector {
+        background-color: transparent;
+        padding: 0.6rem;
+        font-weight: 700;
+        width: 100%;
+        border-radius: 12px;
+        z-index: 1;
+    }
+
+    .select-indicator {
+        position: absolute;
+        width: 33.333%;
+        height: 100%;
+        background-color: var(--secondary-background-dark);
+        border-radius: 12px;
+        transition: all 0.15s ease-out;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+</style>
