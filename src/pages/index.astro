@@ -13,9 +13,19 @@ const title = "Jakub Gustafik";
         <Hero />
         <Picker />
 
-        <article class="content container">
-            <h1>Hello World</h1>
-        </article>
+        <section class="container">
+            <article class="content" id="content-1">
+                <h2>About me</h2>
+            </article>
+
+            <article class="content" id="content-2">
+                <h2>Projects</h2>
+            </article>
+
+            <article class="content" id="content-3">
+                <h2>Blog</h2>
+            </article>
+        </section>
     </main>
 </RetractingNavbarLayout>
 
@@ -26,7 +36,17 @@ const title = "Jakub Gustafik";
         }
     }
 
-    .content {
+    .container {
         padding: 1.5rem 3rem;
+    }
+
+    .content {
+        display: none;
+    }
+
+    main:has(#tab-1.active) #content-1,
+    main:has(#tab-2.active) #content-2,
+    main:has(#tab-3.active) #content-3 {
+        display: block;
     }
 </style>

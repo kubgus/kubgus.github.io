@@ -3,9 +3,9 @@
 
 <figure class="container">
     <div class="content-selector-container">
-        <button class="content-selector">About me</button>
-        <button class="content-selector">Timeline</button>
-        <button class="content-selector">Blog</button>
+        <button class="content-selector active" id="tab-1">About me</button>
+        <button class="content-selector" id="tab-2">Projects</button>
+        <button class="content-selector" id="tab-3">Blog</button>
     </div>
     <div class="select-indicator">
 </figure>
@@ -19,6 +19,10 @@
         const button = buttons[i];
         button.addEventListener("click", () => {
             selector.style.transform = `translateX(${i * 100}%`;
+            for (let j = 0; j < buttons.length; j++) {
+                buttons[j].classList.remove("active");
+            }
+            button.classList.add("active");
         });
     }
 </script>
