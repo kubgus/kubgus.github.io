@@ -30,6 +30,8 @@ const title = "Jakub Gustafik";
                 <Blog />
             </article>
         </section>
+
+        <span id="license">©2024 Jakub Gustafik</span>
     </main>
 </RetractingNavbarLayout>
 
@@ -59,6 +61,11 @@ const title = "Jakub Gustafik";
     main:has(#tab-2.active) #content-2,
     main:has(#tab-3.active) #content-3 {
         display: block;
+    }
+
+    #license {
+        text-align: center;
+        color: var(--secondary-background-dark);
     }
 </style>
 
