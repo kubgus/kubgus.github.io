@@ -1,0 +1,71 @@
+---
+import PictureFrame from "./picture-frame.astro";
+
+let pictures = [
+    "javascript",
+    "typescript",
+    "node",
+    "cpp",
+    "cs",
+    "python",
+    "html",
+    "css",
+    "vue",
+    "astro",
+    "tailwind",
+    "git",
+    "github",
+    "neovim",
+    "linux",
+];
+
+pictures = pictures.sort(() => Math.random() - 0.5);
+---
+
+<figure>
+    <div>
+        {
+            pictures.map((picture) => (
+                <PictureFrame src={`/images/tech-logos/${picture}.png`} alt={picture} />
+            ))
+        }
+        {
+            pictures.map((picture) => (
+                <PictureFrame src={`/images/tech-logos/${picture}.png`} alt={picture} />
+            ))
+        }
+    </div>
+</figure>
+
+<style>
+    figure {
+        overflow: hidden;
+        min-width: 100%;
+        position: relative;
+        margin: 2rem 0;
+    }
+
+    figure > div {
+        animation: marquee linear 30s infinite;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @media (max-width: 480px) {
+        figure {
+            display: none;
+        }
+    }
+</style>

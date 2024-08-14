@@ -1,3 +1,8 @@
+---
+import TechMarquee from "../tech-marquee.astro";
+import PictureFrame from "../picture-frame.astro";
+---
+
 <div>
     <h1>Call me Kubo!</h1>
     <p>
@@ -15,14 +20,22 @@
         <li>Project management</li>
     </ul>
 
+    <TechMarquee />
+
     <h1>Volunteering</h1>
     <figure class="accented">
-        <h2>Slovenský skauting</h2>
-        <p>Dec 2022 - Present</p>
+        <PictureFrame src="/images/slsk.png" alt="Slovenský skauting" />
+        <div>
+            <h2>Slovenský skauting</h2>
+            <p>Dec 2022 - Present</p>
+        </div>
     </figure>
     <figure class="accented">
-        <h2>CoderDojo Bratislava</h2>
-        <p>Sep 2023 - Present</p>
+        <PictureFrame src="/images/coderdojo.png" alt="CoderDojo Bratislava" />
+        <div>
+            <h2>CoderDojo Bratislava</h2>
+            <p>Sep 2023 - Present</p>
+        </div>
     </figure>
 
     <h1>Languages</h1>
@@ -108,7 +121,21 @@
         margin-left: 0.25rem;
     }
 
+    .accented:has(img) {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
     .accented + .accented {
         margin-top: 0.25rem;
+    }
+
+    @media (max-width: 1000px) {
+        .accented:has(img) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 </style>
