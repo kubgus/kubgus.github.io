@@ -10,7 +10,6 @@ export default [
         title: "heystack",
         description: "Social media platform made with Nuxt.js and Supabase.",
         website: "https://heystak.netlify.app/",
-        github: "https://github.com/kubgus/heystack",
     },
     {
         title: "bloodline",
@@ -120,21 +119,18 @@ export default [
     {
         title: "overwork",
         description: "Chrome extension that reminds you to take breaks.",
-        github: "https://github.com/kubgus/overwork",
         website: "https://chromewebstore.google.com/detail/overwork/jhpbphonlhcgjieobohcpamgejbbkkcj",
         image: "images/thumbnails/overwork.png",
     },
     {
         title: "faux",
         description: "Chrome extension that generates fake user data and working temporary emails.",
-        github: "https://github.com/kubgus/faux",
         website: "https://chromewebstore.google.com/detail/faux/kffcggckolacihcclnifefneifapjcdl",
         image: "images/thumbnails/faux.png",
     },
     {
         title: "instant",
         description: "Secure chatboard website made with Express.js and Socket.io.",
-        github: "https://github.com/kubgus/instant",
         website: "https://instant.gustafik.com/",
         image: "images/thumbnails/instant.png",
     },
