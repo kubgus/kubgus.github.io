@@ -1,0 +1,46 @@
+---
+const { post } = Astro.props;
+
+const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
+---
+
+<figure class="container">
+    <a href={post.url}>
+        <h1>{post.frontmatter.title}</h1>
+        <div class="info">
+            <p>{dateString}</p>
+            <p>|</p>
+            <p>{post.frontmatter.author}</p>
+        </div>
+    </a>
+</figure>
+
+<style>
+    figure {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    figure > a:hover > h1 {
+        color: var(--primary-accent-dark);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    div.info {
+        color: var(--secondary-background-dark);
+        font-size: 1.25rem;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        flex-direction: row;
+    }
+</style>

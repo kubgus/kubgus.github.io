@@ -1,3 +1,15 @@
+---
+import BlogPreview from "../blog-preview.astro";
+
+const posts = await Astro.glob("../../pages/blog/*.md");
+posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+---
+
 <div>
-    <h1>Blog</h1>
+    <h1>Blog Posts</h1>
+    {
+        posts.map((post) => (
+            <BlogPreview post={post} />
+        ))
+    }
 </div>
