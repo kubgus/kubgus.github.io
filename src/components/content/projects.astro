@@ -1,10 +1,44 @@
+---
+import ProjectPreview from "../project-preview.astro";
+
+import projects from "../../data/projects";
+const projects_sorted = projects.sort(() => Math.random() - 0.5);
+
+const random_project = projects[Math.floor(Math.random() * projects.length)];
+---
+
 <div>
-    <h1>Random Project</h1>
-    <p>Coming soon...</p>
+    <div id="random-project">
+        <h1>Random Project</h1>
+        <p>This project was picked just for you to check out!</p>
+        <ProjectPreview project={random_project} />
+    </div>
 
-    <h1>Highlights</h1>
-    <p>Coming soon...</p>
-
-    <h1>Projects</h1>
-    <p>Coming soon...</p>
+    <h1>All Projects</h1>
+    <div class="projects">
+        {
+            projects_sorted.map((project) => (
+                <ProjectPreview project={project} />
+            ))
+        }
+    </div>
 </div>
+
+<style>
+    #random-project p {
+        margin-bottom: 0.8rem;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 500px) {
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
