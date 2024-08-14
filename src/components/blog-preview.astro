@@ -4,7 +4,7 @@ const { post } = Astro.props;
 const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
 ---
 
-<figure class="container">
+<figure>
     <a href={post.url}>
         <h1>{post.frontmatter.title}</h1>
         <div class="info">
@@ -20,8 +20,12 @@ const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { mon
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        padding: 1rem;
-        border-width: 2px;
+        padding: 1rem 0.5rem;
+        border-top: 1px solid var(--secondary-background-dark);
+    }
+
+    figure:last-child {
+        border-bottom: 1px solid var(--secondary-background-dark);
     }
 
     a {
