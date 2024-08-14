@@ -77,6 +77,16 @@ const title = "Jakub Gustafik";
         font-size: 1.2rem;
     }
 
+    .content > div > * {
+        opacity: 0;
+        scale: 0.9;
+        animation: fade-in ease-out 0.2s forwards;
+    }
+
+    @keyframes fade-in {
+        to { scale: 1; opacity: 1; }
+    }
+
     .content h1 {
         font-size: 1.85rem;
     }

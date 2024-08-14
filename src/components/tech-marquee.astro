@@ -45,13 +45,27 @@ pictures = pictures.sort(() => Math.random() - 0.5);
         margin: 2rem 0;
     }
 
+    figure {
+        scrollbar-width: none;
+    }
+
     figure > div {
-        animation: marquee linear 30s infinite;
         width: max-content;
         display: flex;
         align-items: center;
         flex-direction: row;
         gap: 0.5rem;
+        animation: marquee linear 30s infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        figure {
+            overflow: scroll;
+        }
+
+        figure > div {
+            animation: none;
+        }
     }
 
     @keyframes marquee {
