@@ -1,24 +1,28 @@
----
-const { project } = Astro.props;
----
+<script setup>
+    defineProps({
+        project: Object
+    });
+</script>
 
-<figure class="container">
-    <a href={project.website ?? project.github ?? "#"} target="_blank">
-        <div class="info">
-            <img src={project.image} alt="" />
-            <figcaption>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-            </figcaption>
+<template>
+    <figure class="container">
+        <a :href="project.website ?? project.github ?? '#'" target="_blank">
+            <div class="info">
+                <img :src="project.image" alt="" />
+                <figcaption>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                </figcaption>
+            </div>
+        </a>
+        <div class="links">
+            <a v-if="project.github" :href="project.github" target="_blank"><i class="fab fa-github"></i></a>
+            <a v-if="project.website" :href="project.website" target="_blank"><i class="fas fa-link"></i></a>
         </div>
-    </a>
-    <div class="links">
-        {project.github && <a href={project.github} target="_blank"><i class="fab fa-github"></i></a>}
-        {project.website && <a href={project.website} target="_blank"><i class="fas fa-link"></i></a>}
-    </div>
-</figure>
+    </figure>
+</template>
 
-<style>
+<style scoped>
     figure {
         display: flex;
         flex-direction: row;

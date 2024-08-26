@@ -4,10 +4,12 @@ import Hero from "../components/hero.astro";
 import Picker from "../components/picker.astro";
 
 import AboutMe from "../components/content/about-me.astro";
-import Projects from "../components/content/projects.astro";
+import Projects from "../components/content/projects.vue";
 import Blog from "../components/content/blog.astro";
 
 import "../styles/default-padding.css";
+
+import projects from "../data/projects.js";
 
 const title = "Jakub Gustafik";
 ---
@@ -23,7 +25,7 @@ const title = "Jakub Gustafik";
             </article>
 
             <article class="content" id="content-2">
-                <Projects />
+                <Projects client:only="vue" projects={projects} />
             </article>
 
             <article class="content" id="content-3">
