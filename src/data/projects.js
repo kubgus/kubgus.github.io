@@ -54,7 +54,7 @@ export default [
     {
         title: "copycat",
         description: "Relaxing puzzle game made for a collaborative game jam in Unity.",
-        website: "https://laiq.itch.io/copycat",
+        website: "https://mavelan.itch.io/copycat",
         image: "images/thumbnails/copycat.png",
     },
     {
