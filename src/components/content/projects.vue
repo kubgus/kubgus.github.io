@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="content-inner">
         <div id="random-project">
             <h1>Random Project</h1>
             <p>This project was picked just for you to check out!</p>

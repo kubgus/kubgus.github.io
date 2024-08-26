@@ -6,7 +6,7 @@ const posts = await Astro.glob("../../pages/blog/*.md");
 posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
-<div>
+<div class="content-inner">
     <h1>Blog Posts</h1>
     {
         posts.map((post) => (
