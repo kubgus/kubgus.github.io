@@ -5,6 +5,25 @@ const { title, meta } = Astro.props || {
 }
 ---
 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+
+        { meta?.map((meta : any) =>
+        <meta name={meta.name} content={meta.content} />)
+        }
+
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+
 <style is:global>
     @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
@@ -19,11 +38,11 @@ const { title, meta } = Astro.props || {
         --complementary-accent-dark-3: #54bc70
     }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
     ::selection {
         background-color: var(--primary-accent-dark);
@@ -126,21 +145,3 @@ const { title, meta } = Astro.props || {
         background-color: var(--complementary-accent-dark-3);
     }
 </style>
-
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        { meta?.map((meta : any) =>
-        <meta name={meta.name} content={meta.content} />)
-        }
-
-        <link rel="icon" type="image/png" href="/favicon.png" />
-
-        <title>{title}</title>
-    </head>
-    <body>
-        <slot />
-    </body>
-</html>
