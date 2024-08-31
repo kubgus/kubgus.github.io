@@ -15,7 +15,7 @@ const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "
     <section class="article-header">
         <h1>{frontmatter.title}</h1>
         <p id="article-description">{frontmatter.description}</p>
-        <div id="article-info">
+        <div id="article-info" class="faded">
             <p>{dateString}</p>
             <p>|</p>
             <p>{frontmatter.author}</p>
@@ -63,8 +63,6 @@ const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "
 
         display: flex;
         gap: 1rem;
-
-        color: var(--secondary-background-dark);
     }
 
     #article-info p {

@@ -5,9 +5,9 @@ const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { mon
 ---
 
 <figure>
-    <a href={post.url}>
+    <a href={post.url} target="_blank">
         <h1>{post.frontmatter.title}</h1>
-        <div class="info">
+        <div class="info faded">
             <p>{dateString}</p>
             <p>|</p>
             <p>{post.frontmatter.author}</p>
@@ -41,7 +41,6 @@ const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { mon
     }
 
     div.info {
-        color: var(--secondary-background-dark);
         font-size: 1.25rem;
         display: flex;
         gap: 0.5rem;

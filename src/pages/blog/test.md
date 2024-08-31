@@ -1,12 +1,9 @@
 ---
-layout: "../../layouts/navbar-for-article.astro"
+layout: "../../layouts/blog-navbar.astro"
 title: "Preview of markdown styles"
-date: 2024-03-26
 description: "This post doesn't hold any relevance, it's just a preview to test markdown styles."
+date: 2024-03-26
 author: "Jakub Gustafik"
-image:
-    url: "https://st2.depositphotos.com/1592314/10545/i/450/depositphotos_105455422-stock-photo-nice-mediterranean-sea-france.jpg"
-    alt: "Seaside France"
 ---
 
 # Heading 1
@@ -54,7 +51,6 @@ This is a paragraph with a task list:
 This is a paragraph with a blockquote:
 
 > This is a blockquote.
-> It has multiple lines.
 
 This is a paragraph with a table:
 
