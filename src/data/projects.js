@@ -48,7 +48,7 @@ export default [
     {
         title: "magnet.io",
         description: "Fake .io game made for a collaborative game jam in Unity.",
-        github: "https://github.com/kubgus/magnet.io",
+        github: "https://github.com/kubgus/magnet-io",
         website: "https://laiq.itch.io/magnet-io",
     },
     {
