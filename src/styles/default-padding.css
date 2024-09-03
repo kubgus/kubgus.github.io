@@ -1,4 +1,4 @@
-main {
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,19 +8,19 @@ main {
 }
 
 @media (max-width: 1420px) {
-    main {
+    body {
         padding-inline: 10vw;
     }
 }
 
 @media (max-width: 768px) {
-    main {
+    body {
         padding: 6rem 5vw;
     }
 }
 
 @media (max-width: 480px) {
-    main {
+    body {
         padding: 6rem 3vw;
     }
 }

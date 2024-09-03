@@ -1,7 +1,7 @@
 ---
-import RetractingNavbarLayout from "../layouts/retracting-navbar.astro";
-import Hero from "../components/hero.astro";
-import Picker from "../components/picker.astro";
+import NavbarLayout from "../layouts/navbar.astro";
+
+import ContactBar from "../components/contact-bar.astro";
 
 import AboutMe from "../components/content/about-me.astro";
 import Projects from "../components/content/projects.vue";
@@ -14,64 +14,182 @@ import projects from "../data/projects.js";
 const title = "Jakub Gustafik";
 ---
 
-<RetractingNavbarLayout title={title}>
-    <main>
-        <Hero />
-        <Picker />
+<NavbarLayout title={title} meta={[]}>
+    <header class="container">
+        <img src="/images/linkedin-portrait.jpg" alt="" id="portrait"/>
+        <figure>
+            <h1>Jakub Gustafik</h1>
+            <span class="faded">Student & software developer based in Slovakia</span>
+            <ContactBar />
+        </figure>
+    </header>
 
-        <section class="container">
-            <article class="content" id="content-1">
-                <AboutMe />
-            </article>
+    <section id="picker" class="container">
+        <div class="content-selector-container">
+            <button class="content-selector active" id="tab-1">About me</button>
+            <button class="content-selector" id="tab-2">Projects</button>
+            <button class="content-selector" id="tab-3">Blog</button>
+        </div>
+        <div class="select-indicator">
+    </section>
 
-            <article class="content" id="content-2">
-                <Projects client:only="vue" projects={projects} />
-            </article>
+    <main class="container">
+        <article class="content" id="content-1">
+            <AboutMe />
+        </article>
 
-            <article class="content" id="content-3">
-                <Blog />
-            </article>
-        </section>
+        <article class="content" id="content-2">
+            <Projects client:only="vue" projects={projects} />
+        </article>
 
-        <span id="license">©2024 Jakub Gustafik</span>
+        <article class="content" id="content-3">
+            <Blog />
+        </article>
     </main>
-</RetractingNavbarLayout>
+
+    <footer>
+        <span id="license">©2024 Jakub Gustafik</span>
+    </footer>
+</NavbarLayout>
+
+<script>
+    const buttons = document.getElementsByClassName("content-selector");
+    // I hate Typescript
+    const selector = Array.from(document.getElementsByClassName("select-indicator") as HTMLCollectionOf<HTMLElement>)[0];
+
+    for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        button.addEventListener("click", () => {
+            selector.style.transform = `translateX(${i * 100}%`;
+            for (let j = 0; j < buttons.length; j++) {
+                buttons[j].classList.remove("active");
+            }
+            button.classList.add("active");
+        });
+    }
+</script>
 
 <style>
-    @media (max-width: 500px) {
-        main {
-            text-align: center;
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 3rem;
+
+        padding: 2rem 3rem;
+    }
+
+    header > img {
+        width: clamp(120px, 15vw, 140px);
+        height: clamp(120px, 15vw, 140px);
+
+        background-color: var(--secondary-background-dark);
+
+        border: 4px solid var(--primary-accent-dark);
+        border-radius: 50%;
+    }
+
+    header > figure {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header > figure h1 {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+
+    header > figure span {
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
+    }
+
+    @media (max-width: 1000px) {
+        header {
+            gap: 2rem;
+            padding: 1rem 1.5rem;
         }
     }
 
-    .container {
+    @media (max-width: 500px) {
+        header {
+            flex-direction: column;
+            border: none;
+        }
+
+        header figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    #picker {
+        position: relative;
+    }
+
+    #picker .content-selector-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #picker button.content-selector {
+        background-color: transparent;
+        padding: 0.6rem;
+        font-weight: 700;
+        width: 100%;
+        border-radius: 12px;
+        z-index: 1;
+    }
+
+    #picker .select-indicator {
+        position: absolute;
+        width: 33.333%;
+        height: 100%;
+        background-color: var(--secondary-background-dark);
+        border-radius: 12px;
+        transition: all 0.15s ease-out;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    article {
         padding: 2.3rem 3rem;
         text-align: left !important;
     }
 
     @media (max-width: 1000px) {
-        .container {
+        article {
             padding: 1rem 1.5rem;
         }
     }
 
-    .content {
-        display: none;
-    }
-
-    main:has(#tab-1.active) #content-1,
-    main:has(#tab-2.active) #content-2,
-    main:has(#tab-3.active) #content-3 {
-        display: block;
-    }
-
-    #license {
+    footer {
         text-align: center;
         color: var(--secondary-background-dark);
     }
 </style>
 
 <style is:global>
+    @media (max-width: 500px) {
+        body {
+            text-align: center;
+        }
+    }
+
+    body:has(#tab-1.active) #content-1,
+    body:has(#tab-2.active) #content-2,
+    body:has(#tab-3.active) #content-3 {
+        display: block;
+    }
+
+    .content {
+        display: none;
+    }
+
     .content-inner {
         display: flex;
         flex-direction: column;

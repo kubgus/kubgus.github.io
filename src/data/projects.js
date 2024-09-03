@@ -81,7 +81,7 @@ export default [
         github: "https://github.com/kubgus/stratus-cli",
     },
     {
-        title: "untitled-game-engine",
+        title: "untitled game engine",
         description: "SDL2 game engine made with C++.",
         github: "https://github.com/kubgus/untitled-game-engine",
     },

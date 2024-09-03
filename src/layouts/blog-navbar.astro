@@ -1,5 +1,5 @@
 ---
-import FixedNavbarLayout from "./fixed-navbar.astro";
+import NavbarLayout from "./navbar.astro";
 
 import "../styles/default-padding.css";
 import "../styles/article.css";
@@ -10,9 +10,8 @@ const title = `${frontmatter.title} | ${frontmatter.author}` || "Jakub Gustafik"
 const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
 ---
 
-<FixedNavbarLayout title={title}>
-<main>
-    <section class="article-header">
+<NavbarLayout title={title} meta={[]} fixed={true}>
+    <header>
         <h1>{frontmatter.title}</h1>
         <p id="article-description">{frontmatter.description}</p>
         <div id="article-info" class="faded">
@@ -20,10 +19,9 @@ const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "
             <p>|</p>
             <p>{frontmatter.author}</p>
         </div>
-    </section>
+    </header>
     <slot />
-</main>
-</FixedNavbarLayout>
+</NavbarLayout>
 
 <style>
     main {
@@ -42,13 +40,13 @@ const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "
         }
     }
 
-    .article-header {
+   header {
         border-bottom: 1px solid var(--secondary-background-dark);
 
         padding-bottom: 2.5rem;
     }
 
-    .article-header h1 {
+    header h1 {
         font-size: 3rem;
         font-weight: 600;
     }

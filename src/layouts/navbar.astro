@@ -1,5 +1,6 @@
 ---
 import CoreLayout from "../layouts/core.astro";
+
 import ContactBar from "../components/contact-bar.astro";
 
 const { title, meta } = Astro.props || {
@@ -9,6 +10,32 @@ const { title, meta } = Astro.props || {
 
 const { fixed } = Astro.props;
 ---
+
+<CoreLayout title={title} meta={meta}>
+<header class={fixed ? "scrolled" : ""}>
+    <figure><a href="/" class="implied">Jakub Gustafik</a></figure>
+    <ContactBar />
+</header>
+
+<slot />
+</CoreLayout>
+
+<script define:vars={{ fixed }} is:inline>
+    if (!fixed) {
+        const header = document.querySelector("header");
+
+        const updateHeader = () => {
+            if (window.scrollY > 200) {
+                header?.classList.add("scrolled");
+            } else {
+                header?.classList.remove("scrolled");
+            }
+        }
+
+        updateHeader();
+        document.addEventListener("scroll", updateHeader);
+    }
+</script>
 
 <style>
     header {
@@ -62,13 +89,3 @@ const { fixed } = Astro.props;
         font-size: 1rem;
     }
 </style>
-
-<CoreLayout title={title} meta={meta}>
-    <header class={fixed ? "scrolled" : ""}>
-        <figure><a href="/" class="implied">Jakub Gustafik</a></figure>
-        <nav>
-            <ContactBar />
-        </nav>
-    </header>
-    <slot />
-</CoreLayout>
