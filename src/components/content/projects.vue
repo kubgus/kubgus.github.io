@@ -3,8 +3,11 @@
 
     const props = defineProps(["projects"]);
 
-    const projects_sorted = props.projects.sort(() => Math.random() - 0.5);
     const random_project = props.projects[Math.floor(Math.random() * props.projects.length)];
+    const projects_random = props.projects.sort(() => Math.random() - 0.5);
+    const projects_sorted = projects_random.sort((a, b) => {
+        return a.year == b.year ? b.rating - a.rating : b.year - a.year
+    });
 </script>
 
 <template>
