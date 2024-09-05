@@ -198,14 +198,15 @@ export default [
     {
         title: "planet generator",
         description: "A simple website that uses the canvas element to generate planets.",
+        github: "https://github.com/kubgus/planet-generator",
         website: "https://gustafik.com/planet-generator",
-        image: "images/thumbnails/planet-generator.png",
         year: 2021,
         rating: 1,
     },
     {
         title: "speed read",
         description: "A basic HTML website for speed reading.",
+        github: "https://github.com/kubgus/speed-read",
         website: "https://gustafik.com/speed-read",
         year: 2021,
         rating: 1,
