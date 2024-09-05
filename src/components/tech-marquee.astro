@@ -1,44 +1,21 @@
 ---
 import PictureFrame from "./picture-frame.astro";
 
-let pictures = [
-    "astro",
-    "aws",
-    "cpp",
-    "cs",
-    "css",
-    "firebase",
-    "git",
-    "github",
-    "html",
-    "javascript",
-    "linux",
-    "mongo",
-    "neovim",
-    "node",
-    "nuxt",
-    "postgres",
-    "python",
-    "supabase",
-    "tailwind",
-    "typescript",
-    "unity",
-    "vue",
-];
+import frameData from "../data/frame-data.js";
 
-pictures = pictures.sort(() => Math.random() - 0.5);
+const sortedData = frameData.sort(() => Math.random() - 0.5);
 ---
 
 <figure>
     <div>
         {
-            pictures.map((picture) => (
-                <PictureFrame src={`/images/tech-logos/${picture}.png`} alt={picture} />
+            sortedData.map((data) => (
+                <PictureFrame data={data} />
             ))
         }
         {
-            pictures.map((picture) => (
-                <PictureFrame src={`/images/tech-logos/${picture}.png`} alt={picture} />
+            sortedData.map((data) => (
+                <PictureFrame data={data} />
             ))
         }
     </div>

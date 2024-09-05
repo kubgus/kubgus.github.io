@@ -1,13 +1,19 @@
 ---
-const { src, alt } = Astro.props;
+const { data } = Astro.props;
 ---
 
-<figure title={alt}>
-    <img src={src} alt={alt} width="128" height="128"/>
-</figure>
+<button title={data?.title ?? "Frame"} popovertarget={data?.title ?? ""}>
+    <img src={data?.src ?? "/favicon.png"} alt={data?.title ?? "Frame"} width="128" height="128" class="base" />
+    <div class="popover" id={data?.title ?? ""} popover>
+        <img src={data?.src ?? "/favicon.png"} alt={data?.title ?? "Frame"} width="256" height="256"/>
+        <h2>{data?.title ?? "Frame"}</h2>
+    </div>
+</button>
 
 <style>
-    figure {
+    button {
+        all: unset;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,34 +23,65 @@ const { src, alt } = Astro.props;
 
         background-color: var(--secondary-background-dark);
         border-radius: 12px;
+
+        cursor: pointer;
+
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    img {
+    img.base {
         max-width: 75%;
         max-height: 75%;
     }
 
     @media (max-width: 1000px) {
-        figure {
+        button {
             box-shadow: none;
         }
     }
 
-    figure:hover, figure:active {
-        animation: shake 0.5s;
+    button:hover, figure:active {
+        transform: scale(0.9) rotate(3deg);
     }
 
-    @keyframes shake {
-        0% { transform: translate(1px, 1px) rotate(0deg); }
-        10% { transform: translate(-1px, -2px) rotate(-4deg); }
-        20% { transform: translate(-3px, 0px) rotate(3deg); }
-        30% { transform: translate(3px, 2px) rotate(0deg); }
-        40% { transform: translate(1px, -1px) rotate(3deg); }
-        50% { transform: translate(-1px, 2px) rotate(-2deg); }
-        60% { transform: translate(-3px, 1px) rotate(0deg); }
-        70% { transform: translate(3px, 1px) rotate(-4deg); }
-        80% { transform: translate(-1px, -1px) rotate(2deg); }
-        90% { transform: translate(1px, 2px) rotate(0deg); }
-        100% { transform: translate(1px, -2px) rotate(-3deg); }
+    .popover:popover-open {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        padding: 2rem 5rem;
+
+        background: var(--background-dark);
+        color: inherit;
+
+        border: 2px solid var(--secondary-background-dark);
+        border-radius: 12px;
+    }
+
+    .popover:popover-open > img {
+        width: 90px !important;
+        height: 90px !important;
+
+        padding: 12px;
+
+        background: var(--secondary-background-dark);
+        border-radius: 12px;
+
+        animation: fadeIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes fadeIn {
+        from {
+            scale: 0.5;
+        }
+        to {
+            scale: 1;
+        }
     }
 </style>
