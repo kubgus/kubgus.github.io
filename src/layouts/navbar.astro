@@ -13,7 +13,7 @@ const { fixed } = Astro.props;
 
 <CoreLayout title={title} meta={meta}>
 <header class={fixed ? "scrolled" : ""}>
-    <figure><a href="/" class="implied">Jakub Gustafik</a></figure>
+    <a href="/" class="implied" aria-hidden="true">Jakub Gustafik</a>
     <ContactBar />
 </header>
 

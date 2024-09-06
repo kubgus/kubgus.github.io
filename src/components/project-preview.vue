@@ -16,8 +16,8 @@
             </div>
         </a>
         <div class="links">
-            <a v-if="project.github" :href="project.github" target="_blank"><i class="fab fa-github"></i></a>
-            <a v-if="project.website" :href="project.website" target="_blank"><i class="fas fa-link"></i></a>
+            <a v-if="project.github" :href="project.github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a v-if="project.website" :href="project.website" target="_blank" aria-label="Website"><i class="fas fa-link"></i></a>
         </div>
     </figure>
 </template>

@@ -15,7 +15,7 @@ const title = "Jakub Gustafik";
 ---
 
 <NavbarLayout title={title} meta={[]}>
-    <header class="container">
+    <header class="container" aria-hidden="true">
         <img src="/images/linkedin-portrait.jpg" alt="" id="portrait"/>
         <figure>
             <h1>Jakub Gustafik</h1>
@@ -24,14 +24,14 @@ const title = "Jakub Gustafik";
         </figure>
     </header>
 
-    <section id="picker" class="container">
+    <nav id="picker" class="container">
         <div class="content-selector-container">
             <button class="content-selector active" id="tab-1">About me</button>
             <button class="content-selector" id="tab-2">Projects</button>
             <button class="content-selector" id="tab-3">Blog</button>
         </div>
         <div class="select-indicator">
-    </section>
+    </nav>
 
     <main class="container">
         <article class="content" id="content-1">

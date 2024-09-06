@@ -4,7 +4,7 @@ const { data } = Astro.props;
 
 <button title={data?.title ?? "Frame"} popovertarget={data?.title ?? ""}>
     <img src={data?.src ?? "/favicon.png"} alt={data?.title ?? "Frame"} width="128" height="128" class="base" />
-    <div class="popover" id={data?.title ?? ""} popover>
+    <div class="popover" id={data?.title ?? ""} aria-hidden="true" popover>
         <img src={data?.src ?? "/favicon.png"} alt={data?.title ?? "Frame"} width="256" height="256"/>
         <h2>{data?.title ?? "Frame"}</h2>
     </div>
