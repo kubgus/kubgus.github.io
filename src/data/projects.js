@@ -118,8 +118,9 @@ export default [
         title: "untitled game engine",
         description: "SDL2 game engine made with C++.",
         github: "https://github.com/kubgus/untitled-game-engine",
+        image: "images/thumbnails/uge.png",
         year: 2024,
-        rating: 0,
+        rating: 4,
     },
     {
         title: "slidar",
