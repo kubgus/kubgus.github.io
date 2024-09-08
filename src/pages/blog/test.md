@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/blog-navbar.astro"
+layout: "../../layouts/blog-layout.astro"
 title: "Preview of markdown styles"
 description: "This post doesn't hold any relevance, it's just a preview to test markdown styles."
 date: 2024-03-26
