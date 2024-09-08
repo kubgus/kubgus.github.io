@@ -11,6 +11,24 @@ import Blog from "../components/content/blog.astro";
 import "../styles/default-padding.css";
 
 import projects from "../data/projects.js";
+
+const tab_query = Astro.url.searchParams.get("tab");
+let tab, translateSelector;
+switch (tab_query) {
+    case "projects":
+        tab = "tab-2";
+        translateSelector = "100%";
+        break;
+    case "blog":
+        tab = "tab-3";
+        translateSelector = "200%";
+        break;
+    default:
+        tab = "tab-1";
+        translateSelector = "0%";
+        break;
+}
+console.log(translateSelector);
 ---
 
 <CoreLayout>
@@ -27,11 +45,11 @@ import projects from "../data/projects.js";
 
     <nav id="picker" class="container">
         <div class="content-selector-container">
-            <button class="content-selector active" id="tab-1">About me</button>
-            <button class="content-selector" id="tab-2">Projects</button>
-            <button class="content-selector" id="tab-3">Blog</button>
+            <a href="/" class={tab === "tab-1" ? "content-selector active" : "content-selector"} id="about-me">About me</a>
+            <a href="/?tab=projects" class={tab === "tab-2" ? "content-selector active" : "content-selector"} id="projects">Projects</a>
+            <a href="/?tab=blog" class={tab === "tab-3" ? "content-selector active" : "content-selector"} id="blog">Blog</a>
         </div>
-        <div class="select-indicator">
+        <div aria-hidden="true" class="select-indicator" />
     </nav>
 
     <main class="container">
@@ -41,6 +59,7 @@ import projects from "../data/projects.js";
 
         <article class="content" id="content-2">
             <Projects client:only="vue" projects={projects} />
+            <h1 class="js-remove">Please enable JavaScript to view this page!</h1>
         </article>
 
         <article class="content" id="content-3">
@@ -58,9 +77,25 @@ import projects from "../data/projects.js";
     // I hate Typescript
     const selector = Array.from(document.getElementsByClassName("select-indicator") as HTMLCollectionOf<HTMLElement>)[0];
 
+    document.querySelectorAll(".js-remove").forEach((e) => e.remove());
+
+    function setQuery(key: string, value: string) {
+        const url = new URL(window.location.href);
+        const params = new URLSearchParams(url.search);
+        if (value.length > 0) {
+            params.set(key, value);
+        } else {
+            params.delete(key);
+        }
+        url.search = params.toString();
+        window.history.pushState({}, "", url);
+    }
+
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            setQuery("tab", button.id == "about-me" ? "" : button.id);
             selector.style.transform = `translateX(${i * 100}%`;
             for (let j = 0; j < buttons.length; j++) {
                 buttons[j].classList.remove("active");
@@ -70,7 +105,7 @@ import projects from "../data/projects.js";
     }
 </script>
 
-<style>
+<style define:vars={{ translateSelector }}>
     header {
         display: flex;
         align-items: center;
@@ -136,13 +171,19 @@ import projects from "../data/projects.js";
         justify-content: space-evenly;
     }
 
-    #picker button.content-selector {
+    #picker .content-selector {
         background-color: transparent;
-        padding: 0.6rem;
-        font-weight: 700;
+        padding: 0.5rem;
+        font-size: 1.01rem;
+        font-weight: 500;
+        text-align: center;
         width: 100%;
-        border-radius: 12px;
         z-index: 1;
+        text-decoration: none;
+    }
+
+    #picker .content-selector:hover {
+        color: inherit;
     }
 
     #picker .select-indicator {
@@ -155,6 +196,7 @@ import projects from "../data/projects.js";
         top: 0;
         left: 0;
         z-index: 0;
+        transform: translateX(var(--translateSelector));
     }
 
     article {
@@ -181,9 +223,9 @@ import projects from "../data/projects.js";
         }
     }
 
-    body:has(#tab-1.active) #content-1,
-    body:has(#tab-2.active) #content-2,
-    body:has(#tab-3.active) #content-3 {
+    body:has(#about-me.active) #content-1,
+    body:has(#projects.active) #content-2,
+    body:has(#blog.active) #content-3 {
         display: block;
     }
 
