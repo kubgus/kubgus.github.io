@@ -24,41 +24,27 @@ This is a paragraph with **bold** and *italic* text.
 
 This is a paragraph with a [link](https://astro.build).
 
-This is a paragraph with an image:
-
 ![Seaside France](https://st2.depositphotos.com/1592314/10545/i/450/depositphotos_105455422-stock-photo-nice-mediterranean-sea-france.jpg)
-
-This is a paragraph with a code block:
 
 ```js
 console.log('Hello world!')
 ```
 
-This is a paragraph with a list:
-
 - Item 1
 - Item 2
 - Item 3
-
-This is a paragraph with a numbered list:
 
 1. Item 1
 2. Item 2
 3. Item 3
 
-This is a paragraph with a task list:
-
 - [x] Item 1
 - [ ] Item 2
 - [ ] Item 3
 
-This is a paragraph with a blockquote:
-
 > This is a blockquote.
 
-This is a paragraph with a table:
-
-| Name | Age |
-| ---- | --- |
-| John | 20 |
-| Jane | 21 |
+| Name | Age   |
+| ---- | :---: |
+| John | 20    |
+| Jane | 21    |
