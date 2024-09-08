@@ -8,7 +8,7 @@
     <figure class="container">
         <a :href="project.website ?? project.github ?? '#'" target="_blank">
             <div class="info">
-                <img :src="project.image" alt="" />
+                <img v-if="project.image" :src="project.image" alt="" />
                 <figcaption>
                     <h3>{{ project.title }}</h3>
                     <p>{{ project.description }}</p>
@@ -17,7 +17,7 @@
         </a>
         <div class="links">
             <a v-if="project.github" :href="project.github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a v-if="project.website" :href="project.website" target="_blank" aria-label="Website"><i class="fas fa-link"></i></a>
+            <a v-if="project.website" :href="project.website" target="_blank"><i class="fas fa-link"></i></a>
         </div>
     </figure>
 </template>
