@@ -16,7 +16,7 @@ const { frontmatter } = Astro.props;
     og_type="article"
     frontmatter={frontmatter}
 >
-    <Navbar fixed={true} />
+    <Navbar fixed={true} href="/?tab=blog" />
 
     <header>
         { frontmatter.image &&

@@ -1,11 +1,11 @@
 ---
 import ContactBar from "../components/contact-bar.astro";
 
-const { fixed } = Astro.props;
+const { fixed = false, href = "/" } = Astro.props;
 ---
 
 <header class={fixed ? "scrolled" : ""}>
-    <a href="/" class="implied" aria-hidden="true">Jakub Gustafik</a>
+    <a href={href} class="implied" aria-hidden="true">Jakub Gustafik</a>
     <ContactBar />
 </header>
 
