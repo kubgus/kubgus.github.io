@@ -12,23 +12,29 @@ import "../styles/default-padding.css";
 
 import projects from "../data/projects.js";
 
-const tab_query = Astro.url.searchParams.get("tab");
-let tab, translateSelector;
-switch (tab_query) {
-    case "projects":
-        tab = "tab-2";
-        translateSelector = "100%";
-        break;
-    case "blog":
-        tab = "tab-3";
-        translateSelector = "200%";
-        break;
-    default:
-        tab = "tab-1";
-        translateSelector = "0%";
-        break;
-}
-console.log(translateSelector);
+// Commented out because it needs SSR, which isn't compatible
+// with GitHub Pages' static hosting.
+// The pros of GitHub Pages are currently too big to migrate
+// to an SSR platform, but I will keep this code just in case.
+// https://docs.astro.build/en/guides/server-side-rendering/
+// Never forget.
+//
+// const tab_query = Astro.url.searchParams.get("tab");
+let tab = "tab-1", translateSelector = "0%";
+// switch (tab_query) {
+//     case "projects":
+//         tab = "tab-2";
+//         translateSelector = "100%";
+//         break;
+//     case "blog":
+//         tab = "tab-3";
+//         translateSelector = "200%";
+//         break;
+//     default:
+//         tab = "tab-1";
+//         translateSelector = "0%";
+//         break;
+// }
 ---
 
 <CoreLayout>
@@ -80,15 +86,17 @@ console.log(translateSelector);
     document.querySelectorAll(".js-remove").forEach((e) => e.remove());
 
     function setQuery(key: string, value: string) {
-        const url = new URL(window.location.href);
-        const params = new URLSearchParams(url.search);
-        if (value.length > 0) {
-            params.set(key, value);
-        } else {
-            params.delete(key);
-        }
-        url.search = params.toString();
-        window.history.pushState({}, "", url);
+        // Never forget.
+        //
+        // const url = new URL(window.location.href);
+        // const params = new URLSearchParams(url.search);
+        // if (value.length > 0) {
+        //     params.set(key, value);
+        // } else {
+        //     params.delete(key);
+        // }
+        // url.search = params.toString();
+        // window.history.pushState({}, "", url);
     }
 
     for (let i = 0; i < buttons.length; i++) {

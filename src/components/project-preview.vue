@@ -43,6 +43,10 @@
         gap: 0.9rem;
     }
 
+    .info:not(:has(img)) {
+        margin-left: 0.5rem;
+    }
+
     img {
         max-height: 70px;
         max-width: 100px;
