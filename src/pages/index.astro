@@ -1,7 +1,8 @@
 ---
-import NavbarLayout from "../layouts/navbar-layout.astro";
+import CoreLayout from "../layouts/core-layout.astro";
 
 import ContactBar from "../components/contact-bar.astro";
+import Navbar from "../components/navbar.astro";
 
 import AboutMe from "../components/content/about-me.astro";
 import Projects from "../components/content/projects.vue";
@@ -10,11 +11,11 @@ import Blog from "../components/content/blog.astro";
 import "../styles/default-padding.css";
 
 import projects from "../data/projects.js";
-
-const title = "Jakub Gustafik";
 ---
 
-<NavbarLayout title={title} meta={[]}>
+<CoreLayout>
+    <Navbar />
+
     <header class="container" aria-hidden="true">
         <img src="/images/linkedin-portrait.jpg" alt="" id="portrait"/>
         <figure>
@@ -50,7 +51,7 @@ const title = "Jakub Gustafik";
     <footer>
         <span id="license">©2024 Jakub Gustafik</span>
     </footer>
-</NavbarLayout>
+</CoreLayout>
 
 <script>
     const buttons = document.getElementsByClassName("content-selector");

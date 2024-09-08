@@ -7,13 +7,13 @@ body {
     padding: 6rem 20vw;
 }
 
-@media (max-width: 1420px) {
+@media (max-width: 1300px) {
     body {
-        padding-inline: 10vw;
+        padding-inline: 15vw;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     body {
         padding: 6rem 5vw;
     }

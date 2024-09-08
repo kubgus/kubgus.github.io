@@ -1,0 +1,31 @@
+---
+const { date, author } = Astro.props;
+const dateString = new Date(date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
+---
+
+<div aria-label="Info" class="faded">
+    <p aria-label="Date">{dateString}</p>
+    <p aria-hidden="true">|</p>
+    <p aria-label="Author">{author}</p>
+</div>
+
+<style>
+    div {
+        font-size: 1.25rem;
+        display: flex;
+        column-gap: 0.5rem;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    @media (max-width: 400px) {
+        div {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        div > p[aria-hidden="true"] {
+            display: none;
+        }
+    }
+</style>

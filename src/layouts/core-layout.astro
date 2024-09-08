@@ -1,7 +1,39 @@
 ---
-const { title, meta } = Astro.props || {
-    title: "Jakub Gustafik",
-    meta: [],
+import { SEO } from 'astro-seo';
+
+const {
+    title = "Jakub Gustafik",
+    description = "Student & software developer based in Slovakia",
+    image = "/images/linkedin-portrait.jpg",
+    canonical = `https://gustafik.com` + Astro.url.pathname,
+    og_title = title,
+    og_type = "website",
+    frontmatter = null,
+} = Astro.props;
+
+let open_graph = {
+    basic: {
+        title: og_title,
+        type: og_type,
+        image: image,
+        url: canonical,
+    },
+    optional: {
+        description: description,
+    },
+    image: {
+        url: image,
+        alt: frontmatter?.image?.alt ?? "",
+        type: "image/jpeg",
+    },
+};
+
+if (frontmatter != null) {
+    Object.assign(open_graph, { article: {
+        publishedTime: frontmatter.date,
+        authors: [ frontmatter.author ],
+        tags: frontmatter.tags ?? [],
+    }});
 }
 ---
 
@@ -11,13 +43,34 @@ const { title, meta } = Astro.props || {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
 
-        { meta?.map((meta : any) =>
-        <meta name={meta.name} content={meta.content} />)
-        }
+        <SEO
+            title={title}
+            description={description}
+            canonical={canonical}
+            openGraph={{
+                basic: {
+                    title: og_title,
+                    type: og_type,
+                    image: image,
+                    url: canonical,
+                },
+                optional: {
+                    description: description,
+                },
+                image: {
+                    url: image,
+                    type: "image/jpeg",
+                },
+            }}
+            twitter={{
+                description: description,
+                card: "summary",
+                site: "@gustafik_dev",
+                creator: "@gustafik_dev",
+            }}
+        />
 
         <link rel="icon" type="image/png" href="/favicon.png" />
-
-        <title>{title}</title>
     </head>
     <body>
         <slot />
@@ -29,7 +82,7 @@ const { title, meta } = Astro.props || {
 
     :root {
         --background-dark: #0e0e0e;
-        --text-color-dark: #e6e6e6;
+        --text-color-dark: #dbdbdb;
         --primary-accent-dark: #7054bc;
         --secondary-background-dark: #333;
         --complementary-accent-dark-1: #bc54a1;
@@ -120,7 +173,7 @@ const { title, meta } = Astro.props || {
     }
 
     button, a.btn, img, video, iframe, input, textarea {
-        border-radius: 5px;
+        border-radius: 12px;
     }
 
     button {

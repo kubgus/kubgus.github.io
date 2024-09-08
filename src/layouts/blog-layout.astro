@@ -1,69 +1,95 @@
 ---
-import NavbarLayout from "./navbar-layout.astro";
+import CoreLayout from "../layouts/core-layout.astro";
+import Navbar from "../components/navbar.astro";
+import BlogInfo from "../components/blog-info.astro";
 
 import "../styles/default-padding.css";
-import "../styles/article.css";
 
 const { frontmatter } = Astro.props;
-
-const title = `${frontmatter.title} | ${frontmatter.author}` || "Jakub Gustafik";
-const dateString = new Date(frontmatter.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
 ---
 
-<NavbarLayout title={title} meta={[]} fixed={true}>
+<CoreLayout
+    title={`${frontmatter.title} | ${frontmatter.author}`}
+    description={frontmatter.description}
+    image={frontmatter.image.src}
+    og_title={frontmatter.title}
+    og_type="article"
+    frontmatter={frontmatter}
+>
+    <Navbar fixed={true} />
+
     <header>
+        { frontmatter.image &&
+            <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
+        }
         <h1>{frontmatter.title}</h1>
         <p id="article-description">{frontmatter.description}</p>
-        <div id="article-info" class="faded">
-            <p>{dateString}</p>
-            <p>|</p>
-            <p>{frontmatter.author}</p>
-        </div>
+        <BlogInfo date={frontmatter.date} author={frontmatter.author} />
     </header>
-    <slot />
-</NavbarLayout>
+
+    <main>
+        <slot />
+    </main>
+</CoreLayout>
 
 <style>
-    main {
-        padding-inline: 28vw;
-    }
-
-    @media (max-width: 1000px) {
-        main {
-            padding-inline: 10vw;
+    @media (min-width: 500px) {
+        header, main {
+            margin-inline: 5vw;
         }
     }
 
-    @media (max-width: 480px) {
-        main {
-            padding-inline: 3vw;
-        }
-    }
-
-   header {
-        border-bottom: 1px solid var(--secondary-background-dark);
-
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         padding-bottom: 2.5rem;
+        border-bottom: 1px solid var(--secondary-background-dark);
+        font-size: 1.5rem;
+    }
+
+    header img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 
     header h1 {
         font-size: 3rem;
         font-weight: 600;
-    }
-
-    #article-description {
+        line-height: 1.1;
         margin-top: 1rem;
-        font-size: 1.5rem;
     }
+</style>
 
-    #article-info {
-        margin-top: 1.6rem;
-
+<style is:global>
+    main {
         display: flex;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.25rem;
     }
 
-    #article-info p {
-        font-size: 1.25rem;
+    main ul > li, main ol > li{
+        margin-left: 1rem;
+    }
+
+    main li.task-list-item {
+        margin-left: 0;
+        list-style-type: none;
+    }
+
+    main pre.astro-code {
+        border-radius: 12px;
+        padding: 1rem;
+    }
+
+    main blockquote {
+        border-left: 0.25rem solid var(--primary-accent-dark);
+        padding-left: 1rem;
+    }
+
+    main img {
+        max-width: 100%;
     }
 </style>

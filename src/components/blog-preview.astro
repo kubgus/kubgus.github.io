@@ -1,17 +1,16 @@
 ---
-const { post } = Astro.props;
+import BlogInfo from "./blog-info.astro";
 
-const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
+const { url, frontmatter } = Astro.props;
+
+const { title, date, author } = frontmatter;
 ---
 
 <figure>
-    <a href={post.url}>
-        <figcaption>{post.frontmatter.title}</figcaption>
-        <div aria-label="Info" class="info faded">
-            <p aria-label="Date">{dateString}</p>
-            <p aria-hidden="true">|</p>
-            <p aria-label="Author">{post.frontmatter.author}</p>
-        </div>
+    <!-- TODO: Add image to blog preview -->
+    <a href={url}>
+        <figcaption>{title}</figcaption>
+        <BlogInfo date={date} author={author} />
     </a>
 </figure>
 
@@ -38,24 +37,5 @@ const dateString = new Date(post.frontmatter.date).toLocaleString("en-US", { mon
 
     figcaption {
         font-size: 1.5rem;
-    }
-
-    div.info {
-        font-size: 1.25rem;
-        display: flex;
-        column-gap: 0.5rem;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    @media (max-width: 400px) {
-        div.info {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        div.info > p[aria-hidden="true"] {
-            display: none;
-        }
     }
 </style>

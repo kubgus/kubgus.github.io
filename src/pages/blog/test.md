@@ -4,6 +4,10 @@ title: "Preview of markdown styles"
 description: "This post doesn't hold any relevance, it's just a preview to test markdown styles."
 date: 2024-03-26
 author: "Jakub Gustafik"
+image: {
+    src: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2F7%2Fd%2Fc%2F15327.jpg&f=1&nofb=1&ipt=82200846d71428ac3174ed161af62cff2d238aec6dc166559281cf429e14251c&ipo=images",
+    alt: "Cool programming wallpaper"
+}
 ---
 
 # Heading 1

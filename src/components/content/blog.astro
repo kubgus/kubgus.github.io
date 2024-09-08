@@ -10,7 +10,7 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
     <h1>Blog Posts</h1>
     {
         posts.map((post) => (
-            <BlogPreview post={post} />
+            <BlogPreview url={post.url} frontmatter={post.frontmatter} />
         ))
     }
 </div>
