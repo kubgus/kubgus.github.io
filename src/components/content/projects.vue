@@ -12,11 +12,8 @@
 
 <template>
     <div class="content-inner">
-        <div id="random-project">
-            <h1>Random Project</h1>
-            <p>This project was picked just for you to check out!</p>
-            <ProjectPreview :project="random_project" />
-        </div>
+        <h1>Random Project</h1>
+        <ProjectPreview :project="random_project" />
 
         <h1>All Projects</h1>
         <div class="projects">
@@ -26,10 +23,6 @@
 </template>
 
 <style scoped>
-    #random-project p {
-        margin-bottom: 0.8rem;
-    }
-
     .projects {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
