@@ -7,36 +7,74 @@ const { title, date, author } = frontmatter;
 ---
 
 <figure>
-    <!-- TODO: Add image to blog preview -->
     <a href={url}>
-        <figcaption>{title}</figcaption>
-        <BlogInfo date={date} author={author} />
+        <div class="text-container">
+            <figcaption>{title}</figcaption>
+            <BlogInfo date={date} author={author} />
+        </div>
+        { frontmatter.image &&
+            <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
+        }
     </a>
 </figure>
 
 <style>
     figure {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem 0.5rem;
-        border-top: 1px solid var(--secondary-background-dark);
-    }
-
-    figure:last-child {
-        border-bottom: 1px solid var(--secondary-background-dark);
-    }
-
-    a {
-        text-decoration: none;
+        padding: 0.7rem 1.3rem;
+        border: 1px solid var(--secondary-background-dark);
+        border-radius: 12px;
     }
 
     figure > a:hover > h1, figure > a:active > h1 {
         color: var(--primary-accent-dark);
     }
 
+    a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        text-decoration: none;
+    }
+
+    img {
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+        height: 5rem;
+    }
+
     figcaption {
         font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    @media (max-width: 650px) {
+        figure {
+            border: none;
+            border-radius: 0;
+            border-top: solid 1px var(--secondary-background-dark);
+            padding: 1rem 0;
+        }
+
+        figure:last-child {
+            border-bottom: solid 1px var(--secondary-background-dark);
+        }
+
+        a {
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 0.7rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto !important;
+        }
+
+        .text-container {
+            margin-left: 0.5rem;
+        }
     }
 </style>
