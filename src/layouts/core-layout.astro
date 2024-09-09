@@ -4,7 +4,7 @@ import { SEO } from 'astro-seo';
 const {
     title = "Jakub Gustafik",
     description = "Student & software developer based in Slovakia",
-    image = "/images/linkedin-portrait.jpg",
+    image = "/images/linkedin-portrait-v2.jpg",
     canonical = `https://gustafik.com` + Astro.url.pathname,
     og_title = title,
     og_type = "website",
@@ -74,6 +74,10 @@ if (frontmatter != null) {
     </head>
     <body>
         <slot />
+
+        <footer>
+            <span id="license">©2024 Jakub Gustafik</span>
+        </footer>
     </body>
 </html>
 
@@ -124,6 +128,11 @@ if (frontmatter != null) {
 
         margin: 0;
         padding: 0;
+    }
+
+    footer {
+        text-align: center;
+        color: var(--secondary-background-dark);
     }
 
     .container {
