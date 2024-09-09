@@ -209,6 +209,7 @@ export default [
         description: "A basic HTML website for speed reading.",
         github: "https://github.com/kubgus/speed-read",
         website: "https://gustafik.com/speed-read",
+        image: "images/thumbnails/speed-read.png",
         year: 2021,
         rating: 1,
     },
