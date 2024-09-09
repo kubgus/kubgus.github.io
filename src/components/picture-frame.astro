@@ -48,14 +48,17 @@ const { data } = Astro.props;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
+        width: clamp(15rem, 50vw, 20rem);
+        height: max(15rem, 25vh);
+
+        padding: 0.5rem;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1rem;
-
-        padding: 2rem 5rem;
 
         background: var(--background-dark);
         color: inherit;
@@ -64,7 +67,7 @@ const { data } = Astro.props;
         border-radius: 12px;
     }
 
-    .popover:popover-open > img {
+    .popover img {
         width: 90px !important;
         height: 90px !important;
 
@@ -73,10 +76,13 @@ const { data } = Astro.props;
         background: var(--secondary-background-dark);
         border-radius: 12px;
 
-        animation: fadeIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    @keyframes fadeIn {
+    .popover:popover-open img {
+        animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popIn {
         from {
             scale: 0.5;
         }
