@@ -29,7 +29,7 @@
         justify-content: space-between;
         gap: 20px;
         align-items: center;
-        padding: 0.7rem 1.3rem 0.7rem 1rem;
+        padding: 0.7rem 1rem 0.7rem 1rem;
     }
 
     a {
@@ -40,7 +40,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.9rem;
+        gap: 1.1rem;
     }
 
     .info:not(:has(img)) {
