@@ -213,4 +213,18 @@ export default [
         year: 2021,
         rating: 1,
     },
+    {
+        title: "discord.js 14 template",
+        description: "A repo template/framework for JS MongoDB Discord bots.",
+        github: "https://github.com/kubgus/discord-js-14-template",
+        year: 2023,
+        rating: 4,
+    },
+    {
+        title: "nuxt & tailwind template",
+        description: "A template repository for a Nuxt.js and Tailwind project.",
+        github: "https://github.com/kubgus/nuxt-tailwind-template",
+        year: 2023,
+        rating: 2,
+    },
 ];
