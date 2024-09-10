@@ -263,7 +263,7 @@ export default [
         description: "Plain HTML, CSS, JS collaborative task list with a Firebase backend.",
         github: "https://github.com/kubgus/remify",
         website: "https://gustafik.com/remify/",
-        year: 2022,
+        year: 2021,
         rating: 3,
     },
 ];
