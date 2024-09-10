@@ -7,6 +7,17 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
 ---
 
 <div class="content-inner">
+    <h1>Newsletter</h1>
+
+    <section id="newsletter">
+        <p>
+            I have a newsletter, btw! I post regular updates on my work, exclusive
+            guides, and Patreon member articles for free.
+        </p>
+
+        <a href="/join" class="btn">Subscribe</a>
+    </section>
+
     <h1>Blog Posts</h1>
     {
         posts.map((post) => (
