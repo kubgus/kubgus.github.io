@@ -101,7 +101,7 @@ export default [
     },
     {
         title: "stratus",
-        description: "Port forwarding service made with Express.js and Supabase.",
+        description: "Port forwarding site made with Express.js and Supabase.",
         github: "https://github.com/kubgus/stratus",
         website: "https://mrkd.dev/",
         image: "images/thumbnails/stratus.png",
@@ -246,7 +246,7 @@ export default [
     },
     {
         title: "leetcode solutions",
-        description: "Collection of LeetCode solutions.",
+        description: "Collection of LeetCode solutions written in C++.",
         github: "https://github.com/kubgus/leetcode",
         year: 2024,
         rating: 2,
