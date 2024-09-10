@@ -15,7 +15,7 @@
         <h1>Random Project</h1>
         <ProjectPreview :project="random_project" />
 
-        <h1>All { props.projects.length } Projects</h1>
+	<h1>All Projects <span class="faded">({{ props.projects.length }})</span></h1>
         <div class="projects">
             <ProjectPreview v-for="(project, index) in projects_sorted" :key="index" :project="project" />
         </div>
