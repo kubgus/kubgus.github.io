@@ -1,6 +1,6 @@
 ---
-layout: "../../layouts/blog-layout.astro"
-title: "Preview of markdown styles"
+layout: "../../../layouts/blog-layout.astro"
+title: "Preview of Markdown Styles"
 description: "This post doesn't hold any relevance, it's just a preview to test markdown styles."
 date: 2024-03-26
 author: "Jakub Gustafik"

@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
 <CoreLayout
     title={`${frontmatter.title} | ${frontmatter.author}`}
     description={frontmatter.description}
-    image={frontmatter.image.src}
+    image={frontmatter.image?.src ?? ""}
     og_title={frontmatter.title}
     og_type="article"
     frontmatter={frontmatter}
@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
 
     <header>
         { frontmatter.image &&
-            <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
+            <img src={frontmatter.image?.src} alt={frontmatter.image?.alt} />
         }
         <h1>{frontmatter.title}</h1>
         <p id="article-description">{frontmatter.description}</p>
@@ -81,6 +81,7 @@ const { frontmatter } = Astro.props;
 
     main pre.astro-code {
         border-radius: 12px;
+        background-color: var(--secondary-background-dark);
         padding: 1rem;
         font-size: 1rem;
     }
