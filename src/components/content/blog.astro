@@ -9,6 +9,7 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
 <div class="content-inner">
     <h1>Newsletter</h1>
 
+    <!-- TODO: Make this a sticky popup -->
     <section id="newsletter">
         <p>
             I have a newsletter, btw! I post regular updates on my work, exclusive
@@ -25,3 +26,9 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
         ))
     }
 </div>
+
+<style>
+    #newsletter > *:not(:last-child) {
+        margin-bottom: 1.1rem;
+    }
+</style>
