@@ -241,7 +241,7 @@ export default [
         title: "c++ playground",
         description: "Collection of assorted C++ micro-projects.",
         github: "https://github.com/kubgus/cpp-playground",
-        year: 2024,
+        year: 2023,
         rating: 2,
     },
     {
