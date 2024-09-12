@@ -266,4 +266,12 @@ export default [
         year: 2021,
         rating: 3,
     },
+    {
+        title: "cells",
+        description: "Advanced infinite high-score bullet-hell game in Scratch.",
+        website: "https://laiq.itch.io/cells",
+        image: "images/thumbnails/cells.png",
+        year: 2022,
+        rating: 2,
+    },
 ];
