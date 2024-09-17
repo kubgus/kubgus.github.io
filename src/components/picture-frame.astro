@@ -6,7 +6,7 @@ const { data } = Astro.props;
     <img src={data?.src ?? "/favicon.png"} alt={data?.title ?? "Frame"} width="128" height="128" class="base" />
     <div class="popover" id={data?.title ?? ""} aria-hidden="true" popover>
         <img src={data?.src ?? "/favicon.png"} alt={data?.title ?? "Frame"} width="256" height="256"/>
-        <h2>{data?.title ?? "Frame"}</h2>
+        <h3>{data?.title ?? "Frame"}</h3>
     </div>
 </button>
 
@@ -52,7 +52,7 @@ const { data } = Astro.props;
         width: clamp(15rem, 50vw, 20rem);
         height: max(15rem, 25vh);
 
-        padding: 0.5rem;
+        padding: 1rem;
 
         display: flex;
         flex-direction: column;
@@ -67,6 +67,11 @@ const { data } = Astro.props;
         border-radius: 12px;
     }
 
+    .popover:popover-open h3 {
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
     .popover img {
         width: 90px !important;
         height: 90px !important;
@@ -75,7 +80,6 @@ const { data } = Astro.props;
 
         background: var(--secondary-background-dark);
         border-radius: 12px;
-
     }
 
     .popover:popover-open img {
