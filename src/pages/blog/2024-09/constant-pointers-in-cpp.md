@@ -1,6 +1,6 @@
 ---
 layout: "../../../layouts/blog-layout.astro"
-title: "Constant pointers in C++"
+title: "Constant Pointers in C++"
 description: "This short guide outlines the intricacies of constant pointers in C++ and explains how they can be used."
 date: 2024-09-10
 author: "Jakub Gustafik"
