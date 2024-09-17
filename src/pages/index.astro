@@ -42,11 +42,11 @@ let tab = "tab-1", translateSelector = "0%";
 
     <header class="container" aria-hidden="true">
         <img src="/images/linkedin-portrait-v2.jpg" alt="" id="portrait"/>
-        <figure>
+        <div>
             <h1>Jakub Gustafik</h1>
             <span class="faded">Student & software developer based in Slovakia</span>
             <ContactBar />
-        </figure>
+        </div>
     </header>
 
     <nav id="picker" class="container">
@@ -59,18 +59,18 @@ let tab = "tab-1", translateSelector = "0%";
     </nav>
 
     <main class="container">
-        <article class="content" id="content-1">
+        <section aria-label="About me" class="content" id="content-1">
             <AboutMe />
-        </article>
+        </section>
 
-        <article class="content" id="content-2">
+        <section class="content" id="content-2">
             <Projects client:only="vue" projects={projects} />
             <h1 class="js-remove">Please enable JavaScript to view this page!</h1>
-        </article>
+        </section>
 
-        <article class="content" id="content-3">
+        <section class="content" id="content-3">
             <Blog />
-        </article>
+        </section>
     </main>
 </CoreLayout>
 
@@ -129,17 +129,17 @@ let tab = "tab-1", translateSelector = "0%";
         border-radius: 50%;
     }
 
-    header > figure {
+    header > div {
         display: flex;
         flex-direction: column;
     }
 
-    header > figure h1 {
+    header > div h1 {
         font-size: 2.25rem;
         font-weight: 600;
     }
 
-    header > figure span {
+    header > div span {
         font-size: 1.25rem;
         margin-bottom: 0.6rem;
     }
@@ -157,7 +157,7 @@ let tab = "tab-1", translateSelector = "0%";
             border: none;
         }
 
-        header figure {
+        header div {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -203,13 +203,13 @@ let tab = "tab-1", translateSelector = "0%";
         transform: translateX(var(--translateSelector));
     }
 
-    article {
+    section {
         padding: 1.5rem 3rem 2.5rem 3rem;
         text-align: left !important;
     }
 
     @media (max-width: 1000px) {
-        article {
+        section {
             padding: 1rem 1.5rem;
         }
     }
@@ -225,21 +225,18 @@ let tab = "tab-1", translateSelector = "0%";
     body:has(#about-me.active) #content-1,
     body:has(#projects.active) #content-2,
     body:has(#blog.active) #content-3 {
-        display: block;
+        display: flex;
     }
 
     .content {
         display: none;
-    }
-
-    .content-inner {
-        display: flex;
         flex-direction: column;
         gap: 0.5rem;
         font-size: 1.2rem;
     }
 
-    .content-inner > * {
+    .content > *:not(astro-island),
+    .content > astro-island > * {
         opacity: 0;
         scale: 0.9;
         animation: fade-in ease-out 0.2s forwards;
@@ -249,16 +246,14 @@ let tab = "tab-1", translateSelector = "0%";
         to { scale: 1; opacity: 1; }
     }
 
-    .content h1 {
+    .content h1,
+    .content h2 {
         font-size: 1.85rem;
     }
 
-    .content h1:not(:first-child) {
+    .content h1:not(:first-child),
+    .content h2:not(:first-child) {
         margin-top: 1rem;
-    }
-
-    .content h2 {
-        font-size: 1.5rem;
     }
 
     .content ul,

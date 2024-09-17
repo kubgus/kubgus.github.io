@@ -6,26 +6,24 @@ const posts = await Astro.glob("../../pages/blog/*/*.md");
 posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
-<div class="content-inner">
-    <h1>Newsletter</h1>
+<h2>Newsletter</h2>
 
-    <!-- TODO: Make this a sticky popup -->
-    <section id="newsletter">
-        <p>
-            I have a newsletter, btw! I post regular updates on my work, exclusive
-            guides, and Patreon member articles for free.
-        </p>
+<!-- TODO: Make this a sticky popup -->
+<section id="newsletter">
+    <p>
+        I have a newsletter, btw! I post regular updates on my work, exclusive
+        guides, and Patreon member articles for free.
+    </p>
 
-        <a href="/newsletter" class="btn">Subscribe</a>
-    </section>
+    <a href="/newsletter" class="btn">Subscribe</a>
+</section>
 
-    <h1>Blog Posts</h1>
-    {
-        posts.map((post) => (
-            <BlogPreview url={post.url} frontmatter={post.frontmatter} />
-        ))
-    }
-</div>
+<h2>Blog Posts</h2>
+{
+    posts.map((post) => (
+        <BlogPreview url={post.url} frontmatter={post.frontmatter} />
+    ))
+}
 
 <style>
     #newsletter > *:not(:last-child) {

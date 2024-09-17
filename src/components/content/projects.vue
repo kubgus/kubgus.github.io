@@ -19,24 +19,22 @@
 </script>
 
 <template>
-    <div class="content-inner">
-        <h1>Random Project</h1>
-        <ProjectPreview :project="random_project" />
+    <h2>Random Project</h2>
+    <ProjectPreview :project="random_project" />
 
-        <CountHeading :count="pinned_projects.length">Pinned Projects</CountHeading>
-        <div class="projects">
-            <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" />
-        </div>
+    <CountHeading :count="pinned_projects.length">Pinned Projects</CountHeading>
+    <div class="projects">
+        <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" />
+    </div>
 
-        <CountHeading :count="open_source_projects.length">Open Source Projects</CountHeading>
-        <div class="projects">
-            <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" />
-        </div>
+    <CountHeading :count="open_source_projects.length">Open Source Projects</CountHeading>
+    <div class="projects">
+        <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" />
+    </div>
 
-        <CountHeading :count="other_projects.length">Other Projects</CountHeading>
-        <div class="projects">
-            <ProjectPreview v-for="(project, index) in other_projects" :key="index" :project="project" />
-        </div>
+    <CountHeading :count="other_projects.length">Other Projects</CountHeading>
+    <div class="projects">
+        <ProjectPreview v-for="(project, index) in other_projects" :key="index" :project="project" />
     </div>
 </template>
 

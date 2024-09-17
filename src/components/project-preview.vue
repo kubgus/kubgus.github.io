@@ -7,13 +7,11 @@
 <template>
     <figure class="container">
         <a :href="project.website ?? project.github ?? '#'" target="_blank">
-            <div class="info">
                 <img v-if="project.image" :src="project.image" alt="" />
                 <figcaption>
                     <h3>{{ project.title }}</h3>
                     <p>{{ project.description }}</p>
                 </figcaption>
-            </div>
         </a>
         <div class="links">
             <a v-if="project.github" :href="project.github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -34,16 +32,13 @@
 
     a {
         text-decoration: none;
-    }
-
-    .info {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 1.1rem;
     }
 
-    .info:not(:has(img)) {
+    a:not(:has(img)) {
         margin-left: 0.5rem;
     }
 
@@ -79,7 +74,7 @@
             text-align: center;
         }
 
-        .info {
+        a {
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;

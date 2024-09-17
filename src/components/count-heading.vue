@@ -1,5 +1,5 @@
 <template>
-    <h1><slot /> <span class="count faded">({{ count }})</span></h1>
+    <h2><slot /> <span class="count faded">({{ count }})</span></h2>
 </template>
 
 <script setup>
