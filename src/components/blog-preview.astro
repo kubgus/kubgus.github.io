@@ -9,7 +9,10 @@ const { title, date, author } = frontmatter;
 <figure>
     <a href={url}>
         <div class="text-container">
-            <figcaption>{title}</figcaption>
+            <figcaption>
+                { title }
+                { frontmatter.lang == "sk" && <img src="/images/flag-sk.jpg" alt="" aria-label="Article language: Slovak" /> }
+            </figcaption>
             <BlogInfo date={date} author={author} />
         </div>
         { frontmatter.image &&
@@ -48,6 +51,14 @@ const { title, date, author } = frontmatter;
     figcaption {
         font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    figcaption > img {
+        width: 1.4rem;
+        height: 0.9rem;
+        border-radius: 3px;
+        margin-left: 3px;
+        margin-bottom: 0.1px;
     }
 
     @media (max-width: 650px) {
