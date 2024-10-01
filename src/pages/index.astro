@@ -65,7 +65,9 @@ let tab = "tab-1", translateSelector = "0%";
 
         <section class="content" id="content-2">
             <Projects client:only="vue" projects={projects} />
-            <h1 class="js-remove">Please enable JavaScript to view this page!</h1>
+            <noscript>
+                <h1 class="js-remove">Please enable JavaScript to view this page!</h1>
+            </noscript>
         </section>
 
         <section class="content" id="content-3">
@@ -78,8 +80,6 @@ let tab = "tab-1", translateSelector = "0%";
     const buttons = document.getElementsByClassName("content-selector");
     // I hate Typescript
     const selector = Array.from(document.getElementsByClassName("select-indicator") as HTMLCollectionOf<HTMLElement>)[0];
-
-    document.querySelectorAll(".js-remove").forEach((e) => e.remove());
 
     function setQuery(key: string, value: string) {
         // Never forget.

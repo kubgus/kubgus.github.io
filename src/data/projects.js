@@ -274,4 +274,12 @@ export default [
         year: 2022,
         rating: 2,
     },
+    {
+        title: "timer",
+        description: "A simple lightning talk timer written in plain HTML and JS.",
+        github: "https://github.com/kubgus/timer",
+        website: "https://gustafik.com/timer",
+        year: 2024,
+        rating: 1,
+    }
 ];
