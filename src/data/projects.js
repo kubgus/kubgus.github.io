@@ -128,6 +128,7 @@ export default [
         title: "slidar",
         description: "Slideshow presentation tool for markdown made with Node.js.",
         github: "https://github.com/kubgus/slidar",
+        image: "images/thumbnails/slidar.png",
         year: 2024,
         rating: 3,
     },
