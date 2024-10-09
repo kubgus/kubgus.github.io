@@ -1,8 +1,10 @@
 ---
 import BlogPreview from "../blog-preview.astro";
 
-const posts = await Astro.glob("../../pages/blog/*/*.md");
+let posts = await Astro.glob("../../pages/blog/*/*.md");
 // TODO: Hook this up to the Twitter API
+
+posts = posts.filter((post) => !post.url?.includes("unlisted"));
 posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
