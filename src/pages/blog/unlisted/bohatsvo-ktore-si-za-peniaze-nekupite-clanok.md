@@ -24,12 +24,21 @@ author: "Jakub Gustafik"
 
 ## "Peniaze?!"
 
-Peniaze sú zaujímavou kapitolou práve kvôli svojej kontradikcii s názvom knihy.
-Sharma túto kapitolu však poníma skôr ako návod na správne finančné návyky
-ako na samotné zarábanie peňazí.
+Peniaze sú v tejto knihe zaujímavou kapitolou práve kvôli svojej kontradikcii
+s jej názvom.
 
-Inklúzia tejto kapitoly zdôrazňuje dôležitosť peňazí ako iba jednej
-z mnohých foriem bohatstva, na ktoré sa treba zameriavať.
+Túto kapitolu som si vybral, lebo ma zaujímalo, ako autor pojme jej
+tému, keď sa od peňažnej formy bohatstva na prvý pohľad snaží vo svojej knihe
+skôr vzdialiť. Sharma túto kapitolu však poníma skôr ako návod na správne
+finančné návyky ako na samotné zarábanie peňazí.
+
+Niekoľko kníh o finančnej gramotnosti som už čítal, a tento žáner kníh ma
+aj osobne veľmi zaujíma, keďže sa chcem venovať podnikaniu, takže výber
+tejto kapitoly bol z mojej strany aj z tohto pohľadu celkom očividný.
+
+Prítomnosť kapitoly o peniazoch aj v takejto knihe ďalej zdôrazňuje ich
+dôležitosť, no ako iba jednej z mnohých foriem bohatstva, na ktoré sa
+treba zameriavať.
 
 ## Nedostatky knihy
 
@@ -91,11 +100,18 @@ Tu sú niektoré, ktoré som si zapísal:
 
 Tento posledný citát so mnou obzvlášť rezonoval, lebo som sa v minulosti
 venoval princípom *autosugescie* a dôležitosti našich slov a myšlienok
-v procese úspechu. Vracia sa to však späť k pointe, že kniha mi nič nové
-nepriniesla a skôr mi len "pripomenula" princípy, ktoré už poznám.
+v procese úspechu.
+
+Už dávnejšie som čítal knihu Napoleona Hilla, *Think and Grow Rich*, ktorá sa
+tejto téme venuje extenzívnejšie. Táto kniha mi veľmi pomohla v budovaní
+návykov a pozitívneho vnútorného monológu. Preto s myšlienkou tohto citátu
+a jeho kapitoly súhlasím.
+
+Opäť sa to však vracia späť k pointe, že kniha mi nič nové nepriniesla a skôr
+mi len “pripomenula” princípy, ktoré už poznám.
 
 *A znova- to by vôbec nebola zlá vec, keby ich kniha neprezentovala v
-predom spomínaných "slovných omáčkach".*
+predom spomínaných “slovných omáčkach”.*
 
 ## Komu by som knihu odporučil?
 
