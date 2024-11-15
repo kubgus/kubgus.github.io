@@ -5,8 +5,8 @@ const { fixed = false, href = "/" } = Astro.props;
 ---
 
 <header class={fixed ? "scrolled" : ""}>
-    <a href={href} class="implied" aria-hidden="true">Jakub Gustafik</a>
-    <ContactBar />
+    <a tabindex="-1" href={href} class="implied" aria-hidden="true">Jakub Gustafik</a>
+    <ContactBar tabindex="-1" />
 </header>
 
 <script define:vars={{ fixed }} is:inline>
