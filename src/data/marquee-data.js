@@ -89,4 +89,8 @@ export default [
         title: "Vue.js",
         src: techLogoPath + "vue.png",
     },
+    {
+        title: "Godot",
+        src: techLogoPath + "godot.png",
+    },
 ];

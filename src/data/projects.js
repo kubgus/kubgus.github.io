@@ -282,5 +282,14 @@ export default [
         website: "https://gustafik.com/timer",
         year: 2024,
         rating: 1,
-    }
+    },
+    {
+        title: "prowl",
+        description: "A social deduction game made as a side project in Godot.",
+        github: "https://github.com/kubgus/prowl",
+        website: "https://laiq.itch.io/prowl",
+        image: "images/thumbnails/prowl.png",
+        year: 2024,
+        rating: 3,
+    },
 ];
