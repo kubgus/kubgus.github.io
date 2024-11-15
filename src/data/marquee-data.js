@@ -93,4 +93,8 @@ export default [
         title: "Godot",
         src: techLogoPath + "godot.png",
     },
+    {
+        title: "NestJS",
+        src: techLogoPath + "nest.png",
+    },
 ];
