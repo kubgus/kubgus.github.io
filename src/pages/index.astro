@@ -45,15 +45,15 @@ let tab = "tab-1", translateSelector = "0%";
         <div>
             <h1>Jakub Gustafik</h1>
             <span class="faded">Student & software developer based in Slovakia</span>
-            <ContactBar tabindex="2" />
+            <ContactBar />
         </div>
     </header>
 
     <nav id="picker" class="container">
         <div class="content-selector-container">
-            <a tabindex="1" href="/" class={tab === "tab-1" ? "content-selector active" : "content-selector"} id="about-me">About me</a>
-            <a tabindex="1" href="/" class={tab === "tab-2" ? "content-selector active" : "content-selector"} id="projects">Projects</a>
-            <a tabindex="1" href="/" class={tab === "tab-3" ? "content-selector active" : "content-selector"} id="blog">Blog</a>
+            <a href="/" class={tab === "tab-1" ? "content-selector active" : "content-selector"} id="about-me">About me</a>
+            <a href="/" class={tab === "tab-2" ? "content-selector active" : "content-selector"} id="projects">Projects</a>
+            <a href="/" class={tab === "tab-3" ? "content-selector active" : "content-selector"} id="blog">Blog</a>
         </div>
         <div aria-hidden="true" class="select-indicator" />
     </nav>
