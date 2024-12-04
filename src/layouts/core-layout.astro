@@ -47,21 +47,7 @@ if (frontmatter != null) {
             title={title}
             description={description}
             canonical={canonical}
-            openGraph={{
-                basic: {
-                    title: og_title,
-                    type: og_type,
-                    image: image,
-                    url: canonical,
-                },
-                optional: {
-                    description: description,
-                },
-                image: {
-                    url: image,
-                    type: "image/jpeg",
-                },
-            }}
+            openGraph={open_graph}
             twitter={{
                 description: description,
                 card: "summary",
