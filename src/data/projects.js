@@ -284,4 +284,12 @@ export default [
         year: 2024,
         rating: 3,
     },
+    {
+        title: "past forward",
+        description: "A split-screen co-op Unity 3D game made for a game jam.",
+        website: "https://laiq.itch.io/past-forward",
+        image: "images/thumbnails/past-forward.png",
+        year: 2024,
+        rating: 4,
+    },
 ];
