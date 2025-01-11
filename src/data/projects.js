@@ -292,4 +292,12 @@ export default [
         year: 2024,
         rating: 4,
     },
+    {
+        title: "blob survivors",
+        description: "Simple evolution game about blobs made in Godot.",
+        github: "https://github.com/kubgus/blob-survivors",
+        image: "images/thumbnails/blob-survivors.png",
+        year: 2024,
+        rating: 3,
+    },
 ];
