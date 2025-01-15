@@ -37,7 +37,7 @@ interakcie s použivateľom.
 Jednoducho povedané, prsteň nedokázal dávať použivateľovi priamy výstup a
 rovnako použivateľ nedokázal nijako priamo dať príkaz prsteňu.
 
-Vyriešením tohoto problému by sa Ryng mohol oddieliť na trhu ako jedinečná
+Vyriešením tohto problému by sa Ryng mohol oddieliť na trhu ako jedinečná
 a inovatívna značka. Ryng sa teda zameral na tri kľúčové sektory, ktoré
 ich produkt mal spĺňať, aby dosiahol svoj potenciálny úspech:
 
@@ -90,7 +90,7 @@ v ktorých dávali najavo ako prsteň za svoju cenu nenaplnil ich očakávania.
 
 Vďaka svojemu marketingu ako "beta verzia" produktu však väčšina zákazníkov mala
 nakoniec na prsteň pozitívny názor a veľa z nich dalo Ryngu veľmi dobrú
-spätnú väzbu. Prvý zákazníci sa taktiež považovali za "ambasádorov novej
+spätnú väzbu. Prví zákazníci sa taktiež považovali za "ambasádorov novej
 generácie prsteňov", čo všeobecne pomohlo marketingu.
 
 Po tejto skúsenosti už Ryng nemal problém s vývojom nových modelov rýchlejšie
