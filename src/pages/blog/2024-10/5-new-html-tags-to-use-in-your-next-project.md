@@ -16,7 +16,7 @@ image: {
         HTML getting over beginner mistakes"
 }
 date: 2024-10-18
-author: "Jakub Gustafik"
+author: "Jakub Guštafik"
 ---
 
 ## `<details>`

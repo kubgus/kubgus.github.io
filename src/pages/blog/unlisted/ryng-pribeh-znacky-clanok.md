@@ -14,7 +14,7 @@ image: {
         "ChatGPT: Generate a banner for a smart ring named Ryng"
 }
 date: 2024-01-08
-author: "Jakub Gustafik"
+author: "Jakub Guštafik"
 ---
 
 Jedného dňa ale prišiel človek, ktorý s výberom dnešnej doby nebol spokojný.

@@ -17,7 +17,7 @@ image: {
         reading a self-help book"
 }
 date: 2024-10-09
-author: "Jakub Gustafik"
+author: "Jakub Guštafik"
 ---
 
 ![Predný obal knihy](https://mrtns.sk/tovar/_l/2571/l2571009.jpg?v=17284465212)

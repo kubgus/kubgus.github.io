@@ -3,7 +3,7 @@ layout: "../../../layouts/blog-layout.astro"
 title: "Constant Pointers in C++"
 description: "This short guide outlines the intricacies of constant pointers in C++ and explains how they can be used."
 date: 2024-09-10
-author: "Jakub Gustafik"
+author: "Jakub Guštafik"
 ---
 
 The `const` keyword may seem simple at first - it makes any variable constant,
