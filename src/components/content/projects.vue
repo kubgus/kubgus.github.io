@@ -47,6 +47,5 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
         margin-top: 1rem;
-        line-break: anywhere;
     }
 </style>

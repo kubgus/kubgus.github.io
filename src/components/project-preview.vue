@@ -36,6 +36,7 @@
         gap: 20px;
         align-items: center;
         padding: 0.7rem 1rem 0.7rem 1rem;
+        word-break: break-all;
     }
 
     .contents {
@@ -64,12 +65,18 @@
     .title {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.1rem 0.5rem;
+    }
+
+    .contents a:not(:has(.logo)) > .title {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .tech {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 0.5rem;
     }
 
@@ -77,6 +84,7 @@
         max-height: 20px;
         max-width: 20px;
         border-radius: 0;
+        margin-top: 3px;
     }
 
     .links {
