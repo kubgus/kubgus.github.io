@@ -81,11 +81,12 @@
 
     .links {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
     i {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 </style>

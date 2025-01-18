@@ -27,12 +27,12 @@
 
     <CountHeading :count="pinned_projects.length">Pinned Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" :tech="tech"/>
+        <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" :tech="tech" />
     </div>
 
     <CountHeading :count="open_source_projects.length">Open Source Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" :tech="tech"/>
+        <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" :tech="tech" />
     </div>
 
     <CountHeading :count="other_projects.length">Other Projects</CountHeading>
@@ -44,14 +44,9 @@
 <style scoped>
     .projects {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
         margin-top: 1rem;
-    }
-
-    @media (max-width: 500px) {
-        .projects {
-            grid-template-columns: 1fr;
-        }
+        line-break: anywhere;
     }
 </style>
