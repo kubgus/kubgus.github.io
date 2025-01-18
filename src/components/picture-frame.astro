@@ -30,8 +30,9 @@ const { data } = Astro.props;
     }
 
     img.base {
-        max-width: 75%;
-        max-height: 75%;
+        max-width: 65%;
+        max-height: 65%;
+        border-radius: 0;
     }
 
     @media (max-width: 1000px) {
@@ -79,7 +80,6 @@ const { data } = Astro.props;
         padding: 12px;
 
         background: var(--secondary-background-dark);
-        border-radius: 12px;
     }
 
     .popover:popover-open img {

@@ -15,7 +15,7 @@
                 <div class="title">
                     <h3>{{ project.title }}</h3>
                     <div class="tech">
-                        <img v-for="data in project.tech" :key="data" :src="tech[data].src" :alt="tech[data].title" :title="tech[data].title" >
+                        <img class="icon" v-for="data in project.tech" :key="data" :src="tech[data].src" :alt="tech[data].title" :title="tech[data].title" >
                     </div>
                 </div>
             </a>
@@ -81,9 +81,6 @@
     }
 
     .tech > img {
-        max-height: 20px;
-        max-width: 20px;
-        border-radius: 0;
         margin-top: 3px;
     }
 

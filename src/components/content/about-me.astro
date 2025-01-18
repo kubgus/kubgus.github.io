@@ -12,10 +12,27 @@ import PictureFrame from "../picture-frame.astro";
 
 <h2>Top Skills</h2>
 <ul>
-    <li>Full-stack development</li>
-    <li>Game development</li>
-    <li>Teamwork</li>
-    <li>Project management</li>
+    <li>
+        Full-stack development
+        <img class="icon" src="/images/wezeo.png" alt="At Wezeo" title="At Wezeo" />
+        <i class="fa-solid fa-circle-user icon" title="Self-taught" aria-label="Self-taught"></i>
+    </li>
+    <li>
+        Game development
+        <i class="fa-solid fa-circle-user icon" title="Self-taught" aria-label="Self-taught"></i>
+    </li>
+    <li>
+        Teamwork
+        <img class="icon" src="/images/slsk.png" alt="At SLSK" title="At SLSK" />
+        <img class="icon" src="/images/wezeo.png" alt="At Wezeo" title="At Wezeo" />
+        <img class="icon" src="/images/coderdojo.png" alt="At CoderDojo" title="At CoderDojo" />
+    </li>
+    <li>
+        Project management
+        <img class="icon" src="/images/slsk.png" alt="At SLSK" title="At SLSK" />
+        <img class="icon" src="/images/wezeo.png" alt="At Wezeo" title="At Wezeo" />
+        <i class="fa-solid fa-circle-user icon" title="Self-taught" aria-label="Self-taught"></i>
+    </li>
 </ul>
 
 <TechMarquee />
@@ -153,6 +170,12 @@ import PictureFrame from "../picture-frame.astro";
 <style>
     h2 {
         font-size: 1.85rem !important;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 0.1rem 0.5rem;
     }
 
     .accented {
