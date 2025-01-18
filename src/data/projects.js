@@ -15,6 +15,7 @@ export default [
         image: "images/thumbnails/kubgus.github.io.png",
         year: 2024,
         rating: 4,
+        tech: ["astro", "tailwind", "ts", "vue"],
     },
     {
         title: "heystack",
@@ -22,6 +23,7 @@ export default [
         website: "https://heystak.netlify.app/",
         year: 2023,
         rating: 4,
+        tech: ["nuxt", "supabase", "ts", "vue", "tailwind", "html", "css"],
     },
     {
         title: "bloodline",
@@ -30,6 +32,7 @@ export default [
         image: "images/thumbnails/bloodline.png",
         year: 2023,
         rating: 3,
+        tech: ["cs"],
     },
     {
         title: "omniroom",
@@ -39,15 +42,17 @@ export default [
         image: "images/thumbnails/omniroom.png",
         year: 2023,
         rating: 2,
+        tech: ["html", "css", "js", "node"],
     },
     {
         title: "filefly",
-        description: "Direct file sharing platform made with Express.js.",
+        description: "Direct file sharing platform made with Express.js and Socket.io.",
         github: "https://github.com/kubgus/filefly",
         website: "https://host.gustafik.com/",
         image: "images/thumbnails/filefly.png",
         year: 2023,
         rating: 3,
+        tech: ["html", "css", "js", "node"],
     },
     {
         title: "super tic-tac-toe",
@@ -57,6 +62,7 @@ export default [
         image: "images/thumbnails/super-tic-tac-toe.png",
         year: 2023,
         rating: 3,
+        tech: ["html", "css", "js"],
     },
     {
         title: "tick oat two",
@@ -66,6 +72,7 @@ export default [
         image: "images/thumbnails/tick-oat-two.png",
         year: 2022,
         rating: 3,
+        tech: ["html", "css", "js"],
     },
     {
         title: "magnet.io",
@@ -74,6 +81,7 @@ export default [
         website: "https://laiq.itch.io/magnet-io",
         year: 2022,
         rating: 3,
+        tech: ["unity", "cs"],
     },
     {
         title: "copycat",
@@ -82,6 +90,7 @@ export default [
         image: "images/thumbnails/copycat.png",
         year: 2022,
         rating: 3,
+        tech: ["unity", "cs"],
     },
     {
         title: "discord tts bot",
@@ -89,6 +98,7 @@ export default [
         github: "https://github.com/kubgus/discord-tts-bot",
         year: 2022,
         rating: 2,
+        tech: ["js"],
     },
     {
         title: "flashcards",
@@ -98,6 +108,7 @@ export default [
         image: "images/thumbnails/flashcards.png",
         year: 2023,
         rating: 1,
+        tech: ["html", "css", "js"],
     },
     {
         title: "stratus",
@@ -107,6 +118,7 @@ export default [
         image: "images/thumbnails/stratus.png",
         year: 2024,
         rating: 4,
+        tech: ["html", "css", "js", "supabase"],
     },
     {
         title: "stratus cli",
@@ -115,6 +127,7 @@ export default [
         image: "images/thumbnails/stratus.png",
         year: 2024,
         rating: 4,
+        tech: ["js", "node"],
     },
     {
         title: "untitled game engine",
@@ -123,6 +136,7 @@ export default [
         image: "images/thumbnails/uge.png",
         year: 2024,
         rating: 4,
+        tech: ["cpp"],
     },
     {
         title: "slidar",
@@ -131,6 +145,7 @@ export default [
         image: "images/thumbnails/slidar.png",
         year: 2024,
         rating: 3,
+        tech: ["js", "node"],
     },
     {
         title: "texemble",
@@ -138,6 +153,7 @@ export default [
         github: "https://github.com/kubgus/texemble",
         year: 2024,
         rating: 4,
+        tech: ["cpp"],
     },
     {
         title: "kudo",
@@ -146,6 +162,7 @@ export default [
         image: "images/thumbnails/kudo.png",
         year: 2022,
         rating: 3,
+        tech: ["cs"],
     },
     {
         title: "frisk",
@@ -153,6 +170,7 @@ export default [
         github: "https://github.com/kubgus/frisk",
         year: 2024,
         rating: 4,
+        tech: ["cpp"],
     },
     {
         title: "hotpot",
@@ -160,6 +178,7 @@ export default [
         github: "https://github.com/kubgus/hotpot",
         year: 2024,
         rating: 4,
+        tech: ["cpp"],
     },
     {
         title: "c++ cheatsheet",
@@ -167,6 +186,7 @@ export default [
         github: "https://github.com/kubgus/cpp-cheatsheet",
         year: 2023,
         rating: 4,
+        tech: ["cpp"],
     },
     {
         title: "overwork",
@@ -175,6 +195,7 @@ export default [
         image: "images/thumbnails/overwork.png",
         year: 2023,
         rating: 4,
+        tech: ["html", "css", "js"],
     },
     {
         title: "faux",
@@ -183,6 +204,7 @@ export default [
         image: "images/thumbnails/faux.png",
         year: 2023,
         rating: 5,
+        tech: ["html", "css", "js"],
     },
     {
         title: "instant",
@@ -191,6 +213,7 @@ export default [
         image: "images/thumbnails/instant.png",
         year: 2022,
         rating: 2,
+        tech: ["html", "css", "js", "node"],
     },
     {
         title: "scratch studio",
@@ -206,6 +229,7 @@ export default [
         website: "https://gustafik.com/planet-generator",
         year: 2021,
         rating: 1,
+        tech: ["html", "css", "js"],
     },
     {
         title: "speed read",
@@ -215,6 +239,7 @@ export default [
         image: "images/thumbnails/speed-read.png",
         year: 2021,
         rating: 1,
+        tech: ["html", "css", "js"],
     },
     {
         title: "discord.js 14 template",
@@ -222,6 +247,7 @@ export default [
         github: "https://github.com/kubgus/discord-js-14-template",
         year: 2023,
         rating: 4,
+        tech: ["js", "node"],
     },
     {
         title: "nuxt & tailwind template",
@@ -229,6 +255,7 @@ export default [
         github: "https://github.com/kubgus/nuxt-tailwind-template",
         year: 2023,
         rating: 2,
+        tech: ["nuxt", "tailwind", "vue"],
     },
     {
         title: "learning nuxt",
@@ -237,6 +264,7 @@ export default [
         website: "https://learning-nuxt3.netlify.app/",
         year: 2023,
         rating: 1,
+        tech: ["nuxt", "tailwind", "vue"],
     },
     {
         title: "c++ playground",
@@ -244,6 +272,7 @@ export default [
         github: "https://github.com/kubgus/cpp-playground",
         year: 2023,
         rating: 2,
+        tech: ["cpp"],
     },
     {
         title: "leetcode solutions",
@@ -251,6 +280,7 @@ export default [
         github: "https://github.com/kubgus/leetcode",
         year: 2024,
         rating: 2,
+        tech: ["cpp"],
     },
     {
         title: "node.js playground",
@@ -258,6 +288,7 @@ export default [
         github: "https://github.com/kubgus/node-playground",
         year: 2022,
         rating: 2,
+        tech: ["js", "node"],
     },
     {
         title: "remify",
@@ -266,6 +297,7 @@ export default [
         website: "https://gustafik.com/remify/",
         year: 2021,
         rating: 3,
+        tech: ["html", "css", "js", "firebase"],
     },
     {
         title: "timer",
@@ -274,6 +306,7 @@ export default [
         website: "https://gustafik.com/timer",
         year: 2024,
         rating: 1,
+        tech: ["html", "css", "js"],
     },
     {
         title: "prowl",
@@ -283,6 +316,7 @@ export default [
         image: "images/thumbnails/prowl.png",
         year: 2024,
         rating: 3,
+        tech: ["godot"],
     },
     {
         title: "past forward",
@@ -291,6 +325,7 @@ export default [
         image: "images/thumbnails/past-forward.png",
         year: 2024,
         rating: 4,
+        tech: ["unity", "cs"],
     },
     {
         title: "blob survivors",
@@ -299,5 +334,6 @@ export default [
         image: "images/thumbnails/blob-survivors.png",
         year: 2024,
         rating: 3,
+        tech: ["godot"],
     },
 ];

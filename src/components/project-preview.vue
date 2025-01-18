@@ -1,18 +1,26 @@
 <script setup>
     defineProps({
-        project: Object
+        project: Object,
+        tech: Object,
     });
+
+    // TODO: Sort project.tech array
 </script>
 
 <template>
     <figure class="container">
-        <a :href="project.website ?? project.github ?? '#'" target="_blank">
-                <img v-if="project.image" :src="project.image" alt="" />
-                <figcaption>
+        <div class="contents">
+            <a :href="project.website ?? project.github ?? '#'" target="_blank">
+                <img class="logo" v-if="project.image" :src="project.image" alt="" />
+                <div class="title">
                     <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
-                </figcaption>
-        </a>
+                    <div class="tech">
+                        <img v-for="data in project.tech" :key="data" :src="tech[data].src" :alt="tech[data].title" :title="tech[data].title" >
+                    </div>
+                </div>
+            </a>
+            <p>{{ project.description }}</p>
+        </div>
         <div class="links">
             <a v-if="project.github" :href="project.github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a v-if="project.website" :href="project.website" target="_blank"><i class="fas fa-link"></i></a>
@@ -30,6 +38,12 @@
         padding: 0.7rem 1rem 0.7rem 1rem;
     }
 
+    .contents {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     a {
         text-decoration: none;
         display: flex;
@@ -38,11 +52,7 @@
         gap: 1.1rem;
     }
 
-    a:not(:has(img)) {
-        margin-left: 0.5rem;
-    }
-
-    img {
+    img.logo {
         max-height: 70px;
         max-width: 100px;
     }
@@ -51,10 +61,22 @@
         display: none;
     }
 
-    figcaption {
+    .title {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .tech {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .tech > img {
+        max-height: 20px;
+        max-width: 20px;
+        border-radius: 0;
     }
 
     .links {
@@ -65,19 +87,5 @@
 
     i {
         font-size: 1.5rem;
-    }
-
-    @media (max-width: 500px) {
-        figure {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
-        }
-
-        a {
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
     }
 </style>

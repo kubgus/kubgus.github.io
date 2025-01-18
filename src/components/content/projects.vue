@@ -2,7 +2,10 @@
     import ProjectPreview from "../project-preview.vue";
     import CountHeading from "../count-heading.vue";
 
-    const props = defineProps(["projects"]);
+    const props = defineProps({
+        projects: Object,
+        tech: Object,
+    });
 
     const random_project = props.projects[Math.floor(Math.random() * props.projects.length)];
     const projects_random = props.projects.sort(() => Math.random() - 0.5);
@@ -20,21 +23,21 @@
 
 <template>
     <h2>Random Project</h2>
-    <ProjectPreview :project="random_project" />
+    <ProjectPreview :project="random_project" :tech="tech" />
 
     <CountHeading :count="pinned_projects.length">Pinned Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" />
+        <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" :tech="tech"/>
     </div>
 
     <CountHeading :count="open_source_projects.length">Open Source Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" />
+        <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" :tech="tech"/>
     </div>
 
     <CountHeading :count="other_projects.length">Other Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in other_projects" :key="index" :project="project" />
+        <ProjectPreview v-for="(project, index) in other_projects" :key="index" :project="project" :tech="tech" />
     </div>
 </template>
 

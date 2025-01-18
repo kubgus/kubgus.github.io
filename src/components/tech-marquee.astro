@@ -1,9 +1,12 @@
 ---
 import PictureFrame from "./picture-frame.astro";
 
-import frameData from "../data/marquee-data.js";
+import frameData from "../data/tech.js";
 
-const sortedData = frameData.sort(() => Math.random() - 0.5);
+const sortableData = [];
+for (let obj in frameData) sortableData.push(frameData[obj as keyof typeof frameData]);
+
+const sortedData = sortableData.sort(() => Math.random() - 0.5);
 ---
 
 <figure aria-label="Technology skills">

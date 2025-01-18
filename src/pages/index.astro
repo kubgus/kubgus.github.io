@@ -11,6 +11,7 @@ import Blog from "../components/content/blog.astro";
 import "../styles/default-padding.css";
 
 import projects from "../data/projects.js";
+import tech from "../data/tech.js";
 
 // Commented out because it needs SSR, which isn't compatible
 // with GitHub Pages' static hosting.
@@ -64,7 +65,7 @@ let tab = "tab-1", translateSelector = "0%";
         </section>
 
         <section class="content" id="content-2">
-            <Projects client:only="vue" projects={projects} />
+            <Projects client:only="vue" projects={projects} tech={tech} />
             <noscript>
                 <h1 class="js-remove">Please enable JavaScript to view this page!</h1>
             </noscript>
