@@ -10,11 +10,11 @@
 <template>
     <figure class="container">
         <div class="contents">
-            <a :href="project.website ?? project.github ?? '#'" target="_blank">
+            <a :href="project.website ?? project.github ?? null" target="_blank">
                 <img class="logo" v-if="project.image" :src="project.image" alt="" />
                 <div class="title">
                     <h3>{{ project.title }}</h3>
-                    <div class="tech">
+                    <div class="icon-container">
                         <img class="icon" v-for="data in project.tech" :key="data" :src="tech[data].src" :alt="tech[data].title" :title="tech[data].title" >
                     </div>
                 </div>
@@ -71,17 +71,6 @@
     .contents a:not(:has(.logo)) > .title {
         flex-direction: row;
         flex-wrap: wrap;
-    }
-
-    .tech {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .tech > img {
-        margin-top: 3px;
     }
 
     .links {
