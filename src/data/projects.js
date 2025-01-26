@@ -14,8 +14,25 @@ export default [
         github: "https://github.com/kubgus/kubgus.github.io",
         image: "images/thumbnails/kubgus.github.io.png",
         year: 2024,
-        rating: 4,
+        rating: 5,
         tech: ["astro", "tailwind", "ts", "vue"],
+    },
+    {
+        title: "modryoblak web",
+        description: "Website for our local scouting group.",
+        github: "https://github.com/modryoblak/web",
+        website: "https://modryoblak.sk/",
+        image: "images/slsk.png",
+        year: 2025,
+        rating: 4,
+        tech: ["astro", "tailwind", "vue"],
+    },
+    {
+        title: "asap",
+        description: "App for small and medium-sized teams that provides fast and straightforward solutions for short-term project management.",
+        year: 2025,
+        rating: 5,
+        tech: ["nuxt", "supabase", "ts", "vue", "tailwind", "html", "css"],
     },
     {
         title: "heystack",
@@ -117,7 +134,7 @@ export default [
         website: "https://mrkd.dev/",
         image: "images/thumbnails/stratus.png",
         year: 2024,
-        rating: 4,
+        rating: 3,
         tech: ["html", "css", "js", "supabase"],
     },
     {
@@ -126,7 +143,7 @@ export default [
         github: "https://github.com/kubgus/stratus-cli",
         image: "images/thumbnails/stratus.png",
         year: 2024,
-        rating: 4,
+        rating: 3,
         tech: ["js", "node"],
     },
     {
@@ -166,7 +183,7 @@ export default [
     },
     {
         title: "frisk",
-        description: "Advanced ls tool for Linux made with C++.",
+        description: "Advanced file listing tool for Linux made with C++.",
         github: "https://github.com/kubgus/frisk",
         year: 2024,
         rating: 4,
@@ -203,7 +220,7 @@ export default [
         website: "https://chromewebstore.google.com/detail/faux/kffcggckolacihcclnifefneifapjcdl",
         image: "images/thumbnails/faux.png",
         year: 2023,
-        rating: 5,
+        rating: 4,
         tech: ["html", "css", "js"],
     },
     {

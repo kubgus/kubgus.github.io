@@ -7,32 +7,33 @@
         tech: Object,
     });
 
-    const random_project = props.projects[Math.floor(Math.random() * props.projects.length)];
+    //const random_project = props.projects[Math.floor(Math.random() * props.projects.length)];
+
     const projects_random = props.projects.sort(() => Math.random() - 0.5);
     const projects_sorted = projects_random.sort((a, b) => {
         return a.year == b.year ? b.rating - a.rating : b.year - a.year
     });
 
-    let pinned_projects = [], open_source_projects = [], other_projects = [];
+    let active_projects = [], side_projects = [], other_projects = [];
     for (const project of projects_sorted) {
-        if (project.rating >= 4) pinned_projects.push(project);
-        else if (project.github) open_source_projects.push(project);
+        if (project.rating == 5) active_projects.push(project);
+        else if (project.rating == 4) side_projects.push(project);
         else other_projects.push(project);
     }
 </script>
 
 <template>
-    <h2>Random Project</h2>
-    <ProjectPreview :project="random_project" :tech="tech" />
+    <!--<h2>Random Project</h2>
+    <ProjectPreview :project="random_project" :tech="tech" />-->
 
-    <CountHeading :count="pinned_projects.length">Pinned Projects</CountHeading>
+    <CountHeading :count="active_projects.length">Active Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in pinned_projects" :key="index" :project="project" :tech="tech" />
+        <ProjectPreview v-for="(project, index) in active_projects" :key="index" :project="project" :tech="tech" />
     </div>
 
-    <CountHeading :count="open_source_projects.length">Open Source Projects</CountHeading>
+    <CountHeading :count="side_projects.length">Side Projects</CountHeading>
     <div class="projects">
-        <ProjectPreview v-for="(project, index) in open_source_projects" :key="index" :project="project" :tech="tech" />
+        <ProjectPreview v-for="(project, index) in side_projects" :key="index" :project="project" :tech="tech" />
     </div>
 
     <CountHeading :count="other_projects.length">Other Projects</CountHeading>
