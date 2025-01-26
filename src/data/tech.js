@@ -97,4 +97,8 @@ export default {
         title: "NestJS",
         src: techLogoPath + "nest.png",
     },
+    bun: {
+        title: "Bun",
+        src: techLogoPath + "bun.png",
+    },
 };
