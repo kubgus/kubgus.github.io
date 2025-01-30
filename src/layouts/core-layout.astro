@@ -1,11 +1,13 @@
 ---
 import { SEO } from 'astro-seo';
 
+const domain = Astro.url.origin
+
 const {
     title = "Jakub Guštafik",
     description = "Student & software developer based in Slovakia",
     image = "/images/portrait-v3.jpg",
-    canonical = `https://gustafik.com` + Astro.url.pathname,
+    canonical = domain + Astro.url.pathname,
     og_title = title,
     og_type = "website",
     frontmatter = null,
@@ -49,7 +51,7 @@ if (frontmatter != null) {
             canonical={canonical}
             openGraph={open_graph}
             twitter={{
-                image: image,
+                image: domain + image,
                 imageAlt: frontmatter?.image?.alt ?? "",
                 description: description,
                 card: "summary",
