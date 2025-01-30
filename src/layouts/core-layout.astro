@@ -49,6 +49,8 @@ if (frontmatter != null) {
             canonical={canonical}
             openGraph={open_graph}
             twitter={{
+                image: image,
+                imageAlt: frontmatter?.image?.alt ?? "",
                 description: description,
                 card: "summary",
                 site: "@gustafik_dev",
