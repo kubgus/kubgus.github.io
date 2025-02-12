@@ -13,7 +13,7 @@ image: {
     alt:
         "ChatGPT: Generate a banner for a smart ring named Ryng"
 }
-date: 2024-01-08
+date: 2025-01-08
 author: "Jakub Guštafik"
 ---
 
