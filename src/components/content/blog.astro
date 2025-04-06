@@ -8,9 +8,9 @@ posts = posts.filter((post) => !post.url?.includes("unlisted"));
 posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
+<!--
 <h2>Newsletter</h2>
 
-<!-- TODO: Make this a sticky popup -->
 <section id="newsletter">
     <p>
         I have a newsletter, btw! I post regular updates on my work, exclusive
@@ -19,8 +19,9 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
 
     <a href="/newsletter" class="btn">Subscribe</a>
 </section>
+-->
 
-<h2>Blog Posts</h2>
+<h2 id="blog-title">Blog Posts</h2>
 {
     posts.map((post) => (
         <BlogPreview url={post.url} frontmatter={post.frontmatter} />
@@ -30,5 +31,16 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
 <style>
     #newsletter > *:not(:last-child) {
         margin-bottom: 1.1rem;
+    }
+
+    #blog-title {
+        display: none;
+    }
+
+    @media (min-width: 650px) {
+        #blog-title {
+            display: initial;
+            margin-bottom: 0.75rem;
+        }
     }
 </style>
