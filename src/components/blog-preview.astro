@@ -37,7 +37,7 @@ const { title, date, author } = frontmatter;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: 0.5rem;
+        gap: 2rem;
 
         text-decoration: none;
     }
@@ -65,12 +65,12 @@ const { title, date, author } = frontmatter;
         figure {
             border: none;
             border-radius: 0;
-            border-top: solid 1px var(--secondary-background-dark);
-            padding: 1rem 0;
+            border-bottom: solid 1px var(--secondary-background-dark);
+            padding: 1.25rem 0;
         }
 
         figure:last-child {
-            border-bottom: solid 1px var(--secondary-background-dark);
+            border-bottom: none;
         }
 
         a {

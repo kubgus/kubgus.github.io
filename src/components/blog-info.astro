@@ -3,10 +3,8 @@ const { date, author } = Astro.props;
 const dateString = new Date(date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
 ---
 
-<div aria-label="Info" class="faded">
-    <p aria-label="Date">{dateString}</p>
-    <p aria-hidden="true">|</p>
-    <p aria-label="Author">{author}</p>
+<div aria-label="Article information" class="faded">
+    <p>{dateString}, {author}</p>
 </div>
 
 <style>
