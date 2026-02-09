@@ -1,0 +1,46 @@
+---
+import frameData from "../data/tech.js";
+
+const sortableData = [];
+for (let obj in frameData) sortableData.push(frameData[obj as keyof typeof frameData]);
+
+const sortedData = sortableData.sort((a, b) => a.title.localeCompare(b.title));
+---
+
+<details>
+    <summary>Full list</summary>
+    <ul>
+        {
+            sortedData.map((data) => (
+                <li>
+                    <img src={data.src} alt={data.title} width="32" height="32" />
+                    <p>{data.title}</p>
+                </li>
+            ))
+        }
+    </ul>
+</details>
+
+<style>
+    summary {
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+    }
+
+    summary:hover {
+        color: var(--primary-accent-dark);
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+</style>

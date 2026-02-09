@@ -4,7 +4,7 @@ body {
     justify-content: center;
     gap: 2.5rem;
 
-    padding: 6rem 20vw;
+    padding: 6rem 17vw;
 }
 
 @media (max-width: 1300px) {

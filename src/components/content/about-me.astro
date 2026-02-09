@@ -1,16 +1,34 @@
 ---
 import TechMarquee from "../tech-marquee.astro";
+import TechList from "../tech-list.astro";
 import PictureFrame from "../picture-frame.astro";
 ---
 
 <h2>Call me Kubo!</h2>
-<p>
-    I'm a passionate (mostly) self-taught programmer with a devotion to life-long learning and improvement.
-    I like to make cool stuff while solving real-world problems, especially when I relate to them personally.
-    I've been coding my way through life since I was about 8 years old and my fire for programming hasn't burned out since.
-</p>
+<ul>
+    <li>
+        I am a software developer
+        with production experience in backend development
+    </li>
+    <li>
+        Currently studying IT, but most of my technical foundation
+        was built outside classrooms & courses
+    </li>
+    <li>
+        I like to explore unfamiliar domains to broaden my horizons and
+        build a more versatile skillset
+    </li>
+    <li>
+        I take craftsmanship seriously -
+        I build things to last, not to "just work"
+    </li>
+    <!--
+    I've been coding my way through life since I was about 8 years old
+    and my fire for programming hasn't burned out since.
+    -->
+</ul>
 
-<h2>Top Skills</h2>
+<h2>What I Like To Do</h2>
 <ul>
     <li>
         Full-stack development
@@ -26,7 +44,13 @@ import PictureFrame from "../picture-frame.astro";
         </div>
     </li>
     <li>
-        Teamwork
+        IoT & embedded development
+        <div class="icon-container">
+            <i class="fa-solid fa-circle-user icon" title="Self-taught" aria-label="Self-taught"></i>
+        </div>
+    </li>
+    <li>
+        Teamwork & mentorship
         <div class="icon-container">
             <img class="icon" src="/images/slsk.png" alt="At SLSK" title="At SLSK" />
             <img class="icon" src="/images/wezeo.png" alt="At Wezeo" title="At Wezeo" />
@@ -34,57 +58,101 @@ import PictureFrame from "../picture-frame.astro";
         </div>
     </li>
     <li>
-        Project management
+        Project management & team leadership
         <div class="icon-container">
             <img class="icon" src="/images/slsk.png" alt="At SLSK" title="At SLSK" />
             <img class="icon" src="/images/wezeo.png" alt="At Wezeo" title="At Wezeo" />
-            <i class="fa-solid fa-circle-user icon" title="Self-taught" aria-label="Self-taught"></i>
         </div>
     </li>
 </ul>
 
-<TechMarquee />
+<h2>Tech Stack</h2>
+<p>
+    Technologies I’ve used beyond tutorials - in deployed or team-based projects.
+</p>
+<p class="faded">(see my projects section for a better idea!)</p>
+<div id="tech-marquee-container">
+    <TechMarquee />
+</div>
+<div id="tech-list-container">
+    <TechList />
+</div>
 
 <h2>Experience</h2>
 <figure class="accented">
     <PictureFrame data={{ title: "Wezeo", src: "/images/wezeo.png" }} />
-    <div>
+    <div class="accented-hero">
         <h3>Wezeo</h3>
-        <p>Backend Development Intern</p>
+        <p>Backend Developer</p>
         <p class="faded">Oct 2024 - Present</p>
+    </div>
+    <div class="accented-content">
+        <ul>
+            <li>Contributed to 4 production projects (2 internal, 2 client-facing) with teams of up to 10 people</li>
+            <li>Implemented documented REST APIs, advanced auth flows, and CI pipelines in production projects</li>
+            <li>Discovered and fixed critical authentication security vulnerability in a client's project</li>
+        </ul>
     </div>
 </figure>
 
 <h2>Education</h2>
 <figure class="accented">
     <PictureFrame data={{ title: "Skyro", src: "/images/skyro.png" }} />
-    <div>
+    <div class="accented-hero">
         <h3>Skyro</h3>
         <p>Information Technology & AI Education</p>
         <p class="faded">Sep 2024 - Jun 2027</p>
     </div>
+    <div class="accented-content">
+        <ul>
+            <li>Gained practical experience with entrepeneurship and project management</li>
+            <li>Participated in 5+ workshops focused on AI, IT, and entrepeneurship</li>
+        </ul>
+    </div>
 </figure>
 <figure class="accented">
-    <h3>Gymnázium</h3>
-    <p>General Secondary Education</p>
-    <p class="faded">Sep 2019 - Aug 2024</p>
+    <PictureFrame data={{ title: "Gymnázium", src: "/images/gymnazium.png" }} />
+    <div class="accented-hero">
+        <h3>Gymnázium</h3>
+        <p>General Secondary Education</p>
+        <p class="faded">Sep 2019 - Aug 2024</p>
+    </div>
+    <div class="accented-content">
+        <ul>
+            <li>Gained solid foundation in math, physics, and other sciences</li>
+            <li>Participated in various extracurricular activities, including programming competitions</li>
+        </ul>
+    </div>
 </figure>
 
 <h2>Volunteering</h2>
 <figure class="accented">
     <PictureFrame data={{ title: "Scouting Slovakia", src: "/images/slsk.png" }} />
-    <div>
+    <div class="accented-hero">
         <h3>Scouting Slovakia (SLSK)</h3>
-        <p>Volunteer Staff Member & Leader</p>
+        <p>Staff Member & Group Leader</p>
         <p class="faded">Dec 2022 - Present</p>
+    </div>
+    <div class="accented-content">
+        <ul>
+            <li>Leading a group of 30+ members & 7+ volunteers</li>
+            <li>Founded 3 sub-groups and currently mentoring their leaders</li>
+            <li>Organized camps for more than 120 attendees</li>
+            <li>Organized educational & teambuilding workshops</li>
+            <li>Maintaining the official website and Google Workspace of over 70 volunteers</li>
     </div>
 </figure>
 <figure class="accented">
     <PictureFrame data={{ title: "CoderDojo Bratislava", src: "/images/coderdojo.png" }} />
-    <div>
+    <div class="accented-hero">
         <h3>CoderDojo Bratislava</h3>
-        <p>Educator & Speaker</p>
+        <p>Mentor & Speaker</p>
         <p class="faded">Sep 2023 - Jun 2024</p>
+    </div>
+    <div class="accented-content">
+        <ul>
+            <li>Mentored 10+ students aged 7-17 in programming and game development</li>
+        </ul>
     </div>
 </figure>
 
@@ -97,27 +165,29 @@ import PictureFrame from "../picture-frame.astro";
 
 <h2>Attended Conferences</h2>
 <figure class="accented">
-    <PictureFrame data={{ title: "CODECON #Žilina 2024", src: "/images/codecon.png" }} />
-    <div>
-        <h3>CODECON #Žilina 2024</h3>
-        <p>Attendee</p>
-        <p class="faded">Nov 2024</p>
-    </div>
-</figure>
-<figure class="accented">
-    <PictureFrame data={{ title: "CODECON #Bratislava 2024", src: "/images/codecon.png" }} />
-    <div>
-        <h3>CODECON #Bratislava 2024</h3>
-        <p>Attendee</p>
-        <p class="faded">Jun 2024</p>
-    </div>
-</figure>
-<figure class="accented">
     <PictureFrame data={{ title: "PyCon SK 2024", src: "/images/pycon.png" }} />
-    <div>
-        <h3>PyCon SK 2024</h3>
+    <div class="accented-hero">
+        <h3>PyCon SK</h3>
         <p>Speaker for CoderDojo Bratislava</p>
         <p class="faded">Mar 2024</p>
+    </div>
+    <div class="accented-content">
+        <ul>
+            <li>Led a workshop on "Getting Started with Programming" for 20+ attendees</li>
+        </ul>
+    </div>
+</figure>
+<figure class="accented">
+    <PictureFrame data={{ title: "CODECON #Bratislava & #Žilina", src: "/images/codecon.png" }} />
+    <div class="accented-hero">
+        <h3>CODECON #Bratislava & #Žilina</h3>
+        <p>Attendee</p>
+        <p class="faded">Yearly since 2024</p>
+    </div>
+    <div class="accented-content">
+        <ul>
+            <li>Attended 30+ talks on various topics in software development, AI, and more</li>
+        </ul>
     </div>
 </figure>
 
@@ -125,11 +195,15 @@ import PictureFrame from "../picture-frame.astro";
 <ul>
     <li>Playing guitar</li>
     <li>Scouting</li>
-    <li>Making and playing video games</li>
+    <li>Making and playing games</li>
     <li>Reading books for personal growth</li>
 </ul>
 
 <h2>Favorite Books</h2>
+<p>
+    These are some of the books that have had a significant impact on me and my way of thinking.
+    I highly recommend all of them!
+</p>
 <ol>
     <li>Paulo Coelho - The Alchemist</li>
     <li>Dale Carnegie - How to Win Friends and Influence People</li>
@@ -190,7 +264,6 @@ import PictureFrame from "../picture-frame.astro";
 
     li {
         display: flex;
-        align-items: center;
         gap: 0.1rem 0.5rem;
         margin-left: 0.25rem !important;
     }
@@ -203,13 +276,19 @@ import PictureFrame from "../picture-frame.astro";
         border-left: solid var(--primary-accent-dark) 3px;
         padding: 0.5rem 1rem;
         margin-left: 0.25rem;
+
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 0.5rem 1rem;
     }
 
-    .accented:has(img) {
+    .accented-hero {
         display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        align-items: center;
+        flex-direction: column;
+    }
+
+    .accented-content {
+        grid-column: span 2;
     }
 
     .accented + .accented {
@@ -219,7 +298,14 @@ import PictureFrame from "../picture-frame.astro";
     @media (max-width: 1000px) {
         .accented:has(img) {
             flex-direction: column;
-            align-items: flex-start;
         }
+    }
+
+    #tech-marquee-container {
+        margin: -1rem -3rem 0 -3rem;
+    }
+
+    #tech-list-container {
+        margin-top: 0.5rem;
     }
 </style>

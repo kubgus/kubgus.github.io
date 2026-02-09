@@ -11,12 +11,22 @@ const { data } = Astro.props;
 </button>
 
 <style>
+    @keyframes popIn {
+        from {
+            scale: 0.5;
+        }
+        to {
+            scale: 1;
+        }
+    }
+
     button {
         all: unset;
 
         display: flex;
         justify-content: center;
         align-items: center;
+        flex: 0 0 auto; /* prevent shrinking and growing */
 
         width: 60px;
         height: 60px;
@@ -27,6 +37,8 @@ const { data } = Astro.props;
         cursor: pointer;
 
         transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        /* only here to fix image display error when switching tabs */
+        animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     img.base {
