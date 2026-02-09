@@ -1,10 +1,12 @@
-// Personal rating guideline:
-// 0 - No rating
-// 1 - Very old or very simple project
-// 2 - Clunky/unfinished project
-// 3 - Recent simple project or older larger project
-// 4 - Recent cool project
-// 5 - Recent impressive project
+const categoryGameDev = ["Games", 0];
+const categoryGameEngines = ["Game Engines", 1];
+const categoryEmbedded = ["Embedded", 2];
+const categoryCLITools = ["CLI Tools", 3];
+const categoryWebDev = ["Web", 4];
+const categoryBrowserExtensions = ["Browser Extensions", 5];
+const categoryDiscordBots = ["Discord Bots", 6];
+const categoryOther = ["Other", 7];
+const categoryOldProjects = ["Old Projects", 8];
 
 export default [
     {
@@ -16,8 +18,9 @@ export default [
         year: 2024,
         rating: 5,
         tech: ["astro", "tailwind", "ts", "vue"],
+        category: categoryWebDev,
     },
-    {
+    /*{
         title: "modryoblak web",
         description: "Website for our local scouting group.",
         github: "https://github.com/modryoblak/web",
@@ -26,14 +29,8 @@ export default [
         year: 2025,
         rating: 4,
         tech: ["astro", "tailwind", "vue"],
-    },
-    {
-        title: "asap",
-        description: "App for small and medium-sized teams that provides fast and straightforward solutions for short-term project management.",
-        year: 2025,
-        rating: 5,
-        tech: ["nuxt", "supabase", "ts", "vue", "tailwind", "html", "css"],
-    },
+        category: categoryWebDev,
+    },*/
     {
         title: "heystack",
         description: "Social media platform made with Nuxt.js and Supabase.",
@@ -41,6 +38,7 @@ export default [
         year: 2023,
         rating: 4,
         tech: ["nuxt", "supabase", "ts", "vue", "tailwind", "html", "css"],
+        category: categoryWebDev,
     },
     {
         title: "bloodline",
@@ -50,6 +48,7 @@ export default [
         year: 2023,
         rating: 3,
         tech: ["cs"],
+        category: categoryGameEngines,
     },
     {
         title: "omniroom",
@@ -60,6 +59,7 @@ export default [
         year: 2023,
         rating: 2,
         tech: ["html", "css", "js", "node"],
+        category: categoryOldProjects,
     },
     {
         title: "filefly",
@@ -70,6 +70,7 @@ export default [
         year: 2023,
         rating: 3,
         tech: ["html", "css", "js", "node"],
+        category: categoryOldProjects,
     },
     {
         title: "super tic-tac-toe",
@@ -80,6 +81,7 @@ export default [
         year: 2023,
         rating: 3,
         tech: ["html", "css", "js"],
+        category: categoryOldProjects,
     },
     {
         title: "tick oat two",
@@ -90,6 +92,7 @@ export default [
         year: 2022,
         rating: 3,
         tech: ["html", "css", "js"],
+        category: categoryOldProjects,
     },
     {
         title: "magnet.io",
@@ -99,6 +102,7 @@ export default [
         year: 2022,
         rating: 3,
         tech: ["unity", "cs"],
+        category: categoryGameDev,
     },
     {
         title: "copycat",
@@ -108,6 +112,7 @@ export default [
         year: 2022,
         rating: 3,
         tech: ["unity", "cs"],
+        category: categoryGameDev,
     },
     {
         title: "discord tts bot",
@@ -116,6 +121,7 @@ export default [
         year: 2022,
         rating: 2,
         tech: ["js"],
+        category: categoryDiscordBots,
     },
     {
         title: "flashcards",
@@ -126,6 +132,7 @@ export default [
         year: 2023,
         rating: 1,
         tech: ["html", "css", "js"],
+        category: categoryOldProjects,
     },
     {
         title: "stratus",
@@ -136,6 +143,7 @@ export default [
         year: 2024,
         rating: 3,
         tech: ["html", "css", "js", "supabase"],
+        category: categoryOldProjects,
     },
     {
         title: "stratus cli",
@@ -145,6 +153,7 @@ export default [
         year: 2024,
         rating: 3,
         tech: ["js", "node"],
+        category: categoryOldProjects,
     },
     {
         title: "untitled game engine",
@@ -154,6 +163,7 @@ export default [
         year: 2024,
         rating: 4,
         tech: ["cpp"],
+        category: categoryGameEngines,
     },
     {
         title: "slidar",
@@ -163,6 +173,7 @@ export default [
         year: 2024,
         rating: 3,
         tech: ["js", "node"],
+        category: categoryOldProjects,
     },
     {
         title: "texemble",
@@ -171,6 +182,7 @@ export default [
         year: 2024,
         rating: 4,
         tech: ["cpp"],
+        category: categoryGameEngines,
     },
     {
         title: "kudo",
@@ -180,6 +192,7 @@ export default [
         year: 2022,
         rating: 3,
         tech: ["cs"],
+        category: categoryGameEngines,
     },
     {
         title: "frisk",
@@ -188,6 +201,7 @@ export default [
         year: 2024,
         rating: 4,
         tech: ["cpp"],
+        category: categoryCLITools,
     },
     {
         title: "hotpot",
@@ -196,6 +210,7 @@ export default [
         year: 2024,
         rating: 4,
         tech: ["cpp"],
+        category: categoryCLITools,
     },
     {
         title: "c++ cheatsheet",
@@ -204,6 +219,7 @@ export default [
         year: 2023,
         rating: 4,
         tech: ["cpp"],
+        category: categoryOther,
     },
     {
         title: "overwork",
@@ -213,6 +229,7 @@ export default [
         year: 2023,
         rating: 4,
         tech: ["html", "css", "js"],
+        category: categoryBrowserExtensions,
     },
     {
         title: "faux",
@@ -222,22 +239,23 @@ export default [
         year: 2023,
         rating: 4,
         tech: ["html", "css", "js"],
+        category: categoryBrowserExtensions,
     },
-    {
+    /*{
         title: "instant",
         description: "Secure chatboard website made with Express.js and Socket.io.",
-        website: "https://instant.gustafik.com/",
         image: "images/thumbnails/instant.png",
         year: 2022,
         rating: 2,
         tech: ["html", "css", "js", "node"],
-    },
+    },*/
     {
         title: "scratch studio",
         description: "My studio on Scratch.",
         website: "https://scratch.mit.edu/studios/29203310/",
         year: 2020,
         rating: 1,
+        category: categoryOldProjects,
     },
     {
         title: "planet generator",
@@ -247,6 +265,7 @@ export default [
         year: 2021,
         rating: 1,
         tech: ["html", "css", "js"],
+        category: categoryOldProjects,
     },
     {
         title: "speed read",
@@ -257,6 +276,7 @@ export default [
         year: 2021,
         rating: 1,
         tech: ["html", "css", "js"],
+        category: categoryOldProjects,
     },
     {
         title: "discord.js 14 template",
@@ -265,6 +285,7 @@ export default [
         year: 2023,
         rating: 4,
         tech: ["js", "node"],
+        category: categoryDiscordBots,
     },
     {
         title: "nuxt & tailwind template",
@@ -273,6 +294,7 @@ export default [
         year: 2023,
         rating: 2,
         tech: ["nuxt", "tailwind", "vue"],
+        category: categoryOther,
     },
     {
         title: "learning nuxt",
@@ -282,6 +304,7 @@ export default [
         year: 2023,
         rating: 1,
         tech: ["nuxt", "tailwind", "vue"],
+        category: categoryOther,
     },
     {
         title: "c++ playground",
@@ -290,6 +313,7 @@ export default [
         year: 2023,
         rating: 2,
         tech: ["cpp"],
+        category: categoryOther,
     },
     {
         title: "leetcode solutions",
@@ -298,6 +322,7 @@ export default [
         year: 2024,
         rating: 2,
         tech: ["cpp"],
+        category: categoryOther,
     },
     {
         title: "node.js playground",
@@ -306,6 +331,7 @@ export default [
         year: 2022,
         rating: 2,
         tech: ["js", "node"],
+        category: categoryOldProjects,
     },
     {
         title: "remify",
@@ -315,6 +341,7 @@ export default [
         year: 2021,
         rating: 3,
         tech: ["html", "css", "js", "firebase"],
+        category: categoryOldProjects,
     },
     {
         title: "timer",
@@ -324,6 +351,7 @@ export default [
         year: 2024,
         rating: 1,
         tech: ["html", "css", "js"],
+        category: categoryOldProjects,
     },
     {
         title: "prowl",
@@ -334,6 +362,7 @@ export default [
         year: 2024,
         rating: 3,
         tech: ["godot"],
+        category: categoryGameDev,
     },
     {
         title: "past forward",
@@ -343,6 +372,7 @@ export default [
         year: 2024,
         rating: 4,
         tech: ["unity", "cs"],
+        category: categoryGameDev,
     },
     {
         title: "blob survivors",
@@ -352,5 +382,15 @@ export default [
         year: 2024,
         rating: 3,
         tech: ["godot"],
+        category: categoryGameDev,
+    },
+    {
+        title: "controller-firmware",
+        description: "Custom firmware for an ESP32-based robot controller.",
+        github: "https://github.com/hikl-gustafik/controller-firmware",
+        year: 2024,
+        rating: 4,
+        tech: ["cpp"],
+        category: categoryEmbedded,
     },
 ];

@@ -1,52 +1,98 @@
 <script setup>
-    import ProjectPreview from "../project-preview.vue";
-    import CountHeading from "../count-heading.vue";
+import ProjectPreview from "../project-preview.vue";
+import CountHeading from "../count-heading.vue";
 
-    const props = defineProps({
-        projects: Object,
-        tech: Object,
-    });
+const props = defineProps({
+    projects: Object,
+    tech: Object,
+});
 
-    //const random_project = props.projects[Math.floor(Math.random() * props.projects.length)];
-
-    const projects_random = props.projects.sort(() => Math.random() - 0.5);
-    const projects_sorted = projects_random.sort((a, b) => {
-        return a.year == b.year ? b.rating - a.rating : b.year - a.year
-    });
-
-    let active_projects = [], side_projects = [], other_projects = [];
-    for (const project of projects_sorted) {
-        if (project.rating == 5) active_projects.push(project);
-        else if (project.rating == 4) side_projects.push(project);
-        else other_projects.push(project);
+const categoriesMap = {};
+for (const project of props.projects) {
+    const [categoryName, categoryIndex] = project.category;
+    if (!categoriesMap[categoryName]) {
+        categoriesMap[categoryName] = { name: categoryName, index: categoryIndex, projects: [] };
     }
+    categoriesMap[categoryName].projects.push(project);
+}
+
+const categories = Object.values(categoriesMap)
+.sort((a, b) => a.index - b.index)
+.map(category => {
+    category.projects.sort((a, b) => {
+        if (b.rating !== a.rating) return b.rating - a.rating;
+        return b.year - a.year;
+    });
+    return category;
+});
 </script>
 
 <template>
-    <!--<h2>Random Project</h2>
-    <ProjectPreview :project="random_project" :tech="tech" />-->
-
-    <CountHeading :count="active_projects.length">Active Projects</CountHeading>
-    <div class="projects">
-        <ProjectPreview v-for="(project, index) in active_projects" :key="index" :project="project" :tech="tech" />
-    </div>
-
-    <CountHeading :count="side_projects.length">Side Projects</CountHeading>
-    <div class="projects">
-        <ProjectPreview v-for="(project, index) in side_projects" :key="index" :project="project" :tech="tech" />
-    </div>
-
-    <CountHeading :count="other_projects.length">Other Projects</CountHeading>
-    <div class="projects">
-        <ProjectPreview v-for="(project, index) in other_projects" :key="index" :project="project" :tech="tech" />
-    </div>
+  <div v-for="(category, index) in categories" :key="index" class="category-section">
+    <details>
+      <summary class="category-summary">
+        <span class="triangle"></span>
+        <span class="summary-text">
+          <CountHeading :count="category.projects.length">{{ category.name }}</CountHeading>
+        </span>
+      </summary>
+      <div class="projects">
+        <ProjectPreview
+          v-for="(project, i) in category.projects"
+          :key="i"
+          :project="project"
+          :tech="tech"
+        />
+      </div>
+    </details>
+  </div>
 </template>
 
 <style scoped>
-    .projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
-    }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.category-section:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.category-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none !important;
+    font-weight: 500;
+}
+
+.summary-text {
+  user-select: none;
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
+.category-summary::-webkit-details-marker {
+    display: none;
+}
+
+.triangle {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transform: translateY(2px);
+}
+
+.triangle::before {
+    content: '☞';
+}
+
+details[open] .triangle {
+    transform: translateY(1px) translateX(-8px) rotate(80deg);
+}
 </style>
