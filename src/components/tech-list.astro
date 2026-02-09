@@ -8,7 +8,10 @@ const sortedData = sortableData.sort((a, b) => a.title.localeCompare(b.title));
 ---
 
 <details>
-    <summary>Full list</summary>
+    <summary>
+        <span class="triangle"></span>
+        <span class="summary-text">Full list</span>
+    </summary>
     <ul>
         {
             sortedData.map((data) => (
@@ -23,12 +26,42 @@ const sortedData = sortableData.sort((a, b) => a.title.localeCompare(b.title));
 
 <style>
     summary {
-        cursor: pointer;
         margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: color 0.1s ease-in-out;
     }
 
     summary:hover {
         color: var(--primary-accent-dark);
+    }
+
+    summary:webkit-details-marker {
+        display: none;
+    }
+
+    .summary-text {
+        user-select: none;
+        -webkit-user-select: none; /* Safari/Chrome */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE/Edge */
+    }
+
+    .triangle {
+        display: inline-block;
+        transition: transform 0.2s ease;
+        font-size: 1rem;
+        transform: translateY(-1px);
+    }
+
+    .triangle::before {
+        content: '>';
+    }
+
+    details[open] .triangle {
+        transform: translateY(-1px) translateX(2px) rotate(90deg);
     }
 
     ul {

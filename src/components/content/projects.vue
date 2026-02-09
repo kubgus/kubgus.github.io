@@ -65,8 +65,15 @@ const categories = Object.values(categoriesMap)
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    user-select: none !important;
-    font-weight: 500;
+    transition: color 0.1s ease-in-out;
+}
+
+.category-summary:hover {
+    color: var(--primary-accent-dark);
+}
+
+.category-summary::-webkit-details-marker {
+    display: none;
 }
 
 .summary-text {
@@ -74,10 +81,6 @@ const categories = Object.values(categoriesMap)
   -webkit-user-select: none; /* Safari/Chrome */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE/Edge */
-}
-
-.category-summary::-webkit-details-marker {
-    display: none;
 }
 
 .triangle {
