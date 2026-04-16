@@ -393,4 +393,13 @@ export default [
         tech: ["cpp"],
         category: categoryEmbedded,
     },
+    {
+        title: "asotag",
+        description: "A systems-oriented terminal adventure game.",
+        github: "https://github.com/kubgus/asotag",
+        year: 2026,
+        rating: 5,
+        tech: ["go"],
+        category: categoryGameDev,
+    },
 ];

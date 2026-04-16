@@ -33,6 +33,10 @@ export default {
         title: "GitHub",
         src: techLogoPath + "github.png",
     },
+    go: {
+        title: "Go",
+        src: techLogoPath + "go.png",
+    },
     html: {
         title: "HTML",
         src: techLogoPath + "html.png",
