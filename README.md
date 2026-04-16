@@ -4,8 +4,7 @@ This website has been remade more times than any major front-end framework, whic
 
 I put an unhealthy amount of effort into this, so you might as well check it out!
 
-![image](https://github.com/user-attachments/assets/da2c7279-b457-44ae-bd6e-652111a5a82a)
-![image](https://github.com/user-attachments/assets/d8eb8bf8-d680-4364-8954-33204c541a1e)
+<img width="1080" height="1373" alt="" src="https://github.com/user-attachments/assets/7770834f-b2bf-4d14-b118-4a49d1413829" />
 
 ## Why are you even here? Go look at [the website](https://gustafik.com)!
 
