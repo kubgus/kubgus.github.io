@@ -88,7 +88,7 @@ const categories = Object.values(categoriesMap)
     transition: transform 0.2s ease;
     font-weight: bold;
     font-size: 1.5rem;
-    transform: translateY(2px);
+    transform: translateY(6px) translateX(-4px);
 }
 
 .triangle::before {
@@ -96,6 +96,6 @@ const categories = Object.values(categoriesMap)
 }
 
 details[open] .triangle {
-    transform: translateY(1px) translateX(-8px) rotate(80deg);
+    transform: translateY(5px) translateX(-10px) rotate(80deg);
 }
 </style>
