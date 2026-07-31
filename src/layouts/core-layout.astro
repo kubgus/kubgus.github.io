@@ -85,12 +85,11 @@ if (frontmatter != null) {
 
     :root {
         --background-dark: #0e0e0e;
-        --text-color-dark: #dbdbdb;
-        --primary-accent-dark: #7054bc;
         --secondary-background-dark: #333;
-        --complementary-accent-dark-1: #bc54a1;
-        --complementary-accent-dark-2: #a1bc54;
-        --complementary-accent-dark-3: #54bc70
+        --text-color-dark: #dbdbdb;
+        --faded-color-dark: #606060;
+        --primary-accent-dark: #7054bc;
+        --complementary-accent-dark: #bada55;
     }
 
     * {
@@ -140,7 +139,12 @@ if (frontmatter != null) {
     }
 
     .faded {
-        opacity: 0.4 !important;
+        /*opacity: 0.4 !important;*/
+        color: var(--faded-color-dark) !important;
+    }
+
+    .contact-related {
+        color: var(--complementary-accent-dark);
     }
 
     img.icon {
@@ -184,19 +188,7 @@ if (frontmatter != null) {
     }
 
     a:hover, a:active {
-        color: var(--primary-accent-dark);
-    }
-
-    a.complementary1:hover, a.complementary1:active {
-        color: var(--complementary-accent-dark-1);
-    }
-
-    a.complementary2:hover, a.complementary2:active {
-        color: var(--complementary-accent-dark-2);
-    }
-
-    a.complementary3:hover, a.complementary3:active {
-        color: var(--complementary-accent-dark-3);
+        color: var(--primary-accent-dark) !important;
     }
 
     button, a.btn, img, video, iframe, input, textarea {
@@ -210,17 +202,5 @@ if (frontmatter != null) {
         cursor: pointer;
         font-size: 16px;
         padding: 10px 20px;
-    }
-
-    button.complementary1 {
-        background-color: var(--complementary-accent-dark-1);
-    }
-
-    button.complementary2 {
-        background-color: var(--complementary-accent-dark-2);
-    }
-
-    button.complementary3 {
-        background-color: var(--complementary-accent-dark-3);
     }
 </style>
