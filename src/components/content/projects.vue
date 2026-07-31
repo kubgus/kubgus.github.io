@@ -28,24 +28,28 @@ const categories = Object.values(categoriesMap)
 </script>
 
 <template>
-  <div v-for="(category, index) in categories" :key="index" class="category-section">
-    <details>
-      <summary class="category-summary">
-        <span class="triangle"></span>
-        <span class="summary-text">
-          <CountHeading :count="category.projects.length">{{ category.name }}</CountHeading>
-        </span>
-      </summary>
-      <div class="projects">
-        <ProjectPreview
-          v-for="(project, i) in category.projects"
-          :key="i"
-          :project="project"
-          :tech="tech"
-        />
-      </div>
-    </details>
-  </div>
+    <p class="faded">
+    (some projects are under NDAs and cannot be showed here -
+    that work is covered in my experience section)
+    </p>
+    <div v-for="(category, index) in categories" :key="index" class="category-section">
+        <details>
+            <summary class="category-summary">
+                <span class="triangle"></span>
+                <span class="summary-text">
+                    <CountHeading :count="category.projects.length">{{ category.name }}</CountHeading>
+                </span>
+            </summary>
+            <div class="projects">
+                <ProjectPreview
+                    v-for="(project, i) in category.projects"
+                    :key="i"
+                    :project="project"
+                    :tech="tech"
+                />
+            </div>
+        </details>
+    </div>
 </template>
 
 <style scoped>

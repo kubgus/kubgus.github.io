@@ -65,13 +65,13 @@
     .title {
         display: flex;
         flex-direction: column;
-        gap: 0.1rem 0.5rem;
+        gap: 0.5rem;
     }
 
-    .contents a:not(:has(.logo)) > .title {
+    /*.contents a:not(:has(.logo)) > .title {
         flex-direction: row;
         flex-wrap: wrap;
-    }
+    }*/
 
     .links {
         display: flex;
