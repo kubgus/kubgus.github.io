@@ -9,6 +9,10 @@ export default {
         title: "AWS",
         src: techLogoPath + "aws.png",
     },
+    claudecode: {
+        title: "Claude Code",
+        src: techLogoPath + "claudecode.png",
+    },
     cpp: {
         title: "C++",
         src: techLogoPath + "cpp.png",
@@ -20,6 +24,10 @@ export default {
     css: {
         title: "CSS",
         src: techLogoPath + "css.png",
+    },
+    docker: {
+        title: "Docker",
+        src: techLogoPath + "docker.webp",
     },
     firebase: {
         title: "Firebase",
@@ -97,12 +105,12 @@ export default {
         title: "Godot",
         src: techLogoPath + "godot.png",
     },
-    nest: {
-        title: "NestJS",
-        src: techLogoPath + "nest.png",
-    },
     bun: {
         title: "Bun",
         src: techLogoPath + "bun.png",
+    },
+    next: {
+        title: "Next.js",
+        src: techLogoPath + "next.png",
     },
 };
