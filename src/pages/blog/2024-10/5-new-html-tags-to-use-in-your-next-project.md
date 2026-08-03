@@ -116,13 +116,13 @@ crawlers, which will rank your website higher in Google searches.
 ```html
 <address>
     <p>Email me at:</p>
-    <a href="mailto:business@gustafik.com">business@gustafik.com</a>
+    <a href="mailto:ja.web@gustafik.com">ja.web@gustafik.com</a>
 </address>
 ```
 
 <address>
     <p>Email me at:</p>
-    <a href="mailto:business@gustafik.com">business@gustafik.com</a>
+    <a href="mailto:ja.web@gustafik.com">ja.web@gustafik.com</a>
 </address>
 
 ## `<meter>` & `<progress>`
